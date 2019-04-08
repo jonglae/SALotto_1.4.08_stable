@@ -1,0 +1,5 @@
+<root>
+    <item name='android.icu.text.DecimalFormat'>
+        <annotation name='java.lang.Deprecated' />
+    </item>
+</root>

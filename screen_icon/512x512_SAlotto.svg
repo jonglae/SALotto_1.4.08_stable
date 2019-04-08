@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="512"
+   height="512"
+   viewBox="0 0 512.00001 512.00001"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   inkscape:export-filename="/opt/backup/an_project_2017/SALotto_dev3/screen_icon/512x512_SAlotto.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90"
+   sodipodi:docname="512x512_SAlotto.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5801"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1;"
+         offset="0"
+         id="stop5803" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient5789">
+      <stop
+         style="stop-color:#ffff00;stop-opacity:1;"
+         offset="0"
+         id="stop5791" />
+      <stop
+         style="stop-color:#ffff00;stop-opacity:0;"
+         offset="1"
+         id="stop5793" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5789"
+       id="linearGradient5795"
+       x1="40.812912"
+       y1="861.61926"
+       x2="534.12933"
+       y2="861.61926"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.98994949"
+     inkscape:cx="162.57631"
+     inkscape:cy="271.63476"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:showpageshadow="true"
+     borderlayer="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="1001"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:snap-text-baseline="false" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-540.36216)">
+    <rect
+       style="opacity:1;fill:#ee3343;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4252-5"
+       width="256.57874"
+       height="515.1778"
+       x="-1.5355181"
+       y="539.20465" />
+    <rect
+       style="opacity:1;fill:#00a76a;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4252"
+       width="265.6701"
+       height="512.14734"
+       x="255.528"
+       y="540.21478" />
+    <circle
+       style="fill:#ffde00;fill-opacity:1;stroke:#000000;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3374"
+       cx="242.43661"
+       cy="798.81384"
+       r="195.9696" />
+    <rect
+       style="fill:#ff55dd;fill-rule:evenodd;stroke:none;stroke-width:0.58271682px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect3336-36-5"
+       width="509.53418"
+       height="32.607395"
+       x="-7.2797103"
+       y="1159.7617" />
+    <ellipse
+       style="fill:#0000ff;stroke:#000000;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3372-3"
+       cx="263.64981"
+       cy="686.68695"
+       r="80.307129" />
+    <circle
+       style="fill:#00a76a;fill-opacity:1;stroke:#000000;stroke-width:1.99999988;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path3374-7"
+       cx="241.93152"
+       cy="796.28851"
+       r="130.81476" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:102.74885559px;line-height:125%;font-family:'휴먼둥근헤드라인';-inkscape-font-specification:'휴먼둥근헤드라인, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#1caed8;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="-0.8753714"
+       y="846.70703"
+       id="text3353-3"
+       sodipodi:linespacing="125%"
+       transform="scale(0.83896952,1.1919384)"><tspan
+         sodipodi:role="line"
+         x="-0.8753714"
+         y="846.70703"
+         id="tspan3485-6"
+         style="fill:#1caed8;stroke-width:3">PowerBall</tspan></text>
+    <image
+       y="660.91028"
+       x="107.56351"
+       id="image4234"
+       xlink:href="data:image/png;base64,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
+"
+       preserveAspectRatio="none"
+       height="272.7767"
+       width="261.66501"
+       style="fill:#f2f2f2" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:143.91964722px;line-height:125%;font-family:'휴먼둥근헤드라인';-inkscape-font-specification:'휴먼둥근헤드라인, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffde00;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="-5.5118027"
+       y="653.90326"
+       id="text3353"
+       sodipodi:linespacing="125%"
+       transform="scale(0.92120178,1.0855385)"><tspan
+         sodipodi:role="line"
+         x="-5.5118027"
+         y="653.90326"
+         id="tspan3485"
+         style="fill:#ffde00;stroke-width:3">LOTTO </tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      >
+
+    <item
+        android:id="@+id/ic_arrow"
+        android:icon="@drawable/ic_arrow_back"
+        android:title="@string/bottom_text1"
+        />
+
+    <item
+        android:id="@+id/ic_android"
+        android:icon="@drawable/num1pic"
+        android:title="@string/bottom_text2" />
+    <item
+        android:id="@+id/ic_books"
+        android:icon="@drawable/num2pic"
+        android:title="@string/bottom_text3" />
+    <item
+        android:id="@+id/ic_center_focus"
+        android:icon="@drawable/num3pic"
+        android:title="@string/bottom_text4" />
+        <item
+            android:id="@+id/ic_backup"
+            android:icon="@drawable/icons8_moreinfo"
+            android:title="@string/bottom_text5"
+            />
+
+</menu>

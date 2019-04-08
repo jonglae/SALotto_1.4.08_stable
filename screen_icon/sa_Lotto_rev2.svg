@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.2 (unknown)"
+   sodipodi:docname="sa_Lotto_rev2.svg">
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4674">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4676" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4678" />
+    </linearGradient>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter4668"
+       x="-0.026898396"
+       width="1.0537968"
+       y="-0.12709537"
+       height="1.2541907">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.8052077"
+         id="feGaussianBlur4670" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4674"
+       id="radialGradient4680"
+       cx="218.02759"
+       cy="462.22122"
+       fx="218.02759"
+       fy="462.22122"
+       r="78.692291"
+       gradientTransform="matrix(1.5150311,-1.9797746,0.65716414,0.50289772,-344.53926,707.18632)"
+       gradientUnits="userSpaceOnUse" />
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter5130"
+       x="-0.016093671"
+       width="1.0321873"
+       y="-0.50856002"
+       height="2.01712">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.0553732"
+         id="feGaussianBlur5132" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.011731"
+     inkscape:cx="272.32482"
+     inkscape:cy="585.19453"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="999"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       id="text4142"
+       y="647.5943"
+       x="275.16705"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="647.5943"
+         x="275.16705"
+         id="tspan4144"
+         sodipodi:role="line"
+         style="font-size:40px;line-height:1.25">SA</tspan><tspan
+         id="tspan4146"
+         y="697.5943"
+         x="275.16705"
+         sodipodi:role="line"
+         style="font-size:40px;line-height:1.25">LoTTo</tspan></text>
+    <g
+       id="g5150"
+       transform="translate(-8.3008749,-0.99610493)"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       inkscape:export-filename="/home/buster/g5150.png">
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         style="fill:#000000;filter:url(#filter4668)"
+         id="g4202">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Bullpen;-inkscape-font-specification:'Bullpen, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="216.94058"
+           y="496.39328"
+           id="text4136"><tspan
+             sodipodi:role="line"
+             x="216.94058"
+             y="496.39328"
+             id="tspan4140"
+             style="font-size:40px;line-height:1.25">SA Lotto</tspan></text>
+        <text
+           id="text4150"
+           y="494.30472"
+           x="279.04535"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Bullpen;-inkscape-font-specification:'Bullpen, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             id="tspan4152"
+             y="494.30472"
+             x="279.04535"
+             sodipodi:role="line"
+             style="font-size:40px;line-height:1.25">Lotto</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Bullpen;-inkscape-font-specification:'Bullpen, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="215.18405"
+           y="494.51501"
+           id="text4154"><tspan
+             sodipodi:role="line"
+             x="215.18405"
+             y="494.51501"
+             id="tspan4156"
+             style="font-size:40px;line-height:1.25">SA</tspan></text>
+      </g>
+      <g
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         transform="translate(2e-7,0.33203448)"
+         id="g4210">
+        <text
+           id="text4212"
+           y="496.39328"
+           x="216.94058"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Bullpen;-inkscape-font-specification:'Bullpen, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             id="tspan4214"
+             y="496.39328"
+             x="216.94058"
+             sodipodi:role="line"
+             style="font-size:40px;line-height:1.25">SA Lotto</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Bullpen;-inkscape-font-specification:'Bullpen, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#00812b;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="279.04535"
+           y="494.30472"
+           id="text4216"><tspan
+             sodipodi:role="line"
+             x="279.04535"
+             y="494.30472"
+             id="tspan4218"
+             style="font-size:40px;line-height:1.25">Lotto</tspan></text>
+        <text
+           id="text4220"
+           y="494.51501"
+           x="215.18405"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Bullpen;-inkscape-font-specification:'Bullpen, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#e31b32;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             id="tspan4222"
+             y="494.51501"
+             x="215.18405"
+             sodipodi:role="line"
+             style="font-size:40px;line-height:1.25">SA</tspan></text>
+      </g>
+      <ellipse
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         ry="2.4902623"
+         rx="78.692291"
+         cy="502.34625"
+         cx="297.1713"
+         id="path4672"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:0.63999999;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#radialGradient4680);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2.20000005;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;filter:url(#filter5130);color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
+  </g>
+</svg>
