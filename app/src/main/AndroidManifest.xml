@@ -21,7 +21,7 @@
         tools:targetApi="n">
 
         <activity android:name="gotopark.com.SAlotto.MainActivity"
-                  android:screenOrientation="portrait"
+                  android:screenOrientation="unspecified"
                   android:launchMode="singleTask">
 
             <intent-filter>

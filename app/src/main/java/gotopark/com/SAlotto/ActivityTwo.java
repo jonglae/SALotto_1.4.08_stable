@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -48,6 +49,7 @@ public class ActivityTwo extends Activity {
     Button button2;
     Button button3;
     Button button4;
+    String str = "";
 
     String[] SAloto = {"Lotto Past Draws", "Lotto Plus Past Draws", "PowerBall Past Draws", "PowerBall Plus Past Draws"};
     int SAlotoChoice;
@@ -184,6 +186,7 @@ public class ActivityTwo extends Activity {
                 infoBallChoice = 1;
 
                 oneCardArrayAdapter.cardList.clear();
+
                 if (iInfo1 == "Network Error!") {
 
                     oneCardArrayAdapter.notifyDataSetChanged();
@@ -400,11 +403,20 @@ public class ActivityTwo extends Activity {
                     Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", "", InfoBall[infoBallChoice]);
                     oneCardArrayAdapter.add(card);
 
+
+                    str = SAloto[SAlotoChoice];
+
+
                 }
 
 
                 Card card = new Card("Be the happy rich", "* * *Congratulation* * *", "", "", "", "(EOF)");
                 oneCardArrayAdapter.add(card);
+
+                Card card2 = new Card("", "", "", "", "", "");
+                oneCardArrayAdapter.add(card2);
+
+                Log.e(TAG, "===================================>" + str);
 
                 mProgressDialog.dismiss();
                 listView.setAdapter(oneCardArrayAdapter);

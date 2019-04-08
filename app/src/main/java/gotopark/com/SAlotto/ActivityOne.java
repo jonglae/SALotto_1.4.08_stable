@@ -272,6 +272,9 @@ public class ActivityOne extends Activity {
                     oneCardArrayAdapter.add (card);
                 }
 
+                Card card2 = new Card("End OF Line", "", "", "", "", "");
+                oneCardArrayAdapter.add(card2);
+
                 mProgressDialog.dismiss ();
                 listView.setAdapter (oneCardArrayAdapter);
 

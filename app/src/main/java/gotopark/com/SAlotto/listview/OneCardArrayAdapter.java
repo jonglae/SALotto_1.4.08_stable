@@ -23,9 +23,6 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         super(context, resource);
     }
 
-
-
-
     static class CardViewHolder {
 
         TextView line1;
@@ -69,7 +66,6 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         CardViewHolder viewHolder;
 
         if (row == null) {
-
 
             LayoutInflater inflater = (LayoutInflater) this.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -115,7 +111,6 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         viewHolder.line4.setText(card.getLine4());
         viewHolder.line5.setText(card.getLine5());
         viewHolder.line6.setText(card.getLine6());
-
 
         return row;
 

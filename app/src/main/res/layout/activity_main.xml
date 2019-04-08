@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="gotopark.com.SAlotto.MainActivity">
@@ -18,10 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:background="@drawable/white_grey_border_bottom"
-            app:tabIndicatorHeight="10dp">
-
-
-        </android.support.design.widget.TabLayout>
+            app:tabIndicatorHeight="20dp" />
 
 
         <android.support.v4.view.ViewPager
@@ -34,17 +30,16 @@
             android:layout_alignParentLeft="true"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:ignore="NotSibling">
-
         </android.support.v4.view.ViewPager>
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/bottomBar"
             android:visibility="visible"
             ads:adUnitId="@string/banner_ad_unit_id"
-            app:adSize="SMART_BANNER" />
+            app:adSize="LARGE_BANNER" />
 
 
         <RelativeLayout
@@ -63,7 +58,6 @@
 
             </android.support.design.widget.BottomNavigationView>
         </RelativeLayout>
-
 
 
     </RelativeLayout>
