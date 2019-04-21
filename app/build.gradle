@@ -7,7 +7,7 @@ android {
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "gotopark.com.SAlotto"
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 28
         versionCode 67
         versionName "1.4.09"
@@ -23,8 +23,8 @@ android {
 }
 
 dependencies {
-    implementation 'org.parceler:parceler-api:1.1.6'
-    annotationProcessor 'org.parceler:parceler:1.1.6'
+    implementation 'org.parceler:parceler-api:1.1.9'
+    annotationProcessor 'org.parceler:parceler:1.1.9'
 }
 
 dependencies {
@@ -34,13 +34,14 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
-//    implementation 'com.google.android.gms:play-services-ads:17.2.0'
     implementation "com.github.hotchemi:android-rate:1.0.1"
     implementation 'org.jsoup:jsoup:1.10.3'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.jakewharton:butterknife:8.8.1'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation 'com.google.firebase:firebase-ads:17.2.0'
+    implementation 'gun0912.ted:tedadmobdialog:1.0.5'
+    implementation 'com.google.android.gms:play-services-ads:17.2.0'
+//    implementation 'com.google.firebase:firebase-ads:17.2.0'
 
 
 

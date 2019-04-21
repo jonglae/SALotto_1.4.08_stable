@@ -53,10 +53,19 @@ public class Tab1Fragment extends Fragment {
     private TextView pimgtext6;
 
 
+    private TextView WiseTxTWord;
+
+    private Random rand;
+    int count,primeWord;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment1_layout, container, false);
+
+        count = 0;
+        rand = new Random();
+        primeWord = rand.nextInt(13) + 4;
+
 
         text1 = (TextView) view.findViewById(R.id.textView);
 
@@ -87,6 +96,8 @@ public class Tab1Fragment extends Fragment {
         pimgtext5 = (TextView) view.findViewById(R.id.pimgtext5);
         pimgtext6 = (TextView) view.findViewById(R.id.pimgtext6);
 
+        WiseTxTWord = (TextView) view.findViewById(R.id.wisetext);
+
 
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         btnTEST2.setTextColor(Color.parseColor("#ffffff"));
@@ -96,9 +107,9 @@ public class Tab1Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
-                Random rand = new Random();
+
                 // 반복 회수 지정
-                int Times_Ran[] = {250, 350, 650, 850, 950, 1150};
+                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
                 // 반복 회수 끝
@@ -110,7 +121,7 @@ public class Tab1Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
-
+                        wiseWord();
                     }
 
                 }.start();
@@ -123,9 +134,9 @@ public class Tab1Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
-                Random rand = new Random();
+
                 // 반복 회수 지정
-                int Times_Ran[] = {250, 350, 650, 850, 950, 1150};
+                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
                 // 반복 회수 끝
@@ -137,7 +148,7 @@ public class Tab1Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
-
+                        wiseWord();
                     }
 
                 }.start();
@@ -271,6 +282,22 @@ public class Tab1Fragment extends Fragment {
 
 
     }
+
+    public void wiseWord(){
+
+        count = count + 1;
+//                        Log.e("============", count + "====" + primeWord);
+
+        if (count == primeWord) {
+            String saywords = BackProcessHandler.frontSay();
+            WiseTxTWord.setText(saywords);
+            count = 0;
+            primeWord = rand.nextInt(11) + 3;
+        }
+
+    }
+
+
 
     public void Gen2Number() {
 

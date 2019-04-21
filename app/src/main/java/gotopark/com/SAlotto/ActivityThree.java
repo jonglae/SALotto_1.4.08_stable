@@ -41,36 +41,36 @@ public class ActivityThree extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate (savedInstanceState);
-        setContentView (R.layout.activity_three);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_three);
 
-        listView = (ListView) findViewById (R.id.card_listView);
-        oneCardArrayAdapter = new OneCardArrayAdapter (getApplicationContext (), R.layout.list_item_card1);
-        listView.addHeaderView (new View (this));
-        listView.addFooterView (new View (this));
+        listView = (ListView) findViewById(R.id.card_listView);
+        oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
+        listView.addHeaderView(new View(this));
+        listView.addFooterView(new View(this));
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById (R.id.bottomNavView_Bar);
-        Menu menu = bottomNavigationView.getMenu ();
-        MenuItem menuItem = menu.getItem (3);
-        menuItem.setChecked (true);
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(3);
+        menuItem.setChecked(true);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener (new BottomNavigationView.OnNavigationItemSelectedListener () {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId ()) {
+                switch (item.getItemId()) {
                     case R.id.ic_arrow:
-                        Intent intent0 = new Intent (ActivityThree.this, MainActivity.class);
-                        startActivity (intent0);
+                        Intent intent0 = new Intent(ActivityThree.this, MainActivity.class);
+                        startActivity(intent0);
                         break;
 
                     case R.id.ic_android:
-                        Intent intent1 = new Intent (ActivityThree.this, ActivityOne.class);
-                        startActivity (intent1);
+                        Intent intent1 = new Intent(ActivityThree.this, ActivityOne.class);
+                        startActivity(intent1);
                         break;
 
                     case R.id.ic_books:
-                        Intent intent2 = new Intent (ActivityThree.this, ActivityTwo.class);
-                        startActivity (intent2);
+                        Intent intent2 = new Intent(ActivityThree.this, ActivityTwo.class);
+                        startActivity(intent2);
                         break;
 
                     case R.id.ic_center_focus:
@@ -78,68 +78,67 @@ public class ActivityThree extends AppCompatActivity {
                         break;
 
                     case R.id.ic_backup:
-                        Intent intent4 = new Intent (ActivityThree.this, ActivityFour.class);
-                        startActivity (intent4);
+                        Intent intent4 = new Intent(ActivityThree.this, ActivityFour.class);
+                        startActivity(intent4);
                         break;
                 }
                 return false;
             }
         });
 
-        Admob_is ();
+        Admob_is();
     }
 
 
     public void Admob_is() {
 
         // admob
-        AdView mAdView = (AdView) findViewById (R.id.adView);
-        MobileAds.initialize (getApplicationContext (),String.valueOf(R.string.unit_id));
-        AdRequest adRequest = new AdRequest.Builder ().build ();
-        mAdView.loadAd (adRequest);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.unit_id));
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onStart() {
-        super.onStart ();
+        super.onStart();
 
         Context context = this;
 
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService (Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         assert cm != null;
-        NetworkInfo activeNetwork = cm.getActiveNetworkInfo ();
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         if (activeNetwork != null) { // connected to the internet
-            if (activeNetwork.getType () == ConnectivityManager.TYPE_WIFI) {
+            if (activeNetwork.getType() == ConnectivityManager.TYPE_WIFI) {
                 // connected to wifi
-                Toast.makeText (context, activeNetwork.getTypeName (), Toast.LENGTH_SHORT).show ();
+                Toast.makeText(context, activeNetwork.getTypeName(), Toast.LENGTH_SHORT).show();
 
 
                 /** 와이 파이 인터넷 연결시 시도 */
-                XMLpase ();
+                XMLpase();
 
 
-            } else if (activeNetwork.getType () == ConnectivityManager.TYPE_MOBILE) {
+            } else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
                 // connected to the mobile provider's data plan
-                Toast.makeText (context, activeNetwork.getTypeName (), Toast.LENGTH_SHORT).show ();
+                Toast.makeText(context, activeNetwork.getTypeName(), Toast.LENGTH_SHORT).show();
 
                 /** 모바일 연결시 시도  */
-                XMLpase ();
+                XMLpase();
 
             }
 
-        } else
-
-        {
+        } else {
             /** 네트웍 문제 메세지 출력 */
-            String iInfo1 = "Network Error!";
-            String iInfo2 = "Please ON Wifi OR Mobile Network";
-            String iInfo3 = "Need Internet!!!";
+            String iInfo1 = getString(R.string.net_Info);
+            String iInfo2 = getString(R.string.net_Info1);
+            String iInfo3 = getString(R.string.net_Info2);
+            String iInfo4 = getString(R.string.net_Info3);
 
-            Card card = new Card (iInfo1, iInfo2, iInfo3, "^.^;;", "", "");
-            oneCardArrayAdapter.add (card);
-            listView.setAdapter (oneCardArrayAdapter);
+            Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, "", "");
+            oneCardArrayAdapter.add(card);
+            listView.setAdapter(oneCardArrayAdapter);
 
 
         }
@@ -150,11 +149,11 @@ public class ActivityThree extends AppCompatActivity {
 
     public void XMLpase() {
 
-        getSupportFragmentManager ()
-                .beginTransaction ()
-                .replace (R.id.rlContainer, RssFragment.newInstance (getString(R.string.FeedLink2)))
-                .addToBackStack (null)
-                .commit ();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.rlContainer, RssFragment.newInstance(getString(R.string.FeedLink2)))
+                .addToBackStack(null)
+                .commit();
     }
 
 

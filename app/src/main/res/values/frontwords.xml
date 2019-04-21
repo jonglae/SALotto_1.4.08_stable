@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="FrontItems">
+        <item>Think like a man of action and act like man of thought.</item>
+        <item>Courage is very important. Like a muscle, it is strengthened by use.</item>
+        <item>Life is the art of drawing sufficient conclusions from insufficient premises.</item>
+        <item>By doubting we come at the truth.</item>
+        <item>A man that hath no virtue in himself, ever envieth virtue in others.</item>
+        <item>When money speaks, the truth keeps silent.</item>
+        <item>Better the last smile than the first laughter.</item>
+        <item>In the morning of life, work; in the midday, give counsel; in the evening, pray.</item>
+        <item>Painless poverty is better than embittered wealth.</item>
+        <item>A poet is the painter of the soul.</item>
+        <item>Error is the discipline through which we advance.</item>
+        <item>Faith without deeds is useless.</item>
+        <item>Weak things united become strong.</item>
+        <item>We give advice, but we cannot give conduct.</item>
+        <item>It is only with the heart that one can see rightly; what is essential is invisible to the eye.</item>
+        <item>Only the person who has faith in himself is able to be faithful to others.</item>
+        <item>To marry is to halve your rights and double your duties.- Arthur Schopenhaur</item>
+        <item>He makes no friend who never made a foe.- Alfred, Lord Tennyson.</item>
+        <item>Common sense is the collection of prejudices acquired by age 18.- Albert Einstein.</item>
+        <item>Nothing is more despicable than respect based on fear.- Albert Camus.</item>
+        <item>Television has proved that people will look at anything rather than each other.- Ann Landers.</item>
+        <item>It is only with the heart that one can see rightly; what is essential is invisible to the eye.</item>
+        <item>The unleashed power of the atom has changed everything save our modes of thinking, and we thus drift toward unparalleled catastrophes.- Albert Einstein</item>
+        <item>Television has proved that people will look at anything rather than each other.- Ann Landers.</item>
+        <item>Love does not consist in gazing at each other, but in looking together in the same direction.- Antoine de Saint-Exupery</item>
+        <item>Business? It\'s quite simple. It\'s other people\'s money.- Alexandre Dumas.</item>
+        <item>I would as soon leave my son a curse as the almighty dollar.- Andrew Carnegie.</item>
+        <item>A great writer is, so to speak, a second government in his country. And for that reason no regime has ever loved great writers, only minor ones.- Alexander Solzhenitsyn.</item>
+        <item>You don\'t live in a world all alone. Your brothers are here too.- Albert Schweitzer </item>
+        <item>A hungry man is not a free man.- Adlai Stevenson.</item>
+        <item>To know is nothing at all; to imagine is everything.-Anatole France.</item>
+        <item> Truth is generally the best vindication against slander.- Abraham Lincoln.</item>
+        <item>The computer is only a fast idiot it has no imagination it cannot originate action. It is, and will remain, only a tool of man.- American Library Association\'s 1964 statement about the Univac.</item>
+        <item>It is my intention to present - through the medium of photography - intuitive observations of the natural world which may have meaning to the spectators..</item>
+        <item>America is a large, friendly dog in a very small room. Every time it wags its tail it knocks over a chair.- Arnold Toynbee.</item>
+        <item>The secret of business is to know something that nobody else knows.- Aristotle Onassis.</item>
+        <item>One man with courage makes a majority.- Andrew Jackson.</item>
+        <item>Television has a real problem. They have no page two.- Art Buchwald.</item>
+        <item>Man is born to live, not to prepare for life. Life itself, the phenomenon of life, the gift of life, is so breathtakingly serious!.- Boris Pasternak</item>
+        <item>Like all great travellers, I have seen more than I remember, and remember more than I have seen.- Benjamin Disraeli.</item>
+        <item>The magic of first love is our ignorance that it can ever end.- Benjamin Disraeli.</item>
+        <item>When men are employed, they are best contented.- Benjamin Franklin.</item>
+        <item>When she finally stopped conforming to the conventional picture of femininity she finally began to enjoy being a woman.- Betty Friedan.</item>
+        <item>Anything you\'re good at contributes to happiness.- Bertrand Russell.</item>
+        <item>Accurst be he that first invented war.- Christopher Marlowe.</item>
+        <item>Since a politician never believes what he says, he is surprised when others believe him.- Charles de Gaulle</item>
+        <item>A woman means by unselfishness chiefly taking trouble for others; a man means not giving trouble to others. Thus each sex regards the other as basically selfish.- C.S. Lewis.</item>
+        <item>Freedom is a system based on courage.- Charles Peguy.</item>
+        <item>Happiness is a warm puppy.- Charles M. Schulz.</item>
+        <item>If a man takes no thought about what is distant, he will find sorrow near at hand.- Confucius.</item>
+        <item>We are an intelligent species and the use of our intelligence quite properly gives us pleasure. In this respect the brain is like a muscle. When it is in use we feel very good. Understanding is joyous.- Carl Sagan.</item>
+        <item>Man with all his noble qualities…with his godlike intellect which has penetrated into the movements and constitution of the solar system…still bears in his bodily frame the indelible stamp of his lowly origin.- Charles Darwin.</item>
+        <item>You can learn a little from victory; you can learn everything from defeat.- Christy Mathewson.</item>
+        <item>In the country of the blind, the one-eyed man is king.- Desiderius Erasmus.</item>
+        <item>Old soldiers never die; They just fade away.- Douglas MacArthur.</item>
+        <item>If you want to be happy for a year, plant a garden; if you wnat to be happy for life, plant a tree.- English Proverb.</item>
+        <item>I was never less alone than when by myself.- Edward Gibbon.</item>
+        <item>The winds and waves are always on the side of the ablest navigators.- Edward Gibbon.</item>
+        <item>Only the person who has faith in himself is able to be faithful to others.- Erich Fromm.</item>
+        <item>There are two ways of spreading light: to be the candle or the mirror that reflects it.- Edith Wharton</item>
+        <item>We hold these truths to be self-evident, that all men and women are created equal.- Elizabeth Cady Stanton.</item>
+        <item>Two cheers for democracy: one because it admit variety and two because it permits criticism. Two cheers are quite enough: There is no occasion to give three.- E.M. Foster.</item>
+        <item>Democracy is the recurrent suspicion that more than half of the people are right more than half of the time.- E.B. White.</item>
+        <item> Life improves slowly and goes wrong fast, and only catastrophe is clearly visible.- Edward Teller.</item>
+        <item>Since when was genius found respectable?.- Elizabeth Barrett Browning</item>
+        <item>My own art is a negation of society, an affirmation of the individual, outside all rules and demands of society.-Emile Zola.</item>
+        <item>First you take a drink, then the drink takes a drink, then the drink takes you.- F. Scott Fitzgerald.</item>
+        <item>Television is chewing gum for the eyes.- Frank Lloyd Wright.</item>
+        <item>A politician divides mankind into two classes: tools and enemies.- Friedrich Nietzsche.</item>
+        <item>A sudden, bold, and unexpected question doth many times surprise a man and lay him open.- Francis Bacon.</item>
+        <item>If a man will begin with certainties, he shall end in doubt; but if he will be content to begin with doubts he shall end in certainties.- Francis Bacon.</item>
+        <item>The test of our progress is not whether we add more to the abundance of those who have much; it is whether we provide enough for those who have too little.- Franklin Delano Roosevelt.</item>
+        <item>There is nothing I love as much as a good fight.- Franklin Delano Roosevelt.</item>
+        <item>He who rises from prayer a better man, his prayer is answered.- George Meredith.</item>
+        <item>Who controls the past controls the future. Who controls the present controls the past.- George Orwell.</item>
+        <item>How wonderful opera would be if there were no singers.- Gioacchino Rossini.</item>
+        <item>Work banishes those three great evils, boredom, vice and poverty.- Goethe.</item>
+        <item>No human being can really understand another, and no one can arrange another\'s happiness.- Graham Greene.</item>
+        <item>One man who has a mind and knows it can always beat ten men who haven\'t and don\'t.- George Bernard Shaw.</item>
+        <item>We have no more right to consume happiness without producing it than to consume wealth without producing it.- George Bernard Shaw.</item>
+        <item>He knows nothing; he thinks he knows everything - that clearly points to a political career.- George Bernard Shaw.</item>
+        <item>Education has produced a vast population able to read but unable to distinguish what is worth reading.- George Macauley Trevelyan.</item>
+        <item>What experience and history teach is this - that people and government never have learned anything from history, or acted on principles deduced from it.- Gerog Wilhelm Friedrich Hegel.</item>
+        <item>The more you sweat in peace, the less you bleed in war.- Hyman Rickover.</item>
+        <item>A friend in power is a friend lost.- Henry Adams.</item>
+        <item>Knowledge of human nature is the beginning and end of political education.- Henry Brooks Adams.</item>
+        <item>Time is a great teacher, but unfortunately it kills all its pupils.- Hector Berlioz.</item>
+        <item>History is more or less bunk.- Henry Ford.</item>
+        <item>It is not the employer who pays wages - he only handles the money. It is the product that pays wages.- Henry Ford.</item>
+        <item>The mystery of language was revealed to me. I knew then that "w-a-t-e-r" meant the wonderful cool something that was flowing over my hand. That living word awakened my soul, gave it light, joy, set it free!- Hellen Keller.</item>
+        <item>Although the world is full of suffering, it is full also of the overcoming of it.- Helen Keller.</item>
+        <item>I think that we should be men first, and subjects afterward. It is not desirable to cultivate a respect for the law, so much as for the right.- Henry David Thoreau.</item>
+        <item>Every generation laughs at the old fashions but religiously follows the new.- Henry David Thoreau.</item>
+        <item>Hear that lonesome whippoorwill? He sounds too blue to fly. The midnight train is whining low, I\'m so lonesome I could cry.- Hank Williams.</item>
+        <item>It takes a great deal of history to produce a little literature.- Henry James.</item>
+        <item>Children and dogs are as necessary to the welfare of this country as Wall Street and the railroads.- Harry S. Truman.</item>
+        <item>You will kill 10 of our men, and we will kill one of yours, and in the end it will be you who tires of it.- Ho Chi Minh.</item>
+        <item>He who does not hope to win has already lost.- Jose Joaquin Olmedo.</item>
+        <item>Art produces ugly things which frequently become beautiful with time.- Jean Cocteau.</item>
+        <item>I met a lot of people in Europe, I even encountered myself.- James Baldwin.</item>
+        <item>The hardest work is to go idle.- Jewish proverb.</item>
+        <item>I want nothing to do with any religion concerned with keeping the masses satisfied to live in hunger, filth and ignorance.- Jawaharlal Nehru.</item>
+        <item>The richest peach is highest on the tree.- James Whitcomb Riley.</item>
+        <item>A writer must refuse to allow himself to be transformed into an institution. - Jean-Paul Sartre.</item>
+        <item>3 O\'clock is always too early for anything you want to do.- Jean-Paul Sartre.</item>
+        <item>The happiness of society is the end of government.- John Adams.</item>
+        <item>Liberty without learning is always in peril and learning without liberty is always in vain.- John F. Kennedy.</item>
+        <item>Ask not what your country can do for you; ask what you can do for your country.- John F. Kennedy.</item>
+        <item>Once you say you\'re going to settle for second, that\'s what happens to you in life, I find.- John F. Kennedy.</item>
+        <item>We\'re more popular than Jesus now. I don\'t know which will go first - rock \'n\' roll or Christianity.- John Lennon.</item>
+        <item>Intelligence recognizes what has happened. Genius recognizes what will happen.- John Ciardi.</item>
+        <item>I believe there are more instances of the abridgment of the freedom of the people by gradual and silent encroachments of those in power than by violent and sudden usurpations.-James Madison</item>
+        <item>A man of genius makes no mistakes. His errors are volitional and are portals of discovery.- James Joyce.</item>
+        <item>I love treason but hate a traitor.- Julius Caesar.</item>
+        <item>It is these well-fed long-haired men that I fear, but the pale and the hungry-looking.- Julius Caesar.</item>
+        <item>New opinions are always suspected, and usually opposed, without any other reason but because they are not already common.- John Locke.</item>
+        <item> We live as we dream - alone.- Joseph Conrad.</item>
+        <item>He who does anything because it is the custom makes no choice.- John Stuart Mill.</item>
+        <item>When commercial capital occupies a position of unquestioned ascendancy, it everywhere constitutes a system of plunder.- Karl Marx.</item>
+        <item>Life is very short. And there\'s no time for fussing and fighting, my friends.- the beatles.</item>
+        <item>Discussion is an Exchange of knowledge: argument an exchange of ignorance.- Robert Quillen.</item>
+        <item>The best and most beautiful things in the world cannot be seen of even touched.They must be felt with the heart.- Helen Keller.</item>
+        <item>Happiness is the perfume you cannot pour on others without getting a few drops on your self</item>
+        <item>True friendship is like sound health, the val ue of it is seldom known until it be lost. </item>
+        <item>Company in distress makes distress less.</item>
+        <item>Where there is a will there is a way.</item>
+        <item>Think of the end before you begin.</item>
+        <item>Carpe Diem!(Seize the day!) </item>
+        <item>Try hard, Try hard!</item>
+        <item>Ability is decided by one\'s own effort.</item>
+        <item>Faithfulness makes all things possible. </item>
+        <item>Do to others as you would be done by.</item>
+        <item>Faith without deeds is useless.</item>
+        <item>The regret after not doing something is bigger than that of doing something.</item>
+        <item>My dream don\'t have forgotten the promise I had until now!!</item>
+        <item>If  you don\'t walk today, you will have to run tomorrow.</item>
+        <item>Today, which was proved to be fruitless, is the day that the dead in the past was longing for.</item>
+        <item>Effort is the best way to realizing your dreams.</item>
+        <item>There is no best choice, but only a choice not to regret.</item>
+        <item>Impossible, it is a excuse, who does not endeavor.</item>
+        <item>For what is the best choice, for each individual is the highest it is possible for him to achieve.</item>
+        <item>Trial and error\' is a ladder that reaching for the truth.-Bright Sky-</item>
+        <item>Whenever you faced a big trouble, think about someone\'s sight always!</item>
+        <item>Thank you For Download Have a happy day every day -App publisher-</item>
+        <item>        </item>
+    </string-array>
+</resources>

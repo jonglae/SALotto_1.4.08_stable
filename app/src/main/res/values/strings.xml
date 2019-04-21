@@ -48,5 +48,15 @@
     <!--PowerBall Pluse-->
     <string name="JsoupLink4">"http://www.lotteryextreme.com/south_africa/powerballplus-results_history.php"</string>
 
+    //=====================================================================================================
 
+    <string name="scr_EXIT_Mesg1">Do you want to EXIT?</string>
+    <string name="scr_EXIT_Mesg2">AD Show after EXIT</string>
+    <string name="scr_EXIT_Mesg3">EXIT</string>
+
+    //network Error Message
+    <string name="net_Info1">Network Error!</string>
+    <string name="net_Info2">Please ON Wifi OR Mobile Network</string>
+    <string name="net_Info3">Need Internet!!!</string>
+    <string name="net_Info">Your Network is Somthing Wrong!!!</string>
 </resources>

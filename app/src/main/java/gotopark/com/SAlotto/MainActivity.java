@@ -10,7 +10,6 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -20,21 +19,19 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.Objects;
 
-import hotchemi.android.rate.AppRate;
-import hotchemi.android.rate.OnClickButtonListener;
-import hotchemi.android.rate.StoreType;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
+    BackProcessHandler backHandler;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        backHandler = new BackProcessHandler(this);
 
         SectionsPageAdapter mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
@@ -94,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Admob_is();
-        AnRate();
+        BackProcessHandler.AnRate();
 
     }
 
@@ -116,24 +113,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-    public void AnRate() {
-
-        AppRate.with(this)
-                .setStoreType(StoreType.GOOGLEPLAY) //default is Google, other option is Amazon
-                .setInstallDays(3) // default 10, 0 means install day.
-                .setLaunchTimes(3) // default 10 times.
-                .setRemindInterval(2) // default 1 day.
-                .setShowLaterButton(true) // default true.
-                .setDebug(false) // default false.
-                .setCancelable(false) // default false.
-                .setOnClickButtonListener(new OnClickButtonListener() { // callback listener.
-                    @Override
-                    public void onClickButton(int which) {
-                    }
-                }).monitor();
-
-        AppRate.showRateDialogIfMeetsConditions(this);
+    @Override
+    public void onBackPressed() {
+        BackProcessHandler.onBackPressed();
     }
-
-
 }

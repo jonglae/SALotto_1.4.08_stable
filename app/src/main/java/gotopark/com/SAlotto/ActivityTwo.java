@@ -129,19 +129,7 @@ public class ActivityTwo extends Activity {
                 SliceNumber = 7;
                 infoBallChoice = 0;
 
-                oneCardArrayAdapter.cardList.clear();
-
-                if (iInfo1 == "Network Error!") {
-
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                    NetPoor();
-
-
-                } else {
-
-                    new Lotto().execute();
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                }
+                netcheckMesg();
 
             }
         });
@@ -157,19 +145,7 @@ public class ActivityTwo extends Activity {
                 SliceNumber = 7;
                 infoBallChoice = 0;
 
-                oneCardArrayAdapter.cardList.clear();
-
-
-                if (iInfo1 == "Network Error!") {
-
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                    NetPoor();
-
-                } else {
-
-                    new Lotto().execute();
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                }
+                netcheckMesg();
 
             }
         });
@@ -185,19 +161,7 @@ public class ActivityTwo extends Activity {
                 SliceNumber = 6;
                 infoBallChoice = 1;
 
-                oneCardArrayAdapter.cardList.clear();
-
-                if (iInfo1 == "Network Error!") {
-
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                    NetPoor();
-
-
-                } else {
-
-                    new Lotto().execute();
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                }
+                netcheckMesg();
 
             }
         });
@@ -213,23 +177,30 @@ public class ActivityTwo extends Activity {
                 SliceNumber = 6;
                 infoBallChoice = 1;
 
-                oneCardArrayAdapter.cardList.clear();
-                if (iInfo1 == "Network Error!") {
-
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                    NetPoor();
-
-
-                } else {
-
-                    new Lotto().execute();
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                }
+                netcheckMesg();
 
             }
         });
 
     }
+
+
+    public void netcheckMesg(){
+        oneCardArrayAdapter.cardList.clear();
+        if (iInfo1 == "Network Error!") {
+
+            oneCardArrayAdapter.notifyDataSetChanged();
+            NetPoor();
+
+
+        } else {
+
+            new Lotto().execute();
+            oneCardArrayAdapter.notifyDataSetChanged();
+        }
+
+    }
+
 
     public void Admob_is() {
 
@@ -259,7 +230,7 @@ public class ActivityTwo extends Activity {
 
 
                 /** 와이 파이 인터넷 연결시 시도 */
-                InfoMessage();
+                wiseWord();
 
                 Admob_is();
 
@@ -287,13 +258,7 @@ public class ActivityTwo extends Activity {
 
         for (int i = 0; i < 3; i++) {
 
-            iInfo1 = "Network Error!";
-            String iInfo2 = "Please ON Wifi OR Mobile Network";
-            String iInfo3 = "Need Internet!!!";
-
-            Card card = new Card(iInfo1, iInfo2, iInfo3, "^.^;;", "", "");
-            oneCardArrayAdapter.add(card);
-            listView.setAdapter(oneCardArrayAdapter);
+            InfoMessage();
 
         }
 
@@ -301,9 +266,10 @@ public class ActivityTwo extends Activity {
 
     private void InfoMessage() {
 
-        String iInfo1 = "SA Lotto Past Winning Numbers";
-        String iInfo2 = "Please touch the button under";
-        String iInfo3 = "Good luck for you !!!";
+        String iInfo1 = getString(R.string.net_Info);
+        String iInfo2 = getString(R.string.net_Info1);
+        String iInfo3 = getString(R.string.net_Info2);
+
 
         Card card = new Card(iInfo1, "", iInfo2, "", iInfo3, "");
         oneCardArrayAdapter.add(card);
@@ -313,6 +279,19 @@ public class ActivityTwo extends Activity {
 
 
     }
+
+
+    private void wiseWord() {
+
+        String iInfo = "SA Lotto Past Winning Numbers";
+
+        String saywords = BackProcessHandler.frontSay();
+        Card card = new Card("", "", iInfo, "", saywords, "");
+
+        oneCardArrayAdapter.add(card);
+        listView.setAdapter(oneCardArrayAdapter);
+    }
+
 
 
     @SuppressLint("StaticFieldLeak")
@@ -425,17 +404,7 @@ public class ActivityTwo extends Activity {
 
                 for (int i = 0; i < 3; i++) {
 
-                    String iInfo1 = "Network Error!";
-                    String iInfo2 = "The network connection is poor.";
-                    String iInfo3 = "Try again later!!!";
-                    String iInfo4 = "If you To check your Lottery Number";
-                    String iInfo5 = "Connect to the Internet";
-
-
-                    Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, iInfo5, "");
-                    oneCardArrayAdapter.add(card);
-                    oneCardArrayAdapter.notifyDataSetChanged();
-                    listView.setAdapter(oneCardArrayAdapter);
+                    InfoMessage();
 
                 }
             }
