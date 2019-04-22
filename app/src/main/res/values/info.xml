@@ -10,4 +10,13 @@
     <string name="two_btn2">Lotto\nPlus</string>
     <string name="two_btn3">PowerBall</string>
     <string name="two_btn4">PowerBall\nPlus</string>
+
+    <string-array name="active_one">
+        <item>Lotto</item>
+        <item>Lotto Plus</item>
+        <item>Lotto Plus 2</item>
+        <item>Daily Lotto</item>
+        <item>Powerball</item>
+        <item>Powerball Plus</item>
+    </string-array>
 </resources>
