@@ -22,10 +22,13 @@
     <string name="populationlabel">"Population : "</string>
 
     <string name="FeedLink1">http://mdbp.org/sa-news/feed/</string>
+    <string name="FeedLink2">http://feeds.bbci.co.uk/news/world/africa/rss.xml</string>
+    <string name="FeedLink3">https://twitrss.me/twitter_user_to_rss/?user=sa_lottery</string>
+
     <string name="active_one">http://www.lotteryextreme.com/south_africa/</string>
 
     <!--<string name="FeedLink2">"http://feeds.news24.com/articles/news24/SouthAfrica/rss"</string>-->
-    <string name="FeedLink2">"http://feeds.bbci.co.uk/news/world/africa/rss.xml"</string>
+
 
     <string name="banner_ad_unit_id">ca-app-pub-5187489598351901/5126781367</string>
     <string name="banner_ad_unit_id2">ca-app-pub-5187489598351901/3193030399</string>
