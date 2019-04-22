@@ -1,5 +1,7 @@
 package gotopark.com.SAlotto.module;
 
+import org.jsoup.select.Elements;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -40,5 +42,13 @@ public class randomNum {
         return num;
 
 
+    }
+
+    public String[] loopfor(Elements input1,int j) {
+        String[] pbnum = new String[input1.size()];
+        for (int i = 0; i < input1.size(); i++) {
+            pbnum[i] = input1.get(i).text().substring(j);
+        }
+        return pbnum;
     }
 }

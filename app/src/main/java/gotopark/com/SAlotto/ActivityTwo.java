@@ -388,8 +388,9 @@ public class ActivityTwo extends Activity {
 
                 }
 
+                String saywords = BackProcessHandler.frontSay();
 
-                Card card = new Card("Be the happy rich", "* * *Congratulation* * *", "", "", "", "(EOF)");
+                Card card = new Card("Be the happy rich", saywords, "", "", "", "(EOF)");
                 oneCardArrayAdapter.add(card);
 
                 Card card2 = new Card("", "", "", "", "", "");

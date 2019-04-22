@@ -31,6 +31,7 @@ import java.io.IOException;
 
 import gotopark.com.SAlotto.listview.Card;
 import gotopark.com.SAlotto.listview.OneCardArrayAdapter;
+import gotopark.com.SAlotto.module.randomNum;
 
 import static java.lang.String.valueOf;
 
@@ -145,9 +146,9 @@ public class ActivityOne extends Activity {
 
             for (int i = 0; i < 3; i++) {
 
-                String iInfo1 = "Network Error!";
-                String iInfo2 = "Please ON Wifi OR Mobile Network";
-                String iInfo3 = "Need Internet!!!";
+                String iInfo1 = getString(R.string.net_Info);
+                String iInfo2 = getString(R.string.net_Info1);
+                String iInfo3 = getString(R.string.net_Info2);
 
                 Card card = new Card(iInfo1, iInfo2, iInfo3, "^.^;;", "", "");
                 oneCardArrayAdapter.add(card);
@@ -218,20 +219,13 @@ public class ActivityOne extends Activity {
 
             if (winperson4 != null) {
 
-                String[] pbnum1 = new String[winperson1.size()];
-                for (int i = 0; i < winperson1.size(); i++) {
-                    pbnum1[i] = winperson1.get(i).text().substring(5);
-                }
+                randomNum rand = new randomNum();
 
-                String[] pbnum2 = new String[winperson2.size()];
-                for (int i = 0; i < winperson2.size(); i++) {
-                    pbnum2[i] = winperson2.get(i).text().substring(1);
-                }
 
-                String[] pbnum3 = new String[winperson3.size()];
-                for (int i = 0; i < winperson3.size(); i++) {
-                    pbnum3[i] = winperson3.get(i).text();
-                }
+
+                String[] pbnum1 = rand.loopfor(winperson1,5);
+                String[] pbnum2 = rand.loopfor(winperson2,1);
+                String[] pbnum3 = rand.loopfor(winperson3,0);
 
 
                 String[] Next1 = new String[pbnum3.length];
@@ -273,6 +267,9 @@ public class ActivityOne extends Activity {
 
                 Card card2 = new Card("Wise Word", saywords, "", "", "", "");
                 oneCardArrayAdapter.add(card2);
+
+                Card card3 = new Card("", "", "", "", "", "");
+                oneCardArrayAdapter.add(card3);
 
                 mProgressDialog.dismiss();
                 listView.setAdapter(oneCardArrayAdapter);
