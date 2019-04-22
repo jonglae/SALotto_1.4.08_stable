@@ -29,7 +29,7 @@ public class Tab1Fragment extends Fragment {
     private static final String TAG = "Tab1Fragment";
     private String ctextR;
 
-    private TextView text1;
+    private TextView text1,wisetext1;
 
     private TextView limgtext1;
     private TextView limgtext2;
@@ -55,8 +55,10 @@ public class Tab1Fragment extends Fragment {
 
     private TextView WiseTxTWord;
 
-    private Random rand;
+    public Random rand;
     int count,primeWord;
+
+    @SuppressLint("CutPasteId")
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -67,7 +69,7 @@ public class Tab1Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
 
-        text1 = (TextView) view.findViewById(R.id.textView);
+        wisetext1 = (TextView) view.findViewById(R.id.wisetext);
 
 
         Button btnTEST = (Button) view.findViewById(R.id.btnTEST);
@@ -95,8 +97,6 @@ public class Tab1Fragment extends Fragment {
         pimgtext4 = (TextView) view.findViewById(R.id.pimgtext4);
         pimgtext5 = (TextView) view.findViewById(R.id.pimgtext5);
         pimgtext6 = (TextView) view.findViewById(R.id.pimgtext6);
-
-        WiseTxTWord = (TextView) view.findViewById(R.id.wisetext);
 
 
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
@@ -290,7 +290,7 @@ public class Tab1Fragment extends Fragment {
 
         if (count == primeWord) {
             String saywords = BackProcessHandler.frontSay();
-            WiseTxTWord.setText(saywords);
+            wisetext1.setText(saywords);
             count = 0;
             primeWord = rand.nextInt(11) + 3;
         }

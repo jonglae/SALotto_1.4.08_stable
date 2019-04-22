@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
                 android:background="@color/frag3"
                 android:layout_width="match_parent"
@@ -8,7 +9,7 @@
     >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/wisetext3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/F4MIV6"
@@ -345,18 +346,20 @@
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded" />
 
     <TextView
         android:id="@+id/wisetext"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/button3"
-        android:background="#1D1822"
-        android:text=""
-        android:textColor="#FFFFFFFF"
+        android:background="#3F354B"
+        android:gravity="center_vertical"
+        android:text="Wise Word"
+        android:textColor="@color/white"
         android:textSize="12sp"
         android:textStyle="bold|italic"
-        android:gravity="center_vertical"/>
+        tools:ignore="DuplicateIds,HardcodedText" />
 
 </RelativeLayout>

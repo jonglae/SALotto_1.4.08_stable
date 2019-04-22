@@ -9,6 +9,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,7 +29,6 @@ public class Tab3Fragment extends Fragment {
 
     public String ctextR;
 
-    TextView text1;
 
     TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
     TextView F2TV1, F2TV2, F2TV3, F2TV4, F2TV5, F2TV6;
@@ -48,14 +48,24 @@ public class Tab3Fragment extends Fragment {
     int[] rednum4 = new int[0];
     int[] rednum5 = new int[0];
 
+    private Random rand;
+    int count, primeWord;
+    TextView text1;
+    public TextView wisetext1;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment3_layout, container, false);
 
+        count = 0;
+        rand = new Random();
+        primeWord = rand.nextInt(13) + 4;
+
+
         Button btnTEST = (Button) view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
-        text1 = (TextView) view.findViewById(R.id.textView);
+
 
 
         F1TV1 = (TextView) view.findViewById(R.id.F1TV1);
@@ -95,6 +105,8 @@ public class Tab3Fragment extends Fragment {
 
         Button btnSHARE = (Button) view.findViewById(R.id.button);
 
+        wisetext1 = (TextView) view.findViewById(R.id.wisetext3);
+
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -102,7 +114,7 @@ public class Tab3Fragment extends Fragment {
 
                 Random rand = new Random();
                 // 반복 회수 지정
-                int Times_Ran[] = {250, 350, 650, 850, 950, 1150};
+                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
                 // 반복 회수 끝
@@ -114,6 +126,7 @@ public class Tab3Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
+                        wiseWord();
 
                     }
 
@@ -210,6 +223,20 @@ public class Tab3Fragment extends Fragment {
 
     }
 
+    public void wiseWord() {
+
+        count = count + 1;
+        Log.e("============", count + "====" + primeWord);
+
+        if (count == primeWord) {
+            String saywords = BackProcessHandler.frontSay();
+
+            wisetext1.setText(saywords);
+            count = 0;
+            primeWord = rand.nextInt(11) + 3;
+        }
+
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     public void GenNumber() {

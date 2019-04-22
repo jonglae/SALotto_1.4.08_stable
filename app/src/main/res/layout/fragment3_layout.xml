@@ -1,31 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
                 android:background="@color/frag2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/text_black"
-        android:textStyle="bold"
-        app:fontFamily="sans-serif" />
-
     <Button
         android:id="@+id/btnTEST"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="10dp"
         android:background="@drawable/ripple_button2"
         android:shadowColor="@android:color/black"
         android:shadowDx="5"
@@ -699,10 +688,10 @@
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_height="40dp"
         android:layout_below="@+id/BallFrame5"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
         android:layout_marginTop="5dp"
         android:background="@drawable/ripple_share2"
         android:shadowColor="@android:color/black"
@@ -713,6 +702,20 @@
         android:textAlignment="center"
         android:textColor="@android:color/holo_blue_bright"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="RtlHardcoded" />
 
+    <TextView
+        android:id="@+id/wisetext3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/button"
+        android:layout_marginTop="0dp"
+        android:background="#014663"
+        android:gravity="center_vertical"
+        android:text="Wise Word"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        tools:ignore="DuplicateIds,HardcodedText" />
 </RelativeLayout>

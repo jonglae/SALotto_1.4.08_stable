@@ -99,7 +99,7 @@ public class ActivityFour extends AppCompatActivity {
         });
 
 
-        text1.setTextSize (TypedValue.COMPLEX_UNIT_SP, 20);
+        text1.setTextSize (TypedValue.COMPLEX_UNIT_SP, 18);
         text1.setTextColor (Color.parseColor ("#ffffff"));
         text2.setTextColor (Color.parseColor ("#ffffff"));
         text4.setTextColor (Color.parseColor ("#000000"));
@@ -112,10 +112,10 @@ public class ActivityFour extends AppCompatActivity {
 
         text1.append (getString (R.string.app_info1));
 
-        text2.setTextSize (TypedValue.COMPLEX_UNIT_SP, 18);
+        text2.setTextSize (TypedValue.COMPLEX_UNIT_SP, 16);
         text2.setText (getString (R.string.app_info2));
 
-        text4.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);
+        text4.setTextSize(TypedValue.COMPLEX_UNIT_SP,16);
         text4.setText(getString(R.string.app_info4)+"\n\n\n");
 
         text4.setTextSize(TypedValue.COMPLEX_UNIT_SP,18);

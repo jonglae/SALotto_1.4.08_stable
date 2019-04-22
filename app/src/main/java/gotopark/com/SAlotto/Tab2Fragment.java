@@ -25,9 +25,12 @@ import gotopark.com.SAlotto.module.randomNum;
 
 public class Tab2Fragment extends Fragment {
 
+
+
     private static final String TAG = "Tab2Fragment";
     public String ctextR;
     TextView text1;
+    TextView wisetext1;
 
     TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
     TextView F2TV1, F2TV2, F2TV3, F2TV4, F2TV5, F2TV6;
@@ -49,17 +52,24 @@ public class Tab2Fragment extends Fragment {
     int[] Lot1num4 = new int[6];
     int[] Lot1num5 = new int[6];
 
+    private Random rand;
+    int count,primeWord;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment2_layout, container, false);
 
+        count = 0;
+        rand = new Random();
+        primeWord = rand.nextInt(13) + 4;
+
+
         Button btnTEST = (Button) view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         Button btnSHARE = (Button) view.findViewById(R.id.button2);
 
-        text1 = (TextView) view.findViewById(R.id.textView);
+        wisetext1 = (TextView) view.findViewById(R.id.wisetext2);
 
 
         F1TV1 = (TextView) view.findViewById(R.id.F1TV1);
@@ -134,14 +144,12 @@ public class Tab2Fragment extends Fragment {
 
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
-            @SuppressWarnings("MalformedFormatString")
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
 
-                Random rand = new Random();
-                // 반복 회수 지정
-                int Times_Ran[] = {250, 350, 650, 850, 950, 1150};
+               // 반복 회수 지정
+                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
                 // 반복 회수 끝
@@ -153,7 +161,7 @@ public class Tab2Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
-
+                        wiseWord();
                     }
 
                 }.start();
@@ -240,6 +248,21 @@ public class Tab2Fragment extends Fragment {
         ctextR = ctextR + "\n\n" + App_links1 + "\n" + App_Share + "★Good Luck★";
 
     }
+
+    public void wiseWord(){
+
+        count = count + 1;
+//                        Log.e("============", count + "====" + primeWord);
+
+        if (count == primeWord) {
+            String saywords = BackProcessHandler.frontSay();
+            wisetext1.setText(saywords);
+            count = 0;
+            primeWord = rand.nextInt(11) + 3;
+        }
+
+    }
+
 
     public void GenNumber() {
 
