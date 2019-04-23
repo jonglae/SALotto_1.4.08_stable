@@ -44,15 +44,4 @@ public class randomNum {
 
     }
 
-    public String[] loopfor(Elements input1,int j) {
-        if (input1.size() == 5) {
-            String[] pbnum = new String[input1.size()+1];
-        }
-            String[] pbnum = new String[input1.size()];
-
-        for (int i = 0; i < input1.size(); i++) {
-            pbnum[i] = input1.get(i).text().substring(j);
-        }
-        return pbnum;
-    }
 }

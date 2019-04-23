@@ -251,8 +251,10 @@ public class ActivityOne extends Activity {
                     // 로또 번호 보너스 번호에 + 집어 넣기
                     pbnum3[i] = null;
                     pbnum3[i] = Next1[i] + " + " + Next2[i];
-                    if(i == 3){
 
+
+                    if(i == 3){
+                        // 파워볼 + 제거
                         pbnum3[i] =pbnum3[i].replace("+","");
                     }
 
