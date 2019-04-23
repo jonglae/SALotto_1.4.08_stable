@@ -65,82 +65,82 @@ public class Tab2Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
 
-        Button btnTEST = (Button) view.findViewById(R.id.btnTEST);
+        Button btnTEST = view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
-        Button btnSHARE = (Button) view.findViewById(R.id.button2);
+        Button btnSHARE = view.findViewById(R.id.button2);
 
-        wisetext1 = (TextView) view.findViewById(R.id.wisetext2);
+        wisetext1 = view.findViewById(R.id.wisetext2);
 
 
-        F1TV1 = (TextView) view.findViewById(R.id.F1TV1);
-        F1TV2 = (TextView) view.findViewById(R.id.F1TV2);
-        F1TV3 = (TextView) view.findViewById(R.id.F1TV3);
-        F1TV4 = (TextView) view.findViewById(R.id.F1TV4);
-        F1TV5 = (TextView) view.findViewById(R.id.F1TV5);
-        F1TV6 = (TextView) view.findViewById(R.id.F1TV6);
+        F1TV1 = view.findViewById(R.id.F1TV1);
+        F1TV2 = view.findViewById(R.id.F1TV2);
+        F1TV3 = view.findViewById(R.id.F1TV3);
+        F1TV4 = view.findViewById(R.id.F1TV4);
+        F1TV5 = view.findViewById(R.id.F1TV5);
+        F1TV6 = view.findViewById(R.id.F1TV6);
 
-        F2TV1 = (TextView) view.findViewById(R.id.F2TV1);
-        F2TV2 = (TextView) view.findViewById(R.id.F2TV2);
-        F2TV3 = (TextView) view.findViewById(R.id.F2TV3);
-        F2TV4 = (TextView) view.findViewById(R.id.F2TV4);
-        F2TV5 = (TextView) view.findViewById(R.id.F2TV5);
-        F2TV6 = (TextView) view.findViewById(R.id.F2TV6);
+        F2TV1 = view.findViewById(R.id.F2TV1);
+        F2TV2 = view.findViewById(R.id.F2TV2);
+        F2TV3 = view.findViewById(R.id.F2TV3);
+        F2TV4 = view.findViewById(R.id.F2TV4);
+        F2TV5 = view.findViewById(R.id.F2TV5);
+        F2TV6 = view.findViewById(R.id.F2TV6);
 
-        F3TV1 = (TextView) view.findViewById(R.id.F3TV1);
-        F3TV2 = (TextView) view.findViewById(R.id.F3TV2);
-        F3TV3 = (TextView) view.findViewById(R.id.F3TV3);
-        F3TV4 = (TextView) view.findViewById(R.id.F3TV4);
-        F3TV5 = (TextView) view.findViewById(R.id.F3TV5);
-        F3TV6 = (TextView) view.findViewById(R.id.F3TV6);
+        F3TV1 = view.findViewById(R.id.F3TV1);
+        F3TV2 = view.findViewById(R.id.F3TV2);
+        F3TV3 = view.findViewById(R.id.F3TV3);
+        F3TV4 = view.findViewById(R.id.F3TV4);
+        F3TV5 = view.findViewById(R.id.F3TV5);
+        F3TV6 = view.findViewById(R.id.F3TV6);
 
-        F4TV1 = (TextView) view.findViewById(R.id.F4TV1);
-        F4TV2 = (TextView) view.findViewById(R.id.F4TV2);
-        F4TV3 = (TextView) view.findViewById(R.id.F4TV3);
-        F4TV4 = (TextView) view.findViewById(R.id.F4TV4);
-        F4TV5 = (TextView) view.findViewById(R.id.F4TV5);
-        F4TV6 = (TextView) view.findViewById(R.id.F4TV6);
+        F4TV1 = view.findViewById(R.id.F4TV1);
+        F4TV2 = view.findViewById(R.id.F4TV2);
+        F4TV3 = view.findViewById(R.id.F4TV3);
+        F4TV4 = view.findViewById(R.id.F4TV4);
+        F4TV5 = view.findViewById(R.id.F4TV5);
+        F4TV6 = view.findViewById(R.id.F4TV6);
 
-        F5TV1 = (TextView) view.findViewById(R.id.F5TV1);
-        F5TV2 = (TextView) view.findViewById(R.id.F5TV2);
-        F5TV3 = (TextView) view.findViewById(R.id.F5TV3);
-        F5TV4 = (TextView) view.findViewById(R.id.F5TV4);
-        F5TV5 = (TextView) view.findViewById(R.id.F5TV5);
-        F5TV6 = (TextView) view.findViewById(R.id.F5TV6);
+        F5TV1 = view.findViewById(R.id.F5TV1);
+        F5TV2 = view.findViewById(R.id.F5TV2);
+        F5TV3 = view.findViewById(R.id.F5TV3);
+        F5TV4 = view.findViewById(R.id.F5TV4);
+        F5TV5 = view.findViewById(R.id.F5TV5);
+        F5TV6 = view.findViewById(R.id.F5TV6);
 
-        F1MIV1 = (ImageView) view.findViewById(R.id.F1MIV1);
-        F1MIV2 = (ImageView) view.findViewById(R.id.F1MIV2);
-        F1MIV3 = (ImageView) view.findViewById(R.id.F1MIV3);
-        F1MIV4 = (ImageView) view.findViewById(R.id.F1MIV4);
-        F1MIV5 = (ImageView) view.findViewById(R.id.F1MIV5);
-        F1MIV6 = (ImageView) view.findViewById(R.id.F1MIV6);
+        F1MIV1 = view.findViewById(R.id.F1MIV1);
+        F1MIV2 = view.findViewById(R.id.F1MIV2);
+        F1MIV3 = view.findViewById(R.id.F1MIV3);
+        F1MIV4 = view.findViewById(R.id.F1MIV4);
+        F1MIV5 = view.findViewById(R.id.F1MIV5);
+        F1MIV6 = view.findViewById(R.id.F1MIV6);
 
-        F2MIV1 = (ImageView) view.findViewById(R.id.F2MIV1);
-        F2MIV2 = (ImageView) view.findViewById(R.id.F2MIV2);
-        F2MIV3 = (ImageView) view.findViewById(R.id.F2MIV3);
-        F2MIV4 = (ImageView) view.findViewById(R.id.F2MIV4);
-        F2MIV5 = (ImageView) view.findViewById(R.id.F2MIV5);
-        F2MIV6 = (ImageView) view.findViewById(R.id.F2MIV6);
+        F2MIV1 = view.findViewById(R.id.F2MIV1);
+        F2MIV2 = view.findViewById(R.id.F2MIV2);
+        F2MIV3 = view.findViewById(R.id.F2MIV3);
+        F2MIV4 = view.findViewById(R.id.F2MIV4);
+        F2MIV5 = view.findViewById(R.id.F2MIV5);
+        F2MIV6 = view.findViewById(R.id.F2MIV6);
 
-        F3MIV1 = (ImageView) view.findViewById(R.id.F3MIV1);
-        F3MIV2 = (ImageView) view.findViewById(R.id.F3MIV2);
-        F3MIV3 = (ImageView) view.findViewById(R.id.F3MIV3);
-        F3MIV4 = (ImageView) view.findViewById(R.id.F3MIV4);
-        F3MIV5 = (ImageView) view.findViewById(R.id.F3MIV5);
-        F3MIV6 = (ImageView) view.findViewById(R.id.F3MIV6);
+        F3MIV1 = view.findViewById(R.id.F3MIV1);
+        F3MIV2 = view.findViewById(R.id.F3MIV2);
+        F3MIV3 = view.findViewById(R.id.F3MIV3);
+        F3MIV4 = view.findViewById(R.id.F3MIV4);
+        F3MIV5 = view.findViewById(R.id.F3MIV5);
+        F3MIV6 = view.findViewById(R.id.F3MIV6);
 
-        F4MIV1 = (ImageView) view.findViewById(R.id.F4MIV1);
-        F4MIV2 = (ImageView) view.findViewById(R.id.F4MIV2);
-        F4MIV3 = (ImageView) view.findViewById(R.id.F4MIV3);
-        F4MIV4 = (ImageView) view.findViewById(R.id.F4MIV4);
-        F4MIV5 = (ImageView) view.findViewById(R.id.F4MIV5);
-        F4MIV6 = (ImageView) view.findViewById(R.id.F4MIV6);
+        F4MIV1 = view.findViewById(R.id.F4MIV1);
+        F4MIV2 = view.findViewById(R.id.F4MIV2);
+        F4MIV3 = view.findViewById(R.id.F4MIV3);
+        F4MIV4 = view.findViewById(R.id.F4MIV4);
+        F4MIV5 = view.findViewById(R.id.F4MIV5);
+        F4MIV6 = view.findViewById(R.id.F4MIV6);
 
-        F5MIV1 = (ImageView) view.findViewById(R.id.F5MIV1);
-        F5MIV2 = (ImageView) view.findViewById(R.id.F5MIV2);
-        F5MIV3 = (ImageView) view.findViewById(R.id.F5MIV3);
-        F5MIV4 = (ImageView) view.findViewById(R.id.F5MIV4);
-        F5MIV5 = (ImageView) view.findViewById(R.id.F5MIV5);
-        F5MIV6 = (ImageView) view.findViewById(R.id.F5MIV6);
+        F5MIV1 = view.findViewById(R.id.F5MIV1);
+        F5MIV2 = view.findViewById(R.id.F5MIV2);
+        F5MIV3 = view.findViewById(R.id.F5MIV3);
+        F5MIV4 = view.findViewById(R.id.F5MIV4);
+        F5MIV5 = view.findViewById(R.id.F5MIV5);
+        F5MIV6 = view.findViewById(R.id.F5MIV6);
 
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
@@ -181,7 +181,7 @@ public class Tab2Fragment extends Fragment {
                 if (check1 != null && check1.equals("")) {
 
                     showGuide(getString(R.string.tab_info1));
-                    text1.setText(getString(R.string.tab_info1));
+                    wisetext1.setText(getString(R.string.tab_info1));
 
                     //안내 문구
 

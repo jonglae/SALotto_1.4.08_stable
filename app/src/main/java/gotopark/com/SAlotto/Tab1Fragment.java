@@ -69,34 +69,34 @@ public class Tab1Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
 
-        wisetext1 = (TextView) view.findViewById(R.id.wisetext);
+        wisetext1 = view.findViewById(R.id.wisetext);
 
 
-        Button btnTEST = (Button) view.findViewById(R.id.btnTEST);
-        Button btnTEST2 = (Button) view.findViewById(R.id.btnTEST2);
-        Button btnSHARE = (Button) view.findViewById(R.id.button3);
+        Button btnTEST = view.findViewById(R.id.btnTEST);
+        Button btnTEST2 = view.findViewById(R.id.btnTEST2);
+        Button btnSHARE = view.findViewById(R.id.button3);
 
-        limg1 = (ImageView) view.findViewById(R.id.limg1);
-        limg2 = (ImageView) view.findViewById(R.id.limg2);
-        limg3 = (ImageView) view.findViewById(R.id.limg3);
-        limg4 = (ImageView) view.findViewById(R.id.limg4);
-        limg5 = (ImageView) view.findViewById(R.id.limg5);
-        limg6 = (ImageView) view.findViewById(R.id.limg6);
+        limg1 = view.findViewById(R.id.limg1);
+        limg2 = view.findViewById(R.id.limg2);
+        limg3 = view.findViewById(R.id.limg3);
+        limg4 = view.findViewById(R.id.limg4);
+        limg5 = view.findViewById(R.id.limg5);
+        limg6 = view.findViewById(R.id.limg6);
 
-        limgtext1 = (TextView) view.findViewById(R.id.limgtext1);
-        limgtext2 = (TextView) view.findViewById(R.id.limgtext2);
-        limgtext3 = (TextView) view.findViewById(R.id.limgtext3);
-        limgtext4 = (TextView) view.findViewById(R.id.limgtext4);
-        limgtext5 = (TextView) view.findViewById(R.id.limgtext5);
-        limgtext6 = (TextView) view.findViewById(R.id.limgtext6);
+        limgtext1 = view.findViewById(R.id.limgtext1);
+        limgtext2 = view.findViewById(R.id.limgtext2);
+        limgtext3 = view.findViewById(R.id.limgtext3);
+        limgtext4 = view.findViewById(R.id.limgtext4);
+        limgtext5 = view.findViewById(R.id.limgtext5);
+        limgtext6 = view.findViewById(R.id.limgtext6);
 
 
-        pimgtext1 = (TextView) view.findViewById(R.id.pimgtext1);
-        pimgtext2 = (TextView) view.findViewById(R.id.pimgtext2);
-        pimgtext3 = (TextView) view.findViewById(R.id.pimgtext3);
-        pimgtext4 = (TextView) view.findViewById(R.id.pimgtext4);
-        pimgtext5 = (TextView) view.findViewById(R.id.pimgtext5);
-        pimgtext6 = (TextView) view.findViewById(R.id.pimgtext6);
+        pimgtext1 = view.findViewById(R.id.pimgtext1);
+        pimgtext2 = view.findViewById(R.id.pimgtext2);
+        pimgtext3 = view.findViewById(R.id.pimgtext3);
+        pimgtext4 = view.findViewById(R.id.pimgtext4);
+        pimgtext5 = view.findViewById(R.id.pimgtext5);
+        pimgtext6 = view.findViewById(R.id.pimgtext6);
 
 
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
@@ -173,7 +173,7 @@ public class Tab1Fragment extends Fragment {
 
                     //안내 문구
                     showGuide(getString(R.string.tab_info1));
-                    text1.setText(getString(R.string.tab_info1));
+                    wisetext1.setText(getString(R.string.tab_info1));
 
 
                 } else {
@@ -232,7 +232,6 @@ public class Tab1Fragment extends Fragment {
         cptext6 = pimgtext6.getText().toString();
 
         //안내 문구 삭제
-        text1.setText("");
 
 
         ctextR = App_Share;

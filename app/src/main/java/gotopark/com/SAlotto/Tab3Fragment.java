@@ -63,49 +63,49 @@ public class Tab3Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
 
-        Button btnTEST = (Button) view.findViewById(R.id.btnTEST);
+        Button btnTEST = view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
 
 
 
-        F1TV1 = (TextView) view.findViewById(R.id.F1TV1);
-        F1TV2 = (TextView) view.findViewById(R.id.F1TV2);
-        F1TV3 = (TextView) view.findViewById(R.id.F1TV3);
-        F1TV4 = (TextView) view.findViewById(R.id.F1TV4);
-        F1TV5 = (TextView) view.findViewById(R.id.F1TV5);
-        F1TV6 = (TextView) view.findViewById(R.id.F1TV6);
+        F1TV1 = view.findViewById(R.id.F1TV1);
+        F1TV2 = view.findViewById(R.id.F1TV2);
+        F1TV3 = view.findViewById(R.id.F1TV3);
+        F1TV4 = view.findViewById(R.id.F1TV4);
+        F1TV5 = view.findViewById(R.id.F1TV5);
+        F1TV6 = view.findViewById(R.id.F1TV6);
 
-        F2TV1 = (TextView) view.findViewById(R.id.F2TV1);
-        F2TV2 = (TextView) view.findViewById(R.id.F2TV2);
-        F2TV3 = (TextView) view.findViewById(R.id.F2TV3);
-        F2TV4 = (TextView) view.findViewById(R.id.F2TV4);
-        F2TV5 = (TextView) view.findViewById(R.id.F2TV5);
-        F2TV6 = (TextView) view.findViewById(R.id.F2TV6);
+        F2TV1 = view.findViewById(R.id.F2TV1);
+        F2TV2 = view.findViewById(R.id.F2TV2);
+        F2TV3 = view.findViewById(R.id.F2TV3);
+        F2TV4 = view.findViewById(R.id.F2TV4);
+        F2TV5 = view.findViewById(R.id.F2TV5);
+        F2TV6 = view.findViewById(R.id.F2TV6);
 
-        F3TV1 = (TextView) view.findViewById(R.id.F3TV1);
-        F3TV2 = (TextView) view.findViewById(R.id.F3TV2);
-        F3TV3 = (TextView) view.findViewById(R.id.F3TV3);
-        F3TV4 = (TextView) view.findViewById(R.id.F3TV4);
-        F3TV5 = (TextView) view.findViewById(R.id.F3TV5);
-        F3TV6 = (TextView) view.findViewById(R.id.F3TV6);
+        F3TV1 = view.findViewById(R.id.F3TV1);
+        F3TV2 = view.findViewById(R.id.F3TV2);
+        F3TV3 = view.findViewById(R.id.F3TV3);
+        F3TV4 = view.findViewById(R.id.F3TV4);
+        F3TV5 = view.findViewById(R.id.F3TV5);
+        F3TV6 = view.findViewById(R.id.F3TV6);
 
-        F4TV1 = (TextView) view.findViewById(R.id.F4TV1);
-        F4TV2 = (TextView) view.findViewById(R.id.F4TV2);
-        F4TV3 = (TextView) view.findViewById(R.id.F4TV3);
-        F4TV4 = (TextView) view.findViewById(R.id.F4TV4);
-        F4TV5 = (TextView) view.findViewById(R.id.F4TV5);
-        F4TV6 = (TextView) view.findViewById(R.id.F4TV6);
+        F4TV1 = view.findViewById(R.id.F4TV1);
+        F4TV2 = view.findViewById(R.id.F4TV2);
+        F4TV3 = view.findViewById(R.id.F4TV3);
+        F4TV4 = view.findViewById(R.id.F4TV4);
+        F4TV5 = view.findViewById(R.id.F4TV5);
+        F4TV6 = view.findViewById(R.id.F4TV6);
 
-        F5TV1 = (TextView) view.findViewById(R.id.F5TV1);
-        F5TV2 = (TextView) view.findViewById(R.id.F5TV2);
-        F5TV3 = (TextView) view.findViewById(R.id.F5TV3);
-        F5TV4 = (TextView) view.findViewById(R.id.F5TV4);
-        F5TV5 = (TextView) view.findViewById(R.id.F5TV5);
-        F5TV6 = (TextView) view.findViewById(R.id.F5TV6);
+        F5TV1 = view.findViewById(R.id.F5TV1);
+        F5TV2 = view.findViewById(R.id.F5TV2);
+        F5TV3 = view.findViewById(R.id.F5TV3);
+        F5TV4 = view.findViewById(R.id.F5TV4);
+        F5TV5 = view.findViewById(R.id.F5TV5);
+        F5TV6 = view.findViewById(R.id.F5TV6);
 
-        Button btnSHARE = (Button) view.findViewById(R.id.button);
+        Button btnSHARE = view.findViewById(R.id.button);
 
-        wisetext1 = (TextView) view.findViewById(R.id.wisetext3);
+        wisetext1 = view.findViewById(R.id.wisetext3);
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
@@ -147,7 +147,7 @@ public class Tab3Fragment extends Fragment {
                 if (check1 == "") {
 
                     showGuide(getString(R.string.tab_info1));
-                    text1.setText(getString(R.string.tab_info1));
+                    wisetext1.setText(getString(R.string.tab_info1));
 
                     //안내 문구
 

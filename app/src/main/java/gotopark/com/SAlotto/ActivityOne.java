@@ -49,14 +49,14 @@ public class ActivityOne extends Activity {
         setContentView(R.layout.activity_one);
         setTitle("Check the Your Numbers");
 
-        listView = (ListView) findViewById(R.id.card_listView);
+        listView = findViewById(R.id.card_listView);
 
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
 
         listView.addHeaderView(new View(this));
         listView.addFooterView(new View(this));
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(1);
         menuItem.setChecked(true);
@@ -102,7 +102,7 @@ public class ActivityOne extends Activity {
     public void Admob_is() {
 
         // admob
-        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
 //        MobileAds.initialize (getApplicationContext (),"ca-app-pub-5187489598351901~6823006419");
         MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.unit_id));
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -222,11 +222,20 @@ public class ActivityOne extends Activity {
                 randomNum rand = new randomNum();
 
 
+                String[] pbnum1 = new String[winperson1.size()];
+                for (int i = 0; i < winperson1.size(); i++) {
+                    pbnum1[i] = winperson1.get(i).text().substring(5);
+                }
 
-                String[] pbnum1 = rand.loopfor(winperson1,5);
-                String[] pbnum2 = rand.loopfor(winperson2,1);
-                String[] pbnum3 = rand.loopfor(winperson3,0);
+                String[] pbnum2 = new String[winperson2.size()];
+                for (int i = 0; i < winperson2.size(); i++) {
+                    pbnum2[i] = winperson2.get(i).text().substring(1);
+                }
 
+                String[] pbnum3 = new String[winperson3.size()];
+                for (int i = 0; i < winperson3.size(); i++) {
+                    pbnum3[i] = winperson3.get(i).text();
+                }
 
                 String[] Next1 = new String[pbnum3.length];
                 String[] Next2 = new String[pbnum3.length];
@@ -242,14 +251,17 @@ public class ActivityOne extends Activity {
                     // 로또 번호 보너스 번호에 + 집어 넣기
                     pbnum3[i] = null;
                     pbnum3[i] = Next1[i] + " + " + Next2[i];
+                    if(i == 3){
 
+                        pbnum3[i] =pbnum3[i].replace("+","");
+                    }
 
                     // SALoto 의 필요 없는 문자 자르기
-                    pbnum2[i] = pbnum2[i].replaceAll(valueOf(SAloto[i]), "").substring(6);
+                    pbnum2[i] = pbnum2[i].replaceAll(SAloto[i], "").substring(6);
 
 
                     //Next Jackpot 필요 없는 문자 잘라 네기
-                    pbnum1[i] = pbnum1[i].replaceAll(valueOf(SAloto[i]), "");
+                    pbnum1[i] = pbnum1[i].replaceAll(SAloto[i], "");
                     pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
 
                     // lotto plus2 blue text 오타 수정
