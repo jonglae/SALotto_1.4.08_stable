@@ -449,18 +449,14 @@ public class Tab1Fragment extends Fragment {
 
     public void savenum(int clickcount, String ctextRlist) {
 
-
-
-//            if (clickcount == 0 || ctextRlist != ctextRlist) {
         if (clickcount == 0) {
             MainActivity.db.insertNote(ctextRlist);
-            String Mesg1 = "Number has been saved.";
+            String Mesg1 = ctextRlist + " -> "+ "Number has been saved.";
 
             //The number has been saved.
-            wisetext1.setText(ctextRlist + " -> " + Mesg1);
+//            wisetext1.setText(Mesg1);
+            Toast.makeText(getActivity(), Mesg1, Toast.LENGTH_SHORT).show();
 
-
-//                    Toast.makeText(MainActivity.this, Mesg1, Toast.LENGTH_SHORT).show();
         } else {
             wisetext1.setText(getString(R.string.btn_save_Mesg1));
 
