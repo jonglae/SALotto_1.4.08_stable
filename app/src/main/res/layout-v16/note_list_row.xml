@@ -36,8 +36,8 @@
         android:layout_below="@id/timestamp"
         android:layout_toRightOf="@id/dot"
         android:textAlignment="center"
-        android:textColor="@android:color/holo_orange_dark"
-        android:textSize="24sp"
+        android:textColor="#B38959"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 </RelativeLayout>

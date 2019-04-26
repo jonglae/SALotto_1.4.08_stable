@@ -16,7 +16,7 @@
             android:layout_height="35dp"
             android:layout_marginRight="2dp"
             android:layout_weight="0.8"
-            android:background="@drawable/ripple_button1"
+            android:background="@drawable/ripple_share2"
             android:shadowColor="@android:color/black"
             android:shadowDx="5"
             android:shadowDy="5"
@@ -47,7 +47,8 @@
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp">
 
         <LinearLayout
             android:id="@+id/LimgLay"

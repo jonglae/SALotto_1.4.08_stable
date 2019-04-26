@@ -1,8 +1,6 @@
 package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -32,7 +30,7 @@ public class Tab1Fragment extends Fragment {
     private static final String TAG = "Tab1Fragment";
     private String ctextR;
 
-    private TextView text1,wisetext1;
+    private TextView text1, wisetext1;
 
     private TextView limgtext1;
     private TextView limgtext2;
@@ -63,13 +61,14 @@ public class Tab1Fragment extends Fragment {
 
     public Random rand;
 
-    String ctextRlist1,ctextRlist2,ctextRlist3;
+    String ctextRlist1, ctextRlist2, ctextRlist3;
+
 
     int ClickCount1 = 1;
     int ClickCount2 = 1;
     int ClickCount3 = 1;
 
-    int count,primeWord;
+    int count, primeWord;
 
 
     @SuppressLint("CutPasteId")
@@ -127,7 +126,6 @@ public class Tab1Fragment extends Fragment {
 
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         btnTEST2.setTextColor(Color.parseColor("#ffffff"));
-
 
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
@@ -189,7 +187,6 @@ public class Tab1Fragment extends Fragment {
         });
 
 
-
         btnTEST3.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -215,7 +212,6 @@ public class Tab1Fragment extends Fragment {
 
                 }.start();
 
-
             }
         });
 
@@ -224,41 +220,40 @@ public class Tab1Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
-                if (ClickCount1 == 0) {
+                LotCOPY();
 
-                    LotCOPY();
+                savenum(ClickCount1, ctextRlist1);
+                ClickCount1 = 1;
+            }
+        });
 
-                    MainActivity.db.insertNote(ctextRlist1);
+        btn_save2.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View view) {
+                LotCOPY();
 
-                    ClickCount1 = 1;
+                savenum(ClickCount2, ctextRlist2);
+                ClickCount2 = 1;
+            }
+        });
+        btn_save3.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View view) {
+                LotCOPY();
 
-                    String Mesg1 = "Number has been saved.";
-
-                    //The number has been saved.
-                    wisetext1.setText(ctextRlist1 + " -> " + Mesg1);
-
-//                    Toast.makeText(MainActivity.this, Mesg1, Toast.LENGTH_SHORT).show();
-
-                } else {
-
-                    wisetext1.setText(getString(R.string.btn_save_Mesg1));
-
-                }
-
-
+                savenum(ClickCount3, ctextRlist3);
+                ClickCount3 = 1;
             }
         });
 
 
-
         btn_list.setOnClickListener(new View.OnClickListener() {
-
-            private Object MainActivity;
-
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent((Context) MainActivity, Main2Activity.class);
+                Intent intent = new Intent(getActivity(), Main2Activity.class);
                 startActivity(intent);
 
             }
@@ -351,7 +346,6 @@ public class Tab1Fragment extends Fragment {
         dltext5 = DLtext5.getText().toString();
 
 
-
         //안내 문구 삭제
 
 
@@ -361,7 +355,9 @@ public class Tab1Fragment extends Fragment {
         ctextR = ctextR + "\n" + "PowerBall";
         ctextR = ctextR + "\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", " + cptext6 + "\n\n" + App_links1 + "\n1등 ^^당첨을 기원합니다.~♡";
 
-        ctextRlist1 = dltext1 + ", " + dltext2 + ", " + dltext3 + ", " + dltext4 + ", " + dltext5;
+        ctextRlist1 = "Lotto and plus1,2\n" + ctext1 + ", " + ctext2 + ", " + ctext3 + ", " + ctext4 + ", " + ctext5 + ", " + ctext6;
+        ctextRlist2 = "PowerBall\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", (" + cptext6 + ")";
+        ctextRlist3 = "Daily Lotto\n" + dltext1 + ", " + dltext2 + ", " + dltext3 + ", " + dltext4 + ", " + dltext5;
 
 
     }
@@ -406,7 +402,7 @@ public class Tab1Fragment extends Fragment {
 
     }
 
-    public void wiseWord(){
+    public void wiseWord() {
 
         count = count + 1;
 //                        Log.e("============", count + "====" + primeWord);
@@ -419,7 +415,6 @@ public class Tab1Fragment extends Fragment {
         }
 
     }
-
 
 
     public void Gen2Number() {
@@ -451,4 +446,27 @@ public class Tab1Fragment extends Fragment {
         DLtext4.setText(String.valueOf(Lot1num1[3]));
         DLtext5.setText(String.valueOf(Lot1num1[4]));
     }
+
+    public void savenum(int clickcount, String ctextRlist) {
+
+
+
+//            if (clickcount == 0 || ctextRlist != ctextRlist) {
+        if (clickcount == 0) {
+            MainActivity.db.insertNote(ctextRlist);
+            String Mesg1 = "Number has been saved.";
+
+            //The number has been saved.
+            wisetext1.setText(ctextRlist + " -> " + Mesg1);
+
+
+//                    Toast.makeText(MainActivity.this, Mesg1, Toast.LENGTH_SHORT).show();
+        } else {
+            wisetext1.setText(getString(R.string.btn_save_Mesg1));
+
+        }
+
+    }
+
+
 }
