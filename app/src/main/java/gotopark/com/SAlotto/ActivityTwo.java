@@ -32,11 +32,9 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 import gotopark.com.SAlotto.listview.Card;
 import gotopark.com.SAlotto.listview.OneCardArrayAdapter;
-import gotopark.com.SAlotto.module.parted1;
 
 @SuppressLint("Registered")
 public class ActivityTwo extends Activity {
@@ -63,12 +61,12 @@ public class ActivityTwo extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
         setTitle("Check the Your Numbers");
-        listView = (ListView) findViewById(R.id.card_listView);
+        listView = findViewById(R.id.card_listView);
 
-        button1 = (Button) findViewById(R.id.button1);
-        button2 = (Button) findViewById(R.id.button2);
-        button3 = (Button) findViewById(R.id.button3);
-        button4 = (Button) findViewById(R.id.button4);
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
 
 
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
@@ -76,7 +74,7 @@ public class ActivityTwo extends Activity {
         listView.addHeaderView(new View(this));
         listView.addFooterView(new View(this));
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(2);
         menuItem.setChecked(true);
@@ -205,8 +203,8 @@ public class ActivityTwo extends Activity {
     public void Admob_is() {
 
         // admob
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.unit_id));
+        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.google_adsene_id));
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

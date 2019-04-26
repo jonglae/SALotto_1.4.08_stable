@@ -1,6 +1,8 @@
 package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -22,6 +24,7 @@ import android.widget.Toast;
 import java.util.Objects;
 import java.util.Random;
 
+
 import gotopark.com.SAlotto.module.numtoimg;
 import gotopark.com.SAlotto.module.randomNum;
 
@@ -38,6 +41,12 @@ public class Tab1Fragment extends Fragment {
     private TextView limgtext5;
     private TextView limgtext6;
 
+    private TextView DLtext1;
+    private TextView DLtext2;
+    private TextView DLtext3;
+    private TextView DLtext4;
+    private TextView DLtext5;
+
     private ImageView limg1;
     private ImageView limg2;
     private ImageView limg3;
@@ -52,11 +61,16 @@ public class Tab1Fragment extends Fragment {
     private TextView pimgtext5;
     private TextView pimgtext6;
 
-
-    private TextView WiseTxTWord;
-
     public Random rand;
+
+    String ctextRlist1,ctextRlist2,ctextRlist3;
+
+    int ClickCount1 = 1;
+    int ClickCount2 = 1;
+    int ClickCount3 = 1;
+
     int count,primeWord;
+
 
     @SuppressLint("CutPasteId")
     @Nullable
@@ -74,7 +88,13 @@ public class Tab1Fragment extends Fragment {
 
         Button btnTEST = view.findViewById(R.id.btnTEST);
         Button btnTEST2 = view.findViewById(R.id.btnTEST2);
+        Button btnTEST3 = view.findViewById(R.id.btnTEST3);
         Button btnSHARE = view.findViewById(R.id.button3);
+        Button btn_list = view.findViewById(R.id.btn_list);
+
+        Button btn_save1 = view.findViewById(R.id.btn_save1);
+        Button btn_save2 = view.findViewById(R.id.btn_save2);
+        Button btn_save3 = view.findViewById(R.id.btn_save3);
 
         limg1 = view.findViewById(R.id.limg1);
         limg2 = view.findViewById(R.id.limg2);
@@ -98,9 +118,16 @@ public class Tab1Fragment extends Fragment {
         pimgtext5 = view.findViewById(R.id.pimgtext5);
         pimgtext6 = view.findViewById(R.id.pimgtext6);
 
+        DLtext1 = view.findViewById(R.id.dltext1);
+        DLtext2 = view.findViewById(R.id.dltext2);
+        DLtext3 = view.findViewById(R.id.dltext3);
+        DLtext4 = view.findViewById(R.id.dltext4);
+        DLtext5 = view.findViewById(R.id.dltext5);
+
 
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         btnTEST2.setTextColor(Color.parseColor("#ffffff"));
+
 
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
@@ -122,6 +149,8 @@ public class Tab1Fragment extends Fragment {
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
                         wiseWord();
+                        ClickCount1 = 0;
+
                     }
 
                 }.start();
@@ -149,10 +178,88 @@ public class Tab1Fragment extends Fragment {
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
                         wiseWord();
+                        ClickCount2 = 0;
+
                     }
 
                 }.start();
 
+
+            }
+        });
+
+
+
+        btnTEST3.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View view) {
+
+                // 반복 회수 지정
+                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
+                int xnum = rand.nextInt(5);
+                int millisec = Times_Ran[xnum];
+                // 반복 회수 끝
+
+                CountDownTimer start = new CountDownTimer(millisec, 50) {
+                    public void onTick(long millisUntilFinished) {
+                        Gen3Number();
+                    }
+
+                    public void onFinish() {
+                        // 반복 후 작업은 아래에 라인
+                        wiseWord();
+                        ClickCount3 = 0;
+
+                    }
+
+                }.start();
+
+
+            }
+        });
+
+
+        btn_save1.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View view) {
+                if (ClickCount1 == 0) {
+
+                    LotCOPY();
+
+                    MainActivity.db.insertNote(ctextRlist1);
+
+                    ClickCount1 = 1;
+
+                    String Mesg1 = "Number has been saved.";
+
+                    //The number has been saved.
+                    wisetext1.setText(ctextRlist1 + " -> " + Mesg1);
+
+//                    Toast.makeText(MainActivity.this, Mesg1, Toast.LENGTH_SHORT).show();
+
+                } else {
+
+                    wisetext1.setText(getString(R.string.btn_save_Mesg1));
+
+                }
+
+
+            }
+        });
+
+
+
+        btn_list.setOnClickListener(new View.OnClickListener() {
+
+            private Object MainActivity;
+
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent((Context) MainActivity, Main2Activity.class);
+                startActivity(intent);
 
             }
         });
@@ -216,6 +323,12 @@ public class Tab1Fragment extends Fragment {
         String ctext5, cptext5;
         String ctext6, cptext6;
 
+        String dltext1;
+        String dltext2;
+        String dltext3;
+        String dltext4;
+        String dltext5;
+
 
         ctext1 = limgtext1.getText().toString();
         ctext2 = limgtext2.getText().toString();
@@ -231,6 +344,14 @@ public class Tab1Fragment extends Fragment {
         cptext5 = pimgtext5.getText().toString();
         cptext6 = pimgtext6.getText().toString();
 
+        dltext1 = DLtext1.getText().toString();
+        dltext2 = DLtext2.getText().toString();
+        dltext3 = DLtext3.getText().toString();
+        dltext4 = DLtext4.getText().toString();
+        dltext5 = DLtext5.getText().toString();
+
+
+
         //안내 문구 삭제
 
 
@@ -239,6 +360,9 @@ public class Tab1Fragment extends Fragment {
         ctextR = ctextR + "\n" + ctext1 + ", " + ctext2 + ", " + ctext3 + ", " + ctext4 + ", " + ctext5 + ", " + ctext6 + "\n";
         ctextR = ctextR + "\n" + "PowerBall";
         ctextR = ctextR + "\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", " + cptext6 + "\n\n" + App_links1 + "\n1등 ^^당첨을 기원합니다.~♡";
+
+        ctextRlist1 = dltext1 + ", " + dltext2 + ", " + dltext3 + ", " + dltext4 + ", " + dltext5;
+
 
     }
 
@@ -314,5 +438,17 @@ public class Tab1Fragment extends Fragment {
         pimgtext6.setText(String.valueOf(rednum1[0]));
     }
 
+    public void Gen3Number() {
 
+        int[] Lot1num1 = new int[4];
+        randomNum Rnum = new randomNum();
+
+        Lot1num1 = Rnum.lotArray(5, 36);
+
+        DLtext1.setText(String.valueOf(Lot1num1[0]));
+        DLtext2.setText(String.valueOf(Lot1num1[1]));
+        DLtext3.setText(String.valueOf(Lot1num1[2]));
+        DLtext4.setText(String.valueOf(Lot1num1[3]));
+        DLtext5.setText(String.valueOf(Lot1num1[4]));
+    }
 }

@@ -9,8 +9,8 @@ android {
         applicationId "gotopark.com.SAlotto"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 69
-        versionName "1.4.11"
+        versionCode 70
+        versionName "1.4.12"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -52,10 +52,13 @@ dependencies {
 //    implementation 'com.google.firebase:firebase-ads:17.2.0'
 
 
-
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation project(':library')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+}
+
+dependencies {
+    implementation 'com.android.support.constraint:constraint-layout:+'
 }

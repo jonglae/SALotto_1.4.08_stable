@@ -104,7 +104,7 @@ public class ActivityOne extends Activity {
         // admob
         AdView mAdView = findViewById(R.id.adView);
 //        MobileAds.initialize (getApplicationContext (),"ca-app-pub-5187489598351901~6823006419");
-        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.unit_id));
+        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.google_adsene_id));
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

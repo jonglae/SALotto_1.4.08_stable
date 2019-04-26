@@ -13,20 +13,19 @@ public class numtoimg {
     public int Numimg(int input1) {
 
 
-        int Num = input1;
-        final int Imgnum[] = {
+        final int[] Imgnum = {
                 R.drawable.ball1,
                 R.drawable.ball2,
                 R.drawable.ball3,
                 R.drawable.ball4};
 
-        if (Num >= 1 && Num <= 13) {
+        if (input1 >= 1 && input1 <= 13) {
             return Imgnum[0];
-        } else if (Num >= 14 && Num <= 26) {
+        } else if (input1 >= 14 && input1 <= 26) {
             return Imgnum[1];
-        } else if (Num >= 27 && Num <= 36) {
+        } else if (input1 >= 27 && input1 <= 36) {
             return Imgnum[2];
-        } else if (Num >= 37 && Num <= 52) {
+        } else if (input1 >= 37 && input1 <= 52) {
             return Imgnum[3];
         } else {
             return Imgnum[3];

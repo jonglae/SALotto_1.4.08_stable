@@ -44,12 +44,12 @@ public class ActivityThree extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
 
-        listView = (ListView) findViewById(R.id.card_listView);
+        listView = findViewById(R.id.card_listView);
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
         listView.addHeaderView(new View(this));
         listView.addFooterView(new View(this));
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(3);
         menuItem.setChecked(true);
@@ -93,8 +93,8 @@ public class ActivityThree extends AppCompatActivity {
     public void Admob_is() {
 
         // admob
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.unit_id));
+        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.google_adsene_id));
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 

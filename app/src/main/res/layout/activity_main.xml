@@ -38,8 +38,8 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/bottomBar"
             android:visibility="visible"
-            ads:adUnitId="@string/banner_ad_unit_id"
-            app:adSize="LARGE_BANNER" />
+            ads:adUnitId="@string/banner_ad_unit_id1"
+            app:adSize="SMART_BANNER" />
 
 
         <RelativeLayout

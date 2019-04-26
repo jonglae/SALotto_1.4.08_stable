@@ -3,8 +3,16 @@
     <string name="app_share">★Lucky SA Lotto★\n</string>
 
     <string name="Gen_btn3">[NUMBERS SHARE]</string>
+    <string name="btn_save">[SAVE]</string>
     <string name="Gen_btnf31">[LOTTO NUMBERS GEN]</string>
     <string name="Gen_btnf32">[POWER BALL NUMBERS GEN]</string>
+    <string name="Gen_btnf33">[DAILY LOTTO NUMBERS GEN]</string>
+    <string name="btn_list">[SHOW LIST]</string>
+
+
+
+    <string name="btn_save_Mesg1">First Number Gen</string>
+
     <string name="tab_text1">South Africa\nLotto and plus1,2</string>
     <string name="tab_text2">South Africa\nPower Ball and Plus</string>
     <string name="tab_text3">South Africa\nLotto , Power Ball</string>
@@ -29,16 +37,15 @@
 
     <!--<string name="FeedLink2">"http://feeds.news24.com/articles/news24/SouthAfrica/rss"</string>-->
 
-
-    <string name="banner_ad_unit_id">ca-app-pub-5187489598351901/5126781367</string>
+    //adsen admob String
+    <string name="banner_ad_unit_id1">ca-app-pub-5187489598351901/5126781367</string>
     <string name="banner_ad_unit_id2">ca-app-pub-5187489598351901/3193030399</string>
     <string name="banner_ad_unit_id3">ca-app-pub-5187489598351901/5897771704</string>
-
-    <string name="unit_id">ca-app-pub-5187489598351901~6823006419</string>
-
-
-    ca-app-pub-5187489598351901~6823006419
+    <string name="google_adsene_id">ca-app-pub-5187489598351901~6823006419</string>
     <string name="google_app_id">1:297237916848:android:d6dfc2bc8280b506</string>
+
+
+
     <string name="mdct">MDCT</string>
 
     <!--2018-6월 이후 로또 이력 자료 -->
@@ -62,4 +69,17 @@
     <string name="net_Info2">Please ON Wifi OR Mobile Network</string>
     <string name="net_Info3">Need Internet!!!</string>
     <string name="net_Info">Your Network is Somthing Wrong!!!</string>
+
+
+    //Note String
+    <string name="action_settings">Settings</string>
+    <string name="activity_title_home">Notes</string>
+    //저장한 번호가 없다.
+    <string name="msg_no_notes">Not Found Number List。</string>
+    <string name="lbl_new_note_title">New Note</string>
+    <string name="lbl_edit_note_title">Edit Note</string>
+    <string name="hint_enter_note">Enter your note!</string>
+
+    <string name="select_list">Long click is to delete number</string>
+    <string name="delete_list">Do you want to delete the number?</string>
 </resources>

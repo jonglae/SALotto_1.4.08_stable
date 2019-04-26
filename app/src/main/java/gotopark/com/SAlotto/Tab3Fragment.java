@@ -67,7 +67,6 @@ public class Tab3Fragment extends Fragment {
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
 
 
-
         F1TV1 = view.findViewById(R.id.F1TV1);
         F1TV2 = view.findViewById(R.id.F1TV2);
         F1TV3 = view.findViewById(R.id.F1TV3);
@@ -299,6 +298,5 @@ public class Tab3Fragment extends Fragment {
 //        text1.append (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + " (" + Srednum5 + ")");
 
     }
-
 
 }

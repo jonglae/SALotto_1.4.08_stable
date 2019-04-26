@@ -19,11 +19,16 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.Objects;
 
+import gotopark.com.SAlotto.database.DatabaseHelper;
 
 
 public class MainActivity extends AppCompatActivity {
 
+    public static DatabaseHelper db;
+
     private static final String TAG = "MainActivity";
+
+
     BackProcessHandler backHandler;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -31,15 +36,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        backHandler = new BackProcessHandler(this);
 
+        db = new DatabaseHelper(this);
+
+        backHandler = new BackProcessHandler(this);
         SectionsPageAdapter mSectionsPageAdapter = new SectionsPageAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        ViewPager mViewPager = (ViewPager) findViewById(R.id.container);
+        ViewPager mViewPager = findViewById(R.id.container);
         setupViewPager(mViewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
 
 
@@ -51,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         mViewPager.setOffscreenPageLimit(3);
 
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(0);
         menuItem.setChecked(true);
@@ -98,8 +105,8 @@ public class MainActivity extends AppCompatActivity {
     public void Admob_is() {
 
         // admob
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.unit_id));
+        AdView mAdView = findViewById(R.id.adView);
+        MobileAds.initialize(getApplicationContext(), String.valueOf(R.string.google_adsene_id));
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
