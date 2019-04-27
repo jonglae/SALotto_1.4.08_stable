@@ -6,7 +6,7 @@ public class Card {
     private String line2;
     private String line3;
     private String line4;
-    private String line5;
+//    private String line5;
     private String line6;
 
 
@@ -16,7 +16,7 @@ public class Card {
         this.line2 = line2;
         this.line3 = line3;
         this.line4 = line4;
-        this.line5 = line5;
+//        this.line5 = line5;
         this.line6 = line6;
     }
 
@@ -37,9 +37,9 @@ public class Card {
         return line4;
     }
 
-    String getLine5() {
-        return line5;
-    }
+//    String getLine5() {
+//        return line5;
+//    }
 
     String getLine6() {
         return line6;

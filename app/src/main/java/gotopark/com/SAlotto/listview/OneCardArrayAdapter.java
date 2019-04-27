@@ -29,7 +29,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         TextView line2;
         TextView line3;
         TextView line4;
-        TextView line5;
+//        TextView line5;
         TextView line6;
 
     }
@@ -74,12 +74,12 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
 
             viewHolder = new CardViewHolder();
 
-            viewHolder.line1 = (TextView) row.findViewById(R.id.line1);
-            viewHolder.line2 = (TextView) row.findViewById(R.id.line2);
-            viewHolder.line3 = (TextView) row.findViewById(R.id.line3);
-            viewHolder.line4 = (TextView) row.findViewById(R.id.line4);
-            viewHolder.line5 = (TextView) row.findViewById(R.id.line5);
-            viewHolder.line6 = (TextView) row.findViewById(R.id.line6);
+            viewHolder.line1 = row.findViewById(R.id.line1);
+            viewHolder.line2 = row.findViewById(R.id.line2);
+            viewHolder.line3 = row.findViewById(R.id.line3);
+            viewHolder.line4 = row.findViewById(R.id.line4);
+//            viewHolder.line5 = (TextView) row.findViewById(R.id.line5);
+            viewHolder.line6 = row.findViewById(R.id.line6);
 
 
             row.setTag(viewHolder);
@@ -95,21 +95,11 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         Card card = getItem(position);
 
         assert card != null;
-//        viewHolder.line1.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
         viewHolder.line1.setText(card.getLine1());
-
-//        viewHolder.line2.setText(card.getLine2().substring(6));
-//        viewHolder.line2.setTextSize(TypedValue.COMPLEX_UNIT_SP, 18);
         viewHolder.line2.setText(card.getLine2());
-
-//        viewHolder.line3.setTextColor(Color.parseColor("#27af3c"));
-//        viewHolder.line3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
         viewHolder.line3.setText(card.getLine3());
-
-//        viewHolder.line4.setTextColor(Color.parseColor("#004EA9"));
-//        viewHolder.line4.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14);
         viewHolder.line4.setText(card.getLine4());
-        viewHolder.line5.setText(card.getLine5());
+//        viewHolder.line5.setText(card.getLine5());
         viewHolder.line6.setText(card.getLine6());
 
         return row;

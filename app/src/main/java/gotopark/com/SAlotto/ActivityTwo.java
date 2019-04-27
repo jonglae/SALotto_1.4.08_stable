@@ -47,9 +47,10 @@ public class ActivityTwo extends Activity {
     Button button2;
     Button button3;
     Button button4;
+    Button button5;
     String str = "";
 
-    String[] SAloto = {"Lotto Past Draws", "Lotto Plus Past Draws", "PowerBall Past Draws", "PowerBall Plus Past Draws"};
+    String[] SAloto = {"Lotto Past Draws", "Lotto Plus Past Draws", "PowerBall Past Draws", "PowerBall Plus Past Draws","Daily Lotto"};
     int SAlotoChoice;
     String url;
     int SliceNumber, infoBallChoice;
@@ -67,6 +68,7 @@ public class ActivityTwo extends Activity {
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
         button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
 
 
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
@@ -113,6 +115,22 @@ public class ActivityTwo extends Activity {
                         break;
                 }
                 return false;
+            }
+        });
+
+
+        button5.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View view) {
+
+                SAlotoChoice = 4;
+                url = getString(R.string.JsoupLink5);
+                SliceNumber = 7;
+                infoBallChoice = 0;
+
+                netcheckMesg();
+
             }
         });
 
@@ -284,7 +302,7 @@ public class ActivityTwo extends Activity {
         String iInfo = "SA Lotto Past Winning Numbers";
 
         String saywords = BackProcessHandler.frontSay();
-        Card card = new Card("", "", iInfo, "", saywords, "");
+        Card card = new Card(iInfo, saywords, "", "","" , "");
 
         oneCardArrayAdapter.add(card);
         listView.setAdapter(oneCardArrayAdapter);

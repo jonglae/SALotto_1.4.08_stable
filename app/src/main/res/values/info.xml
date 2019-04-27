@@ -8,8 +8,9 @@
     <string name="app_links">https://goo.gl/nCPEuo</string>
     <string name="two_btn1">Lotto</string>
     <string name="two_btn2">Lotto\nPlus</string>
-    <string name="two_btn3">PowerBall</string>
-    <string name="two_btn4">PowerBall\nPlus</string>
+    <string name="two_btn3">Power\nBall</string>
+    <string name="two_btn4">Power\nBall\nPlus</string>
+    <string name="two_btn5">Daily\nLotto</string>
 
     <string-array name="active_one">
         <item>Lotto</item>

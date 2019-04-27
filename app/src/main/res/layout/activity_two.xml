@@ -45,9 +45,22 @@
             android:soundEffectsEnabled="true">
 
             <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_share2"
+                android:gravity="top|center_horizontal"
+                android:text="@string/two_btn5"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <Button
                 android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:layout_weight="1"
                 android:background="@drawable/ripple_button1"
                 android:gravity="top|center_horizontal"
                 android:text="@string/two_btn1"
@@ -59,6 +72,7 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:layout_weight="1"
                 android:background="@drawable/ripple_button11"
                 android:gravity="top|center_horizontal"
                 android:text="@string/two_btn2"
@@ -70,6 +84,7 @@
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:layout_weight="1"
                 android:background="@drawable/ripple_button2"
                 android:gravity="top|center_horizontal"
                 android:text="@string/two_btn3"
@@ -81,6 +96,7 @@
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="55dp"
+                android:layout_weight="1"
                 android:background="@drawable/ripple_button22"
                 android:gravity="top|center_horizontal"
                 android:text="@string/two_btn4"

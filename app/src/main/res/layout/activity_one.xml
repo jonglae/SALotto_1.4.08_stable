@@ -22,8 +22,7 @@
             android:layout_above="@+id/bottomBar"
             android:layout_marginTop="2dp"
             android:cacheColorHint="@android:color/transparent"
-            android:divider="@null"
-            android:dividerHeight="10dp"
+            android:dividerHeight="2dp"
             android:listSelector="@android:color/transparent" />
 
         <com.google.android.gms.ads.AdView

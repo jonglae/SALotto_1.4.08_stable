@@ -30,12 +30,12 @@
     <string name="populationlabel">"Population : "</string>
 
     <string name="FeedLink1">http://mdbp.org/sa-news/feed/</string>
-    <string name="FeedLink2">http://feeds.bbci.co.uk/news/world/africa/rss.xml</string>
+    <!--<string name="FeedLink2">http://feeds.bbci.co.uk/news/world/africa/rss.xml</string>-->
     <string name="FeedLink3">https://twitrss.me/twitter_user_to_rss/?user=sa_lottery</string>
 
     <string name="active_one">http://www.lotteryextreme.com/south_africa/</string>
 
-    <!--<string name="FeedLink2">"http://feeds.news24.com/articles/news24/SouthAfrica/rss"</string>-->
+    <string name="FeedLink2">"http://feeds.news24.com/articles/news24/SouthAfrica/rss"</string>
 
     //adsen admob String
     <string name="banner_ad_unit_id1">ca-app-pub-5187489598351901/5126781367</string>
@@ -57,6 +57,8 @@
     <string name="JsoupLink3">"http://www.lotteryextreme.com/south_africa/powerball-results_history.php"</string>
     <!--PowerBall Pluse-->
     <string name="JsoupLink4">"http://www.lotteryextreme.com/south_africa/powerballplus-results_history.php"</string>
+
+    <string name="JsoupLink5">"http://www.lotteryextreme.com/south_africa/dailylotto-results_history"</string>
 
     //=====================================================================================================
 

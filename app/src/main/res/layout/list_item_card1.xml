@@ -4,18 +4,15 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
-	android:paddingLeft="15dp"
-	android:paddingRight="15dp"
+	android:paddingLeft="4dp"
+	android:paddingRight="4dp"
 	android:descendantFocusability="beforeDescendants">
 
 	<LinearLayout
 		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:paddingLeft="15dp"
-		android:paddingTop="15dp"
-		android:paddingBottom="15dp"
-		android:paddingRight="15dp"
+		android:paddingLeft="8dp"
 		android:background="@drawable/card_background_selector"
 		android:descendantFocusability="afterDescendants"
 		tools:ignore="UselessParent">
@@ -26,12 +23,12 @@
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:shadowColor="@android:color/black"
-			android:shadowDx="5"
-			android:shadowDy="5"
-			android:shadowRadius="7"
+			android:shadowDx="3"
+			android:shadowDy="3"
+			android:shadowRadius="1"
 			android:textAlignment="center"
-			android:textColor="@android:color/holo_blue_bright"
-			android:textSize="24sp"
+			android:textColor="#345E9C"
+			android:textSize="18sp"
 			android:textStyle="bold" />
 
 		<TextView
@@ -46,10 +43,11 @@
 			android:id="@+id/line3"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
+			android:layout_marginBottom="-15dp"
 			android:shadowColor="@android:color/black"
-			android:shadowDx="5"
-			android:shadowDy="5"
-			android:shadowRadius="7"
+			android:shadowDx="3"
+			android:shadowDy="3"
+			android:shadowRadius="1"
 			android:textAlignment="center"
 			android:textColor="@android:color/holo_orange_dark"
 			android:textSize="24sp"
@@ -60,16 +58,13 @@
 			android:id="@+id/line4"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:textColor="@android:color/holo_purple"
-			android:textSize="12sp"
-			android:textStyle="italic" />
-
-
-		<TextView
-			android:id="@+id/line5"
-			android:textColor="@color/text_black"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"/>
+			android:textColor="#C55555"
+			android:shadowColor="@android:color/background_dark"
+			android:shadowDx="3"
+			android:shadowDy="3"
+			android:shadowRadius="1"
+			android:textSize="14sp"
+			android:textStyle="bold" />
 
 
 		<TextView
