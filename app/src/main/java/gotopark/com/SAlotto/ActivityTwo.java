@@ -382,9 +382,12 @@ public class ActivityTwo extends Activity {
                     Next1[i] = pbnum4[i].substring(0, pbnum4[i].length() - 2);
                     Next2[i] = pbnum4[i].substring(pbnum4[i].length() - 2);
 
-                    // 로또 번호 보너스 번호에 + 집어 넣기
-                    pbnum4[i] = null;
-                    pbnum4[i] = Next1[i] + " + " + Next2[i];
+
+                    if (SAlotoChoice != 4 ) {
+                        // 로또 번호 보너스 번호에 + 집어 넣기
+                        pbnum4[i] = null;
+                        pbnum4[i] = Next1[i] + " + " + Next2[i];
+                    }
 
 
                 }

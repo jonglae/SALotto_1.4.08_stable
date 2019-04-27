@@ -254,9 +254,19 @@ public class ActivityOne extends Activity {
 
 
                     if(i == 3){
-                        // 파워볼 + 제거
+                        //  // 날짜 쪽에 쓸데 없는 문자 제거 4번째 것
                         pbnum3[i] =pbnum3[i].replace("+","");
+                        pbnum3[i] =pbnum3[i].replace("  "," ");
+                        pbnum2[i] = pbnum2[i].replaceAll("Lotto", "").substring(6);
+
                     }
+
+                    if(i == 4){
+                        // 날짜 쪽에 쓸데 없는 문자 제거 5번째 것
+                        pbnum2[i] = pbnum2[i].replaceAll("all", "").substring(6);
+
+                    }
+
 
                     // SALoto 의 필요 없는 문자 자르기
                     pbnum2[i] = pbnum2[i].replaceAll(SAloto[i], "").substring(6);
