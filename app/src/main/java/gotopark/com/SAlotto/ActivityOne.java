@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -215,12 +216,11 @@ public class ActivityOne extends Activity {
         public void onPostExecute(Void result) {
 
 
-            String[] SAloto = {"Lotto", "Lotto Plus", "Lotto Plus 2", "Powerball", "Powerball Plus"};
+            String[] SAloto = {"Lotto", "Lotto Plus", "Lotto Plus 2", " Daily Lotto", "Powerball", "Powerball Plus"};
 
             if (winperson4 != null) {
 
-                randomNum rand = new randomNum();
-
+                Log.e("==============", "=========" + winperson1);
 
                 String[] pbnum1 = new String[winperson1.size()];
                 for (int i = 0; i < winperson1.size(); i++) {
@@ -241,7 +241,8 @@ public class ActivityOne extends Activity {
                 String[] Next2 = new String[pbnum3.length];
 
                 /** 리스트 뷰 출력 출력 */
-                for (int i = 0; i < pbnum1.length; i++) {
+//                for (int i = 0; i < pbnum1.length; i++) {
+                for (int i = 0; i <= 5; i++) {
 
 
                     // 문자열 자르기 로또 번호
@@ -253,15 +254,15 @@ public class ActivityOne extends Activity {
                     pbnum3[i] = Next1[i] + " + " + Next2[i];
 
 
-                    if(i == 3){
+                    if (i == 3) {
                         //  // 날짜 쪽에 쓸데 없는 문자 제거 4번째 것
-                        pbnum3[i] =pbnum3[i].replace("+","");
-                        pbnum3[i] =pbnum3[i].replace("  "," ");
+                        pbnum3[i] = pbnum3[i].replace("+", "");
+                        pbnum3[i] = pbnum3[i].replace("  ", " ");
                         pbnum2[i] = pbnum2[i].replaceAll("Lotto", "").substring(6);
 
                     }
 
-                    if(i == 4){
+                    if (i == 4) {
                         // 날짜 쪽에 쓸데 없는 문자 제거 5번째 것
                         pbnum2[i] = pbnum2[i].replaceAll("all", "").substring(6);
 
@@ -273,8 +274,10 @@ public class ActivityOne extends Activity {
 
 
                     //Next Jackpot 필요 없는 문자 잘라 네기
-                    pbnum1[i] = pbnum1[i].replaceAll(SAloto[i], "");
-                    pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
+                    if (i < 5) {
+                        pbnum1[i] = pbnum1[i].replaceAll(SAloto[i], "");
+                        pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
+                    }
 
                     // lotto plus2 blue text 오타 수정
                     if (i == 2) {
@@ -282,9 +285,24 @@ public class ActivityOne extends Activity {
 
                     }
 
+                    if (i == 3) {
+                        Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", "", "(Last Number is Bonus or PB number)");
+                        oneCardArrayAdapter.add(card);
+                    }
 
-                    Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], "", "(Last Number is Bonus or PB number)");
-                    oneCardArrayAdapter.add(card);
+                    if (i != 3) {
+
+                        if (i < 4) {
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], "", "(Last Number is Bonus or PB number)");
+                            oneCardArrayAdapter.add(card);
+
+                        } else {
+
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], "", "(Last Number is Bonus or PB number)");
+                            oneCardArrayAdapter.add(card);
+                        }
+
+                    }
                 }
 
                 String saywords = BackProcessHandler.frontSay();
