@@ -286,19 +286,19 @@ public class ActivityOne extends Activity {
                     }
 
                     if (i == 3) {
-                        Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", "", "(Last Number is Bonus or PB number)");
+                        Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", "", getString(R.string.listLast_Meg1));
                         oneCardArrayAdapter.add(card);
                     }
 
                     if (i != 3) {
 
                         if (i < 4) {
-                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], "", "(Last Number is Bonus or PB number)");
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], "", getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card);
 
                         } else {
 
-                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], "", "(Last Number is Bonus or PB number)");
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], "", getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card);
                         }
 

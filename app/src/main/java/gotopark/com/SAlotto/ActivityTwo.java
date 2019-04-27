@@ -54,7 +54,7 @@ public class ActivityTwo extends Activity {
     int SAlotoChoice;
     String url;
     int SliceNumber, infoBallChoice;
-    String[] InfoBall = {"(Last Number is Bonus Ball)", "(Last Number is PowerBall)"};
+//    String[] InfoBall = {"(Last Number is Bonus Ball)", "(Last Number is PowerBall)"};
     String iInfo1;
 
     @Override
@@ -398,7 +398,7 @@ public class ActivityTwo extends Activity {
                 for (int i = 0; i < f13.size(); i++) {
 //                    pbnum3[i] = f13.get (i).toString ();
 
-                    Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", "", InfoBall[infoBallChoice]);
+                    Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", "", getString(R.string.listLast_Meg1));
                     oneCardArrayAdapter.add(card);
 
 
