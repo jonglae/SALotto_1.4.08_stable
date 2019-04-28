@@ -255,7 +255,8 @@ public class ActivityTwo extends Activity {
                 Toast.makeText(context, activeNetwork.getTypeName(), Toast.LENGTH_SHORT).show();
 
                 /** 모바일 연결시 시도  */
-                InfoMessage();
+                wiseWord();
+
 
                 Admob_is();
 
