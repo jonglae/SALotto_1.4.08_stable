@@ -9,8 +9,8 @@ android {
         applicationId "gotopark.com.SAlotto"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 73
-        versionName "1.4.15"
+        versionCode 74
+        versionName "1.4.16"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

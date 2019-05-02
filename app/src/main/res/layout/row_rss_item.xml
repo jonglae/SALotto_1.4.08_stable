@@ -3,10 +3,10 @@
     android:id="@+id/cardview"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="-4dp"
-    android:layout_marginLeft="@dimen/default_margin"
-    android:layout_marginRight="@dimen/default_margin"
-    android:layout_marginTop="@dimen/default_margin"
+    android:layout_marginBottom="2dp"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layout_marginTop="2dp"
     android:clickable="true">
 
 
@@ -14,8 +14,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="0dp">
+        android:orientation="horizontal">
 
 
         <RelativeLayout
@@ -25,10 +24,10 @@
             android:layout_alignParentBottom="true"
             android:background="#aaffffff"
             android:orientation="vertical"
-            android:paddingBottom="5dp"
-            android:paddingLeft="8dp"
-            android:paddingRight="4dp"
-            android:paddingTop="5dp">
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -37,8 +36,8 @@
 
                 <ImageView
                     android:id="@+id/ivThumb"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:scaleType="centerCrop" />
 
                 <LinearLayout
@@ -50,22 +49,15 @@
                         android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-condensed"
                         android:textColor="#000000"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+                        android:textSize="14sp"/>
 
                     <TextView
                         android:id="@+id/tvPubDate"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tvTitle"
-                        android:layout_toEndOf="@+id/ivThumb"
-                        android:layout_toRightOf="@+id/ivThumb"
-                        android:fontFamily="sans-serif-light"
                         android:textColor="#1424ff"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textSize="12sp"/>
                 </LinearLayout>
 
             </LinearLayout>

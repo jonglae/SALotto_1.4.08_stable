@@ -36,7 +36,8 @@
 
     <string name="active_one">http://www.lotteryextreme.com/south_africa/</string>
 
-    <string name="FeedLink2">"http://feeds.news24.com/articles/news24/SouthAfrica/rss"</string>
+    <string name="newsfeed1">"http://feeds.news24.com/articles/news24/SouthAfrica/rss"</string>
+    <string name="newsfeed2">https://news.google.com/news/rss</string>
 
     //adsen admob String
     <string name="banner_ad_unit_id1">ca-app-pub-5187489598351901/5126781367</string>

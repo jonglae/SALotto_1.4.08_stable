@@ -151,7 +151,7 @@ public class ActivityThree extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.rlContainer, RssFragment.newInstance(getString(R.string.FeedLink2)))
+                .replace(R.id.rlContainer, RssFragment.newInstance(getString(R.string.newsfeed2)))
                 .addToBackStack(null)
                 .commit();
     }
