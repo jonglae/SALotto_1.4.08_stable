@@ -1,5 +1,6 @@
 package gotopark.com.SAlotto;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 import java.util.Random;
 
+import gotopark.com.SAlotto.database.DatabaseHelper;
 import gotopark.com.SAlotto.module.numtoimg;
 import gotopark.com.SAlotto.module.randomNum;
 
@@ -29,7 +31,6 @@ public class Tab2Fragment extends Fragment {
 
     private static final String TAG = "Tab2Fragment";
     public String ctextR;
-    TextView text1;
     TextView wisetext1;
 
     TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
@@ -54,6 +55,9 @@ public class Tab2Fragment extends Fragment {
 
     private Random rand;
     int count,primeWord;
+    String ctextRlist1;
+    DatabaseHelper db;
+    int ClickCount1 = 1;
 
     @Nullable
     @Override
@@ -64,10 +68,13 @@ public class Tab2Fragment extends Fragment {
         rand = new Random();
         primeWord = rand.nextInt(13) + 4;
 
+        db = new DatabaseHelper(getActivity());
 
         Button btnTEST = view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         Button btnSHARE = view.findViewById(R.id.button2);
+        Button btn_save = view.findViewById(R.id.button3);
+
 
         wisetext1 = view.findViewById(R.id.wisetext2);
 
@@ -143,6 +150,18 @@ public class Tab2Fragment extends Fragment {
         F5MIV6 = view.findViewById(R.id.F5MIV6);
 
 
+
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View view) {
+                LotCOPY();
+
+                savenum(ClickCount1, ctextRlist1);
+                ClickCount1 = 1;
+            }
+        });
+
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -161,6 +180,7 @@ public class Tab2Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
+                        ClickCount1 = 0;
                         wiseWord();
                     }
 
@@ -244,7 +264,7 @@ public class Tab2Fragment extends Fragment {
         ctextR = ctextR + (SLot1num3[0] + ", " + SLot1num3[1] + ", " + SLot1num3[2] + ", " + SLot1num3[3] + ", " + SLot1num3[4] + ", " + SLot1num3[5] + "\n");
         ctextR = ctextR + (SLot1num4[0] + ", " + SLot1num4[1] + ", " + SLot1num4[2] + ", " + SLot1num4[3] + ", " + SLot1num4[4] + ", " + SLot1num4[5] + "\n");
         ctextR = ctextR + (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + ", " + SLot1num5[5]);
-
+        ctextRlist1 = ctextR;
         ctextR = ctextR + "\n\n" + App_links1 + "\n" + App_Share + "★Good Luck★";
 
     }
@@ -424,6 +444,22 @@ public class Tab2Fragment extends Fragment {
         F5MIV5.setImageResource(d5ball5);
         F5MIV6.setImageResource(d5ball6);
 
+
+    }
+
+    public void savenum(int clickcount, String ctextRlist) {
+
+        if (clickcount == 0) {
+            db.insertNote(ctextRlist);
+            String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
+
+            showGuide(Mesg1);
+
+        } else {
+
+            showGuide("First Gen Button Click");
+
+        }
 
     }
 

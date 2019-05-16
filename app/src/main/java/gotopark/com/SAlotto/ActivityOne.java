@@ -32,9 +32,6 @@ import java.io.IOException;
 
 import gotopark.com.SAlotto.listview.Card;
 import gotopark.com.SAlotto.listview.OneCardArrayAdapter;
-import gotopark.com.SAlotto.module.randomNum;
-
-import static java.lang.String.valueOf;
 
 
 public class ActivityOne extends Activity {
@@ -200,10 +197,10 @@ public class ActivityOne extends Activity {
 
                     // Get the html document title
 
-                    winperson4 = document.select("title");
-                    winperson1 = document.select(".f13");
-                    winperson2 = document.select(".lotterygame2");
-                    winperson3 = document.select(".results2");
+                    winperson4 = document.select(getString(R.string.jsoup_q1));
+                    winperson1 = document.select(getString(R.string.jsoup_q2));
+                    winperson2 = document.select(getString(R.string.jsoup_q3));
+                    winperson3 = document.select(getString(R.string.jsoup_q4));
 
                 }
             } catch (IOException e) {
@@ -229,7 +226,7 @@ public class ActivityOne extends Activity {
 
                 String[] pbnum2 = new String[winperson2.size()];
                 for (int i = 0; i < winperson2.size(); i++) {
-                    pbnum2[i] = winperson2.get(i).text().substring(1);
+                    pbnum2[i] = winperson2.get(i).text();
                 }
 
                 String[] pbnum3 = new String[winperson3.size()];
@@ -241,7 +238,7 @@ public class ActivityOne extends Activity {
                 String[] Next2 = new String[pbnum3.length];
 
                 /** 리스트 뷰 출력 출력 */
-//                for (int i = 0; i < pbnum1.length; i++) {
+
                 for (int i = 0; i <= 5; i++) {
 
 
@@ -258,19 +255,8 @@ public class ActivityOne extends Activity {
                         //  // 날짜 쪽에 쓸데 없는 문자 제거 4번째 것
                         pbnum3[i] = pbnum3[i].replace("+", "");
                         pbnum3[i] = pbnum3[i].replace("  ", " ");
-                        pbnum2[i] = pbnum2[i].replaceAll("Lotto", "").substring(6);
-
                     }
 
-                    if (i == 4) {
-                        // 날짜 쪽에 쓸데 없는 문자 제거 5번째 것
-                        pbnum2[i] = pbnum2[i].replaceAll("all", "").substring(6);
-
-                    }
-
-
-                    // SALoto 의 필요 없는 문자 자르기
-                    pbnum2[i] = pbnum2[i].replaceAll(SAloto[i], "").substring(6);
 
 
                     //Next Jackpot 필요 없는 문자 잘라 네기
@@ -279,11 +265,6 @@ public class ActivityOne extends Activity {
                         pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
                     }
 
-                    // lotto plus2 blue text 오타 수정
-                    if (i == 2) {
-                        pbnum1[2] = pbnum1[2].replaceAll("Lotto Plus", "");
-
-                    }
 
                     if (i == 3) {
                         Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", "", getString(R.string.listLast_Meg1));

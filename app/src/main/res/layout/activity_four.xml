@@ -37,12 +37,15 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageView"
                 android:layout_marginTop="10dp"
-                android:textAlignment="center"
+                android:fontFamily="sans-serif-medium"
                 android:shadowColor="@android:color/background_dark"
                 android:shadowDx="3"
                 android:shadowDy="3"
                 android:shadowRadius="1.2"
+                android:textAlignment="center"
                 android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 tools:ignore="NotSibling" />
 
             <TextView
@@ -50,11 +53,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView1"
-                android:textAlignment="center"
+                android:shadowColor="@android:color/background_dark"
                 android:shadowDx="3"
                 android:shadowDy="3"
                 android:shadowRadius="1.2"
-                android:textColor="@android:color/white" />
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -62,12 +67,14 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
                 android:layout_marginTop="30dp"
+                android:autoLink="web"
+                android:shadowColor="@android:color/background_dark"
                 android:shadowDx="3"
                 android:shadowDy="3"
                 android:shadowRadius="1.2"
-                android:autoLink="web"
                 android:textAlignment="center"
-                android:textColor="@android:color/white" />
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
             <ImageView
                 android:id="@+id/imageView2"

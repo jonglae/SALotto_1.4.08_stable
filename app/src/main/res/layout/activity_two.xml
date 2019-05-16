@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/BtnLayout"
             ads:adUnitId="@string/banner_ad_unit_id3"
-            app:adSize="LARGE_BANNER" />
+            app:adSize="SMART_BANNER" />
 
 
         <LinearLayout

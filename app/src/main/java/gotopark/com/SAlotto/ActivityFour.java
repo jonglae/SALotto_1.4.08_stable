@@ -28,13 +28,13 @@ public class ActivityFour extends AppCompatActivity {
         super.onCreate (savedInstanceState);
         setContentView (R.layout.activity_four);
 
-        TextView text1 = (TextView) findViewById (R.id.textView1);
-        TextView text2 = (TextView) findViewById (R.id.textView2);
-        TextView text4 = (TextView) findViewById (R.id.textView4);
-        ImageView App_image = (ImageView) findViewById (R.id.imageView);
-        ImageView App_image2 = (ImageView) findViewById (R.id.imageView2);
+        TextView text1 = findViewById (R.id.textView1);
+        TextView text2 = findViewById (R.id.textView2);
+        TextView text4 = findViewById (R.id.textView4);
+        ImageView App_image = findViewById (R.id.imageView);
+        ImageView App_image2 = findViewById (R.id.imageView2);
 
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById (R.id.bottomNavView_Bar);
+        BottomNavigationView bottomNavigationView = findViewById (R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu ();
         MenuItem menuItem = menu.getItem (4);
         menuItem.setChecked (true);
@@ -102,7 +102,6 @@ public class ActivityFour extends AppCompatActivity {
         text1.setTextSize (TypedValue.COMPLEX_UNIT_SP, 18);
         text1.setTextColor (Color.parseColor ("#ffffff"));
         text2.setTextColor (Color.parseColor ("#ffffff"));
-        text4.setTextColor (Color.parseColor ("#000000"));
 
 
         /** 앱버전 과 앱이름 표시 */

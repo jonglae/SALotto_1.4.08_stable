@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_info1">Published By MDCT\n</string>
-    <string name="app_info2">MDCT is My(Your) Dream Come True\nOne of my dreams is to travel to South Africa</string>
-    <string name="app_info3">Contact to email : jonglae@gmail.com\n</string>
-    <string name="app_info4">Thnak you for Download\nAnd be Happy Rich  ^.^! </string>
-    <string name="app_info5">https://play.google.com/store/apps/details?id=gotopark.com.SAlotto</string>
-    <string name="app_links">https://goo.gl/nCPEuo</string>
-    <string name="two_btn1">Lotto</string>
-    <string name="two_btn2">Lotto\nPlus</string>
-    <string name="two_btn3">Power\nBall</string>
-    <string name="two_btn4">Power\nBall\nPlus</string>
-    <string name="two_btn5">Daily\nLotto</string>
+<string name="app_info1">Published By MDCT\n</string>
+<string name="app_info2">MDCT is My(Your) Dream Come True\nOne of my dreams is to travel to South Africa</string>
+<string name="app_info3">Contact to email : jonglae@gmail.com\n</string>
+<string name="app_info4">Thnak you for Download\nAnd be Happy Rich  ^.^! </string>
+<string name="app_info5">https://play.google.com/store/apps/details?id=gotopark.com.SAlotto</string>
+<string name="app_links">https://goo.gl/nCPEuo</string>
+<string name="two_btn1">Lotto</string>
+<string name="two_btn2">Lotto\nPlus</string>
+<string name="two_btn3">Power\nBall</string>
+<string name="two_btn4">Power\nBall\nPlus</string>
+<string name="two_btn5">Daily\nLotto</string>
 
-    <string-array name="active_one">
-        <item>Lotto</item>
-        <item>Lotto Plus</item>
-        <item>Lotto Plus 2</item>
-        <item>Daily Lotto</item>
-        <item>Powerball</item>
-        <item>Powerball Plus</item>
-    </string-array>
+<string-array name="active_one">
+    <item>Lotto</item>
+    <item>Lotto Plus</item>
+    <item>Lotto Plus 2</item>
+    <item>Daily Lotto</item>
+    <item>Powerball</item>
+    <item>Powerball Plus</item>
+</string-array>
 </resources>

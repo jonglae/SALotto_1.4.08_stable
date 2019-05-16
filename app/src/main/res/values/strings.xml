@@ -13,9 +13,9 @@
 
     <string name="btn_save_Mesg1">Please generation a number!!!</string>
 
-    <string name="tab_text1">South Africa\nLotto and plus1,2</string>
-    <string name="tab_text2">South Africa\nPower Ball and Plus</string>
-    <string name="tab_text3">South Africa\nLotto , Power Ball</string>
+    <string name="tab_text1">SA Lotto\nLotto and plus1,2</string>
+    <string name="tab_text2">SA Lotto\nPower Ball and Plus</string>
+    <string name="tab_text3">SA Lotto\nLotto , Power Ball</string>
     <string name="tab_info1">First Presse GEN Button</string>
     <string name="bottom_text1">Home</string>
     <string name="bottom_text2">Result</string>
@@ -61,6 +61,12 @@
     <string name="JsoupLink4">"http://www.lotteryextreme.com/south_africa/powerballplus-results_history.php"</string>
 
     <string name="JsoupLink5">"http://www.lotteryextreme.com/south_africa/dailylotto-results_history"</string>
+
+
+    <string name="jsoup_q1">"title"</string>
+    <string name="jsoup_q2">".f13"</string>
+    <string name="jsoup_q3">".lotterygame2"</string>
+    <string name="jsoup_q4">".results2"</string>
 
     //=====================================================================================================
 

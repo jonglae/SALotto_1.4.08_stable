@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@+id/bottomBar"
             ads:adUnitId="@string/banner_ad_unit_id2"
-            app:adSize="LARGE_BANNER" />
+            app:adSize="SMART_BANNER" />
 
 
         <RelativeLayout

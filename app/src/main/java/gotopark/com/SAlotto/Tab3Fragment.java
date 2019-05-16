@@ -1,5 +1,6 @@
 package gotopark.com.SAlotto;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 import java.text.DecimalFormat;
 import java.util.Random;
 
+import gotopark.com.SAlotto.database.DatabaseHelper;
 import gotopark.com.SAlotto.module.randomNum;
 
 
@@ -42,16 +44,20 @@ public class Tab3Fragment extends Fragment {
     int[] Lot1num4 = new int[5];
     int[] Lot1num5 = new int[5];
 
-    int[] rednum1 = new int[0];
-    int[] rednum2 = new int[0];
-    int[] rednum3 = new int[0];
-    int[] rednum4 = new int[0];
-    int[] rednum5 = new int[0];
+    int[] rednum1 = new int[1];
+    int[] rednum2 = new int[1];
+    int[] rednum3 = new int[1];
+    int[] rednum4 = new int[1];
+    int[] rednum5 = new int[1];
 
     private Random rand;
     int count, primeWord;
-    TextView text1;
     public TextView wisetext1;
+
+    String ctextRlist1;
+    int ClickCount1 = 1;
+
+    DatabaseHelper db;
 
     @Nullable
     @Override
@@ -62,9 +68,11 @@ public class Tab3Fragment extends Fragment {
         rand = new Random();
         primeWord = rand.nextInt(13) + 4;
 
+        db = new DatabaseHelper(getActivity());
 
         Button btnTEST = view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
+        Button btn_save = view.findViewById(R.id.button3);
 
 
         F1TV1 = view.findViewById(R.id.F1TV1);
@@ -125,6 +133,7 @@ public class Tab3Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
+                        ClickCount1 = 0;
                         wiseWord();
 
                     }
@@ -134,6 +143,17 @@ public class Tab3Fragment extends Fragment {
             }
         });
 
+
+        btn_save.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("NewApi")
+            @Override
+            public void onClick(View view) {
+                LotCOPY();
+
+                savenum(ClickCount1, ctextRlist1);
+                ClickCount1 = 1;
+            }
+        });
 
         btnSHARE.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
@@ -217,6 +237,7 @@ public class Tab3Fragment extends Fragment {
         ctextR = ctextR + (SLot1num3[0] + ", " + SLot1num3[1] + ", " + SLot1num3[2] + ", " + SLot1num3[3] + ", " + SLot1num3[4] + " (" + Srednum3 + ")\n");
         ctextR = ctextR + (SLot1num4[0] + ", " + SLot1num4[1] + ", " + SLot1num4[2] + ", " + SLot1num4[3] + ", " + SLot1num4[4] + " (" + Srednum4 + ")\n");
         ctextR = ctextR + (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + " (" + Srednum5 + ")");
+        ctextRlist1 = ctextR;
 
         ctextR = ctextR + "\n\n" + App_links1 + "\n" + App_Share + "★Good Luck★";
 
@@ -289,14 +310,22 @@ public class Tab3Fragment extends Fragment {
         F5TV5.setText(String.valueOf(Lot1num5[4]));
         F5TV6.setText(String.valueOf(rednum5[0]));
 
-//        text1.setTextSize (TypedValue.COMPLEX_UNIT_SP, 30);
-//        text1.setTextColor (Color.parseColor ("#000000"));
-//        text1.setText (SLot1num1[0] + ", " + SLot1num1[1] + ", " + SLot1num1[2] + ", " + SLot1num1[3] + ", " + SLot1num1[4] + " (" + Srednum1 + ")\n");
-//        text1.append (SLot1num2[0] + ", " + SLot1num2[1] + ", " + SLot1num2[2] + ", " + SLot1num2[3] + ", " + SLot1num2[4] + " (" + Srednum2 + ")\n");
-//        text1.append (SLot1num3[0] + ", " + SLot1num3[1] + ", " + SLot1num3[2] + ", " + SLot1num3[3] + ", " + SLot1num3[4] + " (" + Srednum3 + ")\n");
-//        text1.append (SLot1num4[0] + ", " + SLot1num4[1] + ", " + SLot1num4[2] + ", " + SLot1num4[3] + ", " + SLot1num4[4] + " (" + Srednum4 + ")\n");
-//        text1.append (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + " (" + Srednum5 + ")");
-
     }
 
+
+    public void savenum(int clickcount, String ctextRlist) {
+
+        if (clickcount == 0) {
+            db.insertNote(ctextRlist);
+            String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
+
+            showGuide(Mesg1);
+
+        } else {
+
+            showGuide("First Gen Button Click");
+
+        }
+
+    }
 }
