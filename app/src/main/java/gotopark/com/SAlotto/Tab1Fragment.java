@@ -140,14 +140,15 @@ public class Tab1Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                // 사운드 재생
+                soundpool.play(tak, 10, 10, 1, 0, 0);
 
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
 
-                // 사운드 재생
-                soundpool.play(tak, 10, 10, 1, 0, 0);
+
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
@@ -174,14 +175,14 @@ public class Tab1Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
-
+                // 사운드 재생
+                soundpool.play(tak, 10, 10, 1, 0, 0);
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
 
-                // 사운드 재생
-                soundpool.play(tak, 10, 10, 1, 0, 0);
+
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
@@ -207,14 +208,14 @@ public class Tab1Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
-
+                // 사운드 재생
+                soundpool.play(tak, 10, 10, 1, 0, 0);
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
 
-                // 사운드 재생
-                soundpool.play(tak, 10, 10, 1, 0, 0);
+
 
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {

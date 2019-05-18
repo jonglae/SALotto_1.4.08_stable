@@ -126,14 +126,15 @@ public class Tab3Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                // 반복 회수 끝
+                soundpool.play(tak, 1, 1, 0, 0, 0);
 
                 Random rand = new Random();
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
-                // 반복 회수 끝
-                soundpool.play(tak, 1, 1, 0, 0, 1);
+
 
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
