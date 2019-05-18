@@ -1,8 +1,11 @@
 package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -70,6 +73,9 @@ public class Tab1Fragment extends Fragment {
 
     int count, primeWord;
 
+    int tak;
+    SoundPool soundpool;
+
 
     @SuppressLint("CutPasteId")
     @Nullable
@@ -81,6 +87,8 @@ public class Tab1Fragment extends Fragment {
         rand = new Random();
         primeWord = rand.nextInt(13) + 4;
 
+        soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        tak = soundpool.load(getActivity() , R.raw.click1, 1);
 
         wisetext1 = view.findViewById(R.id.wisetext);
 
@@ -137,11 +145,16 @@ public class Tab1Fragment extends Fragment {
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
-                // 반복 회수 끝
+
+                // 사운드 재생
+                soundpool.play(tak, 10, 10, 1, 0, 0);
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
+
+
                         Gen1Number();
+
                     }
 
                     public void onFinish() {
@@ -166,10 +179,13 @@ public class Tab1Fragment extends Fragment {
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
-                // 반복 회수 끝
+
+                // 사운드 재생
+                soundpool.play(tak, 10, 10, 1, 0, 0);
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
+
                         Gen2Number();
                     }
 
@@ -196,7 +212,10 @@ public class Tab1Fragment extends Fragment {
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
-                // 반복 회수 끝
+
+                // 사운드 재생
+                soundpool.play(tak, 10, 10, 1, 0, 0);
+
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
@@ -463,6 +482,5 @@ public class Tab1Fragment extends Fragment {
             }
 
     }
-
 
 }

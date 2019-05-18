@@ -3,6 +3,8 @@ package gotopark.com.SAlotto;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -57,6 +59,9 @@ public class Tab3Fragment extends Fragment {
     String ctextRlist1;
     int ClickCount1 = 1;
 
+    int tak;
+    SoundPool soundpool;
+
     DatabaseHelper db;
 
     @Nullable
@@ -67,6 +72,9 @@ public class Tab3Fragment extends Fragment {
         count = 0;
         rand = new Random();
         primeWord = rand.nextInt(13) + 4;
+
+        soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        tak = soundpool.load(getActivity() , R.raw.click1, 1);
 
         db = new DatabaseHelper(getActivity());
 
@@ -125,6 +133,8 @@ public class Tab3Fragment extends Fragment {
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
                 // 반복 회수 끝
+                soundpool.play(tak, 1, 1, 0, 0, 1);
+
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {

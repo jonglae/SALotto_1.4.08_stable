@@ -15,6 +15,12 @@
         android:orientation="vertical">
 
         <include
+            layout="@layout/daily_lotto_gen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+        <include
             layout="@layout/lotto_gen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,11 +32,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp" />
-
-        <include
-            layout="@layout/daily_lotto_gen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -75,17 +76,19 @@
                 tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/wisetext"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:background="#3F354B"
-            android:gravity="center_vertical"
-            android:text="Wise Word"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            android:textStyle="bold|italic"
-            tools:ignore="DuplicateIds,HardcodedText" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/wisetext"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#3F354B"
+        android:gravity="center_vertical"
+        android:text="Wise Word"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        tools:ignore="DuplicateIds,HardcodedText" />
 
 </RelativeLayout>

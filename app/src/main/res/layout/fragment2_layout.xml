@@ -8,50 +8,6 @@
     android:layout_height="match_parent">
 
 
-    <LinearLayout
-        android:id="@+id/buttonall"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/BallFrame5"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:background="@drawable/ripple_share1"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="7"
-            android:text="@string/Gen_btn3"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:background="@drawable/ripple_save"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="7"
-            android:text="@string/btn_save"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
     <Button
         android:id="@+id/btnTEST"
         android:layout_width="match_parent"
@@ -59,6 +15,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:layout_marginTop="4dp"
         android:background="@drawable/ripple_button1"
         android:shadowColor="@android:color/black"
         android:shadowDx="5"
@@ -777,11 +734,55 @@
 
     </FrameLayout>
 
+    <LinearLayout
+        android:id="@+id/buttonall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BallFrame5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_share1"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="7"
+            android:text="@string/Gen_btn3"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_save"
+            android:shadowColor="@android:color/black"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:shadowRadius="7"
+            android:text="@string/btn_save"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/wisetext2"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@+id/buttonall"
+        android:layout_alignParentBottom="true"
         android:background="#573F39"
         android:gravity="center_vertical"
         android:text="Wise Word"

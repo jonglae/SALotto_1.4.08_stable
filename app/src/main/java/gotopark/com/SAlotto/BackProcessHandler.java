@@ -4,13 +4,17 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.util.Log;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.InterstitialAd;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -19,7 +23,11 @@ import hotchemi.android.rate.AppRate;
 import hotchemi.android.rate.OnClickButtonListener;
 import hotchemi.android.rate.StoreType;
 
+import static android.app.PendingIntent.getActivity;
+
+
 class BackProcessHandler {
+
 
 //    private Toast toast;
 
@@ -98,7 +106,7 @@ class BackProcessHandler {
         AppRate.showRateDialogIfMeetsConditions(activity);
     }
 
-//
+    //
 //     static void Admob_Front() {
 //        Log.e("전면_Front_TEST =====> ", "=======================> OK");
 //        mInterstitialAd = new InterstitialAd(activity);
@@ -119,6 +127,7 @@ class BackProcessHandler {
 //
 //        }
 //    }
+
 
 
     static String frontSay() {
