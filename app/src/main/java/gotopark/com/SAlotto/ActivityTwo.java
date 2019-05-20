@@ -6,6 +6,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -49,6 +51,10 @@ public class ActivityTwo extends Activity {
     Button button4;
     Button button5;
     String str = "";
+    int tak,tok;
+    SoundPool soundpool;
+
+
 
     String[] SAloto = {"Lotto Past Draws", "Lotto Plus Past Draws", "PowerBall Past Draws", "PowerBall Plus Past Draws","Daily Lotto"};
     int SAlotoChoice;
@@ -61,6 +67,11 @@ public class ActivityTwo extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
+
+        soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        tak = soundpool.load(this , R.raw.short_click2 , 1);
+        tok = soundpool.load(this, R.raw.click1_rebert1, 1);
+
         setTitle("Check the Your Numbers");
         listView = findViewById(R.id.card_listView);
 
@@ -123,6 +134,7 @@ public class ActivityTwo extends Activity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 SAlotoChoice = 4;
                 url = getString(R.string.JsoupLink5);
@@ -139,6 +151,7 @@ public class ActivityTwo extends Activity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 SAlotoChoice = 0;
                 url = getString(R.string.JsoupLink1);
@@ -155,6 +168,7 @@ public class ActivityTwo extends Activity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 SAlotoChoice = 1;
                 url = getString(R.string.JsoupLink2);
@@ -171,6 +185,7 @@ public class ActivityTwo extends Activity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 SAlotoChoice = 2;
                 url = getString(R.string.JsoupLink3);
@@ -187,6 +202,7 @@ public class ActivityTwo extends Activity {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 SAlotoChoice = 3;
                 url = getString(R.string.JsoupLink4);

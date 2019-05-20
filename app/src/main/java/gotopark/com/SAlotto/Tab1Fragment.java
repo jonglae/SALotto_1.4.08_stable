@@ -212,7 +212,7 @@ public class Tab1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // 사운드 재생
-                soundpool.play(tak, 10, 10, 1, 0, 0);
+                soundpool.play(tak, 1, 1, 0, 0, 0);
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
