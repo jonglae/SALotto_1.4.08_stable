@@ -73,7 +73,7 @@ public class Tab1Fragment extends Fragment {
 
     int count, primeWord;
 
-    int tak;
+    int tak,tok;
     SoundPool soundpool;
 
 
@@ -88,7 +88,8 @@ public class Tab1Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        tak = soundpool.load(getActivity() , R.raw.click1, 1);
+        tak = soundpool.load(getActivity() , R.raw.short_click2 , 1);
+        tok = soundpool.load(getActivity(), R.raw.click1_rebert1, 1);
 
         wisetext1 = view.findViewById(R.id.wisetext);
 
@@ -141,7 +142,7 @@ public class Tab1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // 사운드 재생
-                soundpool.play(tak, 10, 10, 1, 0, 0);
+                soundpool.play(tak, 1, 1, 0, 0, 0);
 
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
@@ -152,6 +153,7 @@ public class Tab1Fragment extends Fragment {
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
+                        soundpool.play(tak, 1, 1, 0, 0, 0);
 
 
                         Gen1Number();
@@ -176,7 +178,7 @@ public class Tab1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // 사운드 재생
-                soundpool.play(tak, 10, 10, 1, 0, 0);
+                soundpool.play(tak, 1, 1, 0, 0, 0);
                 // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
@@ -186,6 +188,7 @@ public class Tab1Fragment extends Fragment {
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
+                        soundpool.play(tak, 1, 1, 0, 0, 0);
 
                         Gen2Number();
                     }
@@ -220,6 +223,9 @@ public class Tab1Fragment extends Fragment {
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
+
+                        soundpool.play(tak, 1, 1, 0, 0, 0);
+
                         Gen3Number();
                     }
 
@@ -241,6 +247,7 @@ public class Tab1Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 LotCOPY();
+                soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 savenum(ClickCount1, ctextRlist1);
                 ClickCount1 = 1;
@@ -251,6 +258,8 @@ public class Tab1Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
+
                 LotCOPY();
 
                 savenum(ClickCount2, ctextRlist2);
@@ -261,6 +270,8 @@ public class Tab1Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
+
                 LotCOPY();
 
                 savenum(ClickCount3, ctextRlist3);
@@ -273,6 +284,8 @@ public class Tab1Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
+
                 Intent intent = new Intent(getActivity(), Main2Activity.class);
                 startActivity(intent);
 
@@ -284,6 +297,8 @@ public class Tab1Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
+                soundpool.play(tak, 1, 1, 0, 0, 0);
+
 
                 String check1;
                 String check2;

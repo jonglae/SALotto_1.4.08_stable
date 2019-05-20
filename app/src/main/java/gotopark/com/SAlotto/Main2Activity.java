@@ -1,6 +1,8 @@
 package gotopark.com.SAlotto;
 
 import android.content.DialogInterface;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
@@ -36,11 +38,18 @@ public class Main2Activity extends AppCompatActivity {
 
     private DatabaseHelper db;
 
+    int tak,tok;
+    SoundPool soundpool;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
+        soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        tak = soundpool.load(this , R.raw.short_click2 , 1);
+        tok = soundpool.load(this, R.raw.click1_rebert1, 1);
 
         CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinator_layout);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -81,11 +90,16 @@ public class Main2Activity extends AppCompatActivity {
             @Override
             public void onClick(View view, final int position) {
 
+                soundpool.play(tok, 1, 1, 0, 0, 0);
+
+
                 Toast.makeText(Main2Activity.this, getString(R.string.select_list), Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onLongClick(View view, int position) {
+                soundpool.play(tak, 1, 1, 0, 0, 0);
+
                 showActionsDialog(position);
             }
         }));
@@ -169,6 +183,9 @@ public class Main2Activity extends AppCompatActivity {
                 if (which == 1) {
                     showNoteDialog(true, notesList.get(position), position);
                 } else {
+
+                    soundpool.play(tok, 1, 1, 0, 0, 0);
+
                     deleteNote(position);
                 }
             }

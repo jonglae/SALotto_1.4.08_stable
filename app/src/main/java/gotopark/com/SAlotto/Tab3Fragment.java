@@ -59,7 +59,7 @@ public class Tab3Fragment extends Fragment {
     String ctextRlist1;
     int ClickCount1 = 1;
 
-    int tak;
+    int tak,tok;
     SoundPool soundpool;
 
     DatabaseHelper db;
@@ -75,6 +75,7 @@ public class Tab3Fragment extends Fragment {
 
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         tak = soundpool.load(getActivity() , R.raw.click1, 1);
+        tok = soundpool.load(getActivity(), R.raw.click1_rebert1, 1);
 
         db = new DatabaseHelper(getActivity());
 
@@ -139,6 +140,8 @@ public class Tab3Fragment extends Fragment {
 
                 CountDownTimer start = new CountDownTimer(millisec, 50) {
                     public void onTick(long millisUntilFinished) {
+                        soundpool.play(tak, 1, 1, 0, 0, 0);
+
                         GenNumber();
                     }
 
@@ -159,6 +162,8 @@ public class Tab3Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
+
                 LotCOPY();
 
                 savenum(ClickCount1, ctextRlist1);
@@ -170,6 +175,7 @@ public class Tab3Fragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
+                soundpool.play(tak, 1, 1, 0, 0, 0);
 
                 String check1;
                 check1 = F1TV1.getText().toString();
