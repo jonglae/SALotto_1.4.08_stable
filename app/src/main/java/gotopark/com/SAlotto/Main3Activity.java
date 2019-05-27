@@ -1,6 +1,7 @@
 package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
@@ -60,31 +62,65 @@ public class Main3Activity extends AppCompatActivity {
     private String old_pbnum1 = "";
     private String old_pbnum2 = "";
 
-
+    Resources ball;
     int tak, tok;
     SoundPool soundpool;
 
+    String[] numbers;
+    String[] numbers2;
+    int ballgiri;
+
+
+    @SuppressLint("SetTextI18n")
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        Resources ball = getResources();
+        Intent intent = getIntent();
+        final int select = Objects.requireNonNull(intent.getExtras()).getInt("select");
+        ball = getResources();
+
+        switch (select) {
+            case 1:
+                numbers = ball.getStringArray(array.daily);
+                ballgiri = 5;
+                numbers2 = null;
+
+                break;
+            case 2:
+                numbers = ball.getStringArray(array.lotto);
+                ballgiri = 6;
+                numbers2 = null;
+                break;
+
+            case 3:
+                ballgiri = 5;
+                numbers = ball.getStringArray(array.powerfive);
+                numbers2 = ball.getStringArray(array.powerball);
+
+                break;
+        }
+
 
         db = new DatabaseHelper(this);
-
-        String[] numbers = ball.getStringArray(array.fiveball);
-        String[] numbers2 = ball.getStringArray(array.MeGaball);
 
 
         GridView gridView1 = findViewById(id.grid);
         GridView gridView2 = findViewById(id.grid2);
 
-        adapter = new GridViewAdapter(numbers, this);
-        adapter2 = new GridViewAdapter(numbers2, this);
 
+        adapter = new GridViewAdapter(numbers, this);
+
+        if (numbers2 != null) {
+            adapter2 = new GridViewAdapter(numbers2, this);
+        }
+
+        TextView Seltext = findViewById(id.seltext);
         View btnGo = findViewById(id.button);
 
+        Seltext.setText("text : " + select);
         selectedStrings = new ArrayList<>();
         selectedStrings_star2 = new ArrayList<>();
 
@@ -92,8 +128,9 @@ public class Main3Activity extends AppCompatActivity {
         cardArrayAdapter = new OneCardAdapter2(getApplicationContext(), R.layout.tab1_lot_list);
 
         gridView1.setAdapter(adapter);
-        gridView2.setAdapter(adapter2);
-
+        if (numbers2 != null) {
+            gridView2.setAdapter(adapter2);
+        }
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         tak = soundpool.load(this, R.raw.short_click2, 1);
         tok = soundpool.load(this, R.raw.click1_rebert1, 1);
@@ -105,7 +142,7 @@ public class Main3Activity extends AppCompatActivity {
 
                 selectedIndex1 = adapter.selectedPositions.indexOf(position);
 
-                if (selectedStrings.size() == 4) {
+                if (selectedStrings.size() == (ballgiri - 1)) {
                     Log.d("====click ok=====", "click ok");
 
                     Click_true = 0;
@@ -121,7 +158,7 @@ public class Main3Activity extends AppCompatActivity {
 
                 } else {
 
-                    if (selectedStrings.size() == 5) {
+                    if (selectedStrings.size() == ballgiri) {
 
                         Toast.makeText(getApplicationContext(), "OK", Toast.LENGTH_LONG).show();
 
@@ -193,8 +230,19 @@ public class Main3Activity extends AppCompatActivity {
 
                 pbnum = String.valueOf(selectedStrings);
                 pbnum2 = String.valueOf(selectedStrings_star2);
+                int star2_Size = selectedStrings_star2.size();
 
-                if (selectedStrings.size() == 5 && selectedStrings_star2.size() == 1 && Click_true == 0) {
+                switch (select) {
+                    case 1:
+                        star2_Size = 1;
+                        break;
+                    case 2:
+                        star2_Size = 1;
+                        break;
+
+                }
+
+                if (selectedStrings.size() == ballgiri && star2_Size == 1 && Click_true == 0) {
                     if (Objects.equals(old_pbnum1, pbnum) && Objects.equals(old_pbnum2, pbnum2)) {
                         Toast.makeText(getApplicationContext(), "Same Numbers", Toast.LENGTH_LONG).show();
 
@@ -213,10 +261,9 @@ public class Main3Activity extends AppCompatActivity {
                         pbnum2 = pbnum2.replace("[", "");
                         pbnum2 = pbnum2.replace("]", "");
 
-
-
-                        pbnum = pbnum + " (" + pbnum2 + ")";
-
+                        if (select == 3) {
+                            pbnum = pbnum + " (" + pbnum2 + ")";
+                        }
                         Card card = new Card(LottoCount + "St Number", pbnum, "", "", "", "");
 
                         //DB 입력

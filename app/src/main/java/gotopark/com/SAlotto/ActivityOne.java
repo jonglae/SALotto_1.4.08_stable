@@ -75,7 +75,9 @@ public class ActivityOne extends Activity {
 
 
         btn6.setOnClickListener(Lot_list);
-        btn7.setOnClickListener(Num_Choice);
+        btn7.setOnClickListener(Num_Choice1);
+        btn8.setOnClickListener(Num_Choice2);
+        btn9.setOnClickListener(Num_Choice3);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(1);
@@ -132,13 +134,38 @@ public class ActivityOne extends Activity {
     };
 
 
-    public Button.OnClickListener Num_Choice = new View.OnClickListener() {
+    public Button.OnClickListener Num_Choice1 = new View.OnClickListener() {
 
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         @Override
         public void onClick(View v) {
             soundpool.play(tok, 1, 1, 1, 0, 1);
             Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
+            intent.putExtra("select", 1);
+            startActivity(intent);
+        }
+    };
+
+    public Button.OnClickListener Num_Choice2 = new View.OnClickListener() {
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        public void onClick(View v) {
+            soundpool.play(tok, 1, 1, 1, 0, 1);
+            Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
+            intent.putExtra("select", 2);
+            startActivity(intent);
+        }
+    };
+
+    public Button.OnClickListener Num_Choice3 = new View.OnClickListener() {
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        public void onClick(View v) {
+            soundpool.play(tok, 1, 1, 1, 0, 1);
+            Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
+            intent.putExtra("select", 3);
             startActivity(intent);
         }
     };

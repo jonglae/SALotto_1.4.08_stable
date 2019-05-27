@@ -44,6 +44,7 @@ public class ActivityThree extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_three);
 
+
         listView = findViewById(R.id.card_listView);
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
         listView.addHeaderView(new View(this));
