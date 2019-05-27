@@ -384,10 +384,13 @@ public class Tab1Fragment extends Fragment {
 
 
         ctextR = App_Share;
+        ctextR = ctextR + "\n" + "Daily Lotto";
+        ctextR = ctextR + "\n" + dltext1 + ", " + dltext2 + ", " + dltext3 + ", " + dltext4 + ", " + dltext5;
+
         ctextR = ctextR + "\n" + "Lotto and plus1,2 ";
-        ctextR = ctextR + "\n" + ctext1 + ", " + ctext2 + ", " + ctext3 + ", " + ctext4 + ", " + ctext5 + ", " + ctext6 + "\n";
+        ctextR = ctextR + "\n" + ctext1 + ", " + ctext2 + ", " + ctext3 + ", " + ctext4 + ", " + ctext5 + ", " + ctext6;
         ctextR = ctextR + "\n" + "PowerBall";
-        ctextR = ctextR + "\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", " + cptext6 + "\n\n" + App_links1 + "\n1등 ^^당첨을 기원합니다.~♡";
+        ctextR = ctextR + "\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", " + cptext6 + "\n" + App_links1 + "\n1등 ^^당첨을 기원합니다.~♡";
 
         ctextRlist1 = "Lotto and plus1,2\n" + ctext1 + ", " + ctext2 + ", " + ctext3 + ", " + ctext4 + ", " + ctext5 + ", " + ctext6;
         ctextRlist2 = "PowerBall\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", (" + cptext6 + ")";

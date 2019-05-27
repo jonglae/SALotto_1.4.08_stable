@@ -44,37 +44,37 @@
             <Button
                 android:id="@+id/button6"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/ripple_list"
-                android:text="[list]"
+                android:text="[SHOW]\n[list]"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ripple_button1"
-                android:text="[Daily]"
+                android:background="@drawable/ripple_share2"
+                android:text="[M/S]\n[Daily]"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/button8"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/ripple_button1"
-                android:text="[Lotto]"
+                android:text="[M/S]\n[Lotto]"
                 android:textSize="14sp" />
 
             <Button
                 android:id="@+id/button9"
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/ripple_button1"
-                android:text="[Powerball]"
+                android:background="@drawable/ripple_button2"
+                android:text="[M/S]\n[Powerball]"
                 android:textSize="14sp" />
 
         </LinearLayout>

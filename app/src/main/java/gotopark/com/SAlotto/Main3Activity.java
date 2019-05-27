@@ -70,6 +70,7 @@ public class Main3Activity extends AppCompatActivity {
     String[] numbers2;
     int ballgiri;
 
+    String title;
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -81,28 +82,33 @@ public class Main3Activity extends AppCompatActivity {
         Intent intent = getIntent();
         final int select = Objects.requireNonNull(intent.getExtras()).getInt("select");
         ball = getResources();
-
+        TextView Seltext = findViewById(id.seltext);
         switch (select) {
             case 1:
                 numbers = ball.getStringArray(array.daily);
                 ballgiri = 5;
                 numbers2 = null;
+                title ="Daily Lotto";
 
                 break;
             case 2:
                 numbers = ball.getStringArray(array.lotto);
                 ballgiri = 6;
                 numbers2 = null;
+                title ="Lotto Plus/2";
+
                 break;
 
             case 3:
                 ballgiri = 5;
                 numbers = ball.getStringArray(array.powerfive);
                 numbers2 = ball.getStringArray(array.powerball);
+                title ="Powerball/Plus";
 
                 break;
         }
 
+        Seltext.setText(title);
 
         db = new DatabaseHelper(this);
 
@@ -117,10 +123,9 @@ public class Main3Activity extends AppCompatActivity {
             adapter2 = new GridViewAdapter(numbers2, this);
         }
 
-        TextView Seltext = findViewById(id.seltext);
+
         View btnGo = findViewById(id.button);
 
-        Seltext.setText("text : " + select);
         selectedStrings = new ArrayList<>();
         selectedStrings_star2 = new ArrayList<>();
 
@@ -227,7 +232,6 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 soundpool.play(tok, 1, 1, 0, 0, 1);
-
                 pbnum = String.valueOf(selectedStrings);
                 pbnum2 = String.valueOf(selectedStrings_star2);
                 int star2_Size = selectedStrings_star2.size();
@@ -238,8 +242,11 @@ public class Main3Activity extends AppCompatActivity {
                         break;
                     case 2:
                         star2_Size = 1;
+
                         break;
 
+                    case 3:
+                        break;
                 }
 
                 if (selectedStrings.size() == ballgiri && star2_Size == 1 && Click_true == 0) {
@@ -260,6 +267,8 @@ public class Main3Activity extends AppCompatActivity {
 
                         pbnum2 = pbnum2.replace("[", "");
                         pbnum2 = pbnum2.replace("]", "");
+
+                        pbnum = title +"\n"+pbnum;
 
                         if (select == 3) {
                             pbnum = pbnum + " (" + pbnum2 + ")";

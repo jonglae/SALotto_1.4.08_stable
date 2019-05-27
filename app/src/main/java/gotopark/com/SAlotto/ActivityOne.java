@@ -365,8 +365,8 @@ public class ActivityOne extends Activity {
                 Card card2 = new Card("Wise Word", saywords, "", "", "", "");
                 oneCardArrayAdapter.add(card2);
 
-                Card card3 = new Card("", "", "", "", "", "");
-                oneCardArrayAdapter.add(card3);
+//                Card card3 = new Card("", "", "", "", "", "");
+//                oneCardArrayAdapter.add(card3);
 
                 mProgressDialog.dismiss();
                 listView.setAdapter(oneCardArrayAdapter);
