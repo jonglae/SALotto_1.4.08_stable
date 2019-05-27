@@ -19,20 +19,44 @@
             android:id="@+id/card_listView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/bottomBar"
-            android:layout_marginTop="2dp"
+            android:layout_above="@+id/adView"
             android:cacheColorHint="@android:color/transparent"
             android:dividerHeight="2dp"
             android:listSelector="@android:color/transparent" />
+
 
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/bottomBar"
+            android:layout_above="@+id/bottom_button"
             ads:adUnitId="@string/banner_ad_unit_id2"
             app:adSize="SMART_BANNER" />
 
+        <LinearLayout
+            android:id="@+id/bottom_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottomBar"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_save"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button7"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/ripple_button1"
+                android:text="Button" />
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"

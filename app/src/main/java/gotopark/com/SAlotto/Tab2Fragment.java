@@ -57,6 +57,7 @@ public class Tab2Fragment extends Fragment {
 
     private Random rand;
     int count,primeWord;
+
     String ctextRlist1;
     DatabaseHelper db;
     int ClickCount1 = 1;
