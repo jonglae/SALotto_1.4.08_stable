@@ -5,6 +5,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
+import android.media.SoundPool;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -17,6 +19,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -41,6 +44,10 @@ public class ActivityOne extends Activity {
     public OneCardArrayAdapter oneCardArrayAdapter;
     ProgressDialog mProgressDialog;
 
+    int tak, tok;
+    SoundPool soundpool;
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,11 +56,26 @@ public class ActivityOne extends Activity {
 
         listView = findViewById(R.id.card_listView);
 
+        soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
+        tak = soundpool.load(this, R.raw.short_click2, 1);
+        tok = soundpool.load(this, R.raw.click1_rebert1, 1);
+
+
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
 
         listView.addHeaderView(new View(this));
         listView.addFooterView(new View(this));
 
+
+        Button btn6 = findViewById(R.id.button6);
+        Button btn7 = findViewById(R.id.button7);
+        Button btn8 = findViewById(R.id.button8);
+        Button btn9 = findViewById(R.id.button9);
+
+
+
+        btn6.setOnClickListener(Lot_list);
+        btn7.setOnClickListener(Num_Choice);
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView_Bar);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem = menu.getItem(1);
@@ -95,6 +117,31 @@ public class ActivityOne extends Activity {
 
         Admob_is();
     }
+
+
+    public Button.OnClickListener Lot_list = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            soundpool.play(tok, 1, 1, 1, 0, 1);
+
+            Intent intent = new Intent(ActivityOne.this, Main2Activity.class);
+            startActivity(intent);
+
+        }
+    };
+
+
+    public Button.OnClickListener Num_Choice = new View.OnClickListener() {
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        public void onClick(View v) {
+            soundpool.play(tok, 1, 1, 1, 0, 1);
+            Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
+            startActivity(intent);
+        }
+    };
 
 
     public void Admob_is() {
