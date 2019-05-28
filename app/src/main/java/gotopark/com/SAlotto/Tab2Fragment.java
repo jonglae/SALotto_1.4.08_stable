@@ -179,16 +179,16 @@ public class Tab2Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // 반복 회수 끝
-                soundpool.play(tak, 1, 1, 0, 0, 0);
+                soundpool.play(tak, 1, 1, 0, 0, 1);
                // 반복 회수 지정
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
 
 
-                CountDownTimer start = new CountDownTimer(millisec, 50) {
+                CountDownTimer start = new CountDownTimer(millisec, 10) {
                     public void onTick(long millisUntilFinished) {
-                        soundpool.play(tak, 1, 1, 0, 0, 0);
+                        soundpool.play(tak, 1, 1, 0, 0, 1);
                         GenNumber();
                     }
 
@@ -465,7 +465,7 @@ public class Tab2Fragment extends Fragment {
     public void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
-            db.insertNote(ctextRlist);
+            db.insertNote(ctextRlist,"AUTO");
             String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
 
             showGuide(Mesg1);

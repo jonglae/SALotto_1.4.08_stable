@@ -128,7 +128,7 @@ public class Tab3Fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 // 반복 회수 끝
-                soundpool.play(tak, 1, 1, 0, 0, 0);
+                soundpool.play(tak, 1, 1, 0, 0, 1);
 
                 Random rand = new Random();
                 // 반복 회수 지정
@@ -138,9 +138,9 @@ public class Tab3Fragment extends Fragment {
 
 
 
-                CountDownTimer start = new CountDownTimer(millisec, 50) {
+                CountDownTimer start = new CountDownTimer(millisec, 10) {
                     public void onTick(long millisUntilFinished) {
-                        soundpool.play(tak, 1, 1, 0, 0, 0);
+                        soundpool.play(tak, 1, 1, 0, 0, 1);
 
                         GenNumber();
                     }
@@ -333,7 +333,7 @@ public class Tab3Fragment extends Fragment {
     public void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
-            db.insertNote(ctextRlist);
+            db.insertNote(ctextRlist,"AUTO");
             String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
 
             showGuide(Mesg1);

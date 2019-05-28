@@ -9,10 +9,12 @@ public class Note {
 
     public static final String COLUMN_ID = "id";
     public static final String COLUMN_NOTE = "note";
+    public static final String COLUMN_MAGROUP = "magroup";
     public static final String COLUMN_TIMESTAMP = "timestamp";
 
     private int id;
     private String note;
+    private String magroup;
     private String timestamp;
 
 
@@ -21,16 +23,27 @@ public class Note {
             "CREATE TABLE " + TABLE_NAME + "("
                     + COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
                     + COLUMN_NOTE + " TEXT,"
+                    + COLUMN_MAGROUP + " TEXT,"
                     + COLUMN_TIMESTAMP + " DATETIME DEFAULT CURRENT_TIMESTAMP"
                     + ")";
 
     public Note() {
     }
 
-    public Note(int id, String note, String timestamp) {
+    public Note(int id, String note,String magroup,String timestamp) {
         this.id = id;
         this.note = note;
+        this.magroup = magroup;
         this.timestamp = timestamp;
+    }
+
+
+    public String getMagroup() {
+        return magroup;
+    }
+
+    public void setMagroup(String magroup) {
+        this.magroup = magroup;
     }
 
     public int getId() {

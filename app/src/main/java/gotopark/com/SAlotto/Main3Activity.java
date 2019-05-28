@@ -276,7 +276,7 @@ public class Main3Activity extends AppCompatActivity {
                         Card card = new Card(LottoCount + "St Number", pbnum, "", "", "", "");
 
                         //DB 입력
-                        db.insertNote(pbnum);
+                        db.insertNote(pbnum,"Manual Select Number");
 
 
                         cardArrayAdapter.add(card);

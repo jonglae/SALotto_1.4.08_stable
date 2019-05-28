@@ -3,7 +3,9 @@ package gotopark.com.SAlotto;
 import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
@@ -15,6 +17,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -38,7 +41,7 @@ public class Main2Activity extends AppCompatActivity {
 
     private DatabaseHelper db;
 
-    int tak,tok;
+    int tak,tok,trash;
     SoundPool soundpool;
 
 
@@ -50,16 +53,22 @@ public class Main2Activity extends AppCompatActivity {
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
         tak = soundpool.load(this , R.raw.short_click2 , 1);
         tok = soundpool.load(this, R.raw.click1_rebert1, 1);
+        trash = soundpool.load(this, R.raw.trashbin , 1);
 
         CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinator_layout);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
         noNotesView = findViewById(R.id.empty_notes_view);
+        Button btn1 = findViewById(R.id.btn_clear);
+
         TextView title = findViewById(R.id.saveTitle);
 
         title.setText(getString(R.string.app_name)+" Save Numbers List");
 
 
         db = new DatabaseHelper(this);
+
+        btn1.setOnClickListener(fun_clear);
+
 
         notesList.addAll(db.getAllNotes());
 
@@ -108,14 +117,28 @@ public class Main2Activity extends AppCompatActivity {
         Admob_is();
     }
 
+
+    public Button.OnClickListener fun_clear = new View.OnClickListener() {
+
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+        @Override
+        public void onClick(View v) {
+            soundpool.play(trash, 1, 1, 0, 0, 1);
+            for (int i = 0; i < db.getNotesCount(); i++) {
+                soundpool.play(trash, 1, 1, 0, 0, 1);
+                deleteNote(i);
+            }
+        }
+    };
+
     /**
      * Inserting new note in db
      * and refreshing the list
      */
-    private void createNote(String note) {
+    private void createNote(String note,String magroup) {
         // inserting note in db and getting
         // newly inserted note id
-        long id = db.insertNote(note);
+        long id = db.insertNote(note, magroup);
 
         // get the newly inserted note from db
         Note n = db.getNote(id);
@@ -248,7 +271,7 @@ public class Main2Activity extends AppCompatActivity {
                     updateNote(inputNote.getText().toString(), position);
                 } else {
                     // create new note
-                    createNote(inputNote.getText().toString());
+//                    createNote(inputNote.getText().toString());
                 }
             }
         });

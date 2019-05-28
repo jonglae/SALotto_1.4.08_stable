@@ -4,7 +4,9 @@ package gotopark.com.SAlotto;
  * Created by ravi on 20/02/18.
  */
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
@@ -26,12 +28,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView note;
+        TextView MAgroup;
         TextView dot;
         TextView timestamp;
 
         MyViewHolder(View view) {
             super(view);
             note = view.findViewById(R.id.note);
+            MAgroup = view.findViewById(R.id.MAgroup);
             dot = view.findViewById(R.id.dot);
             timestamp = view.findViewById(R.id.timestamp);
         }
@@ -54,8 +58,12 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Note note = notesList.get(position);
+        holder.MAgroup.setTextColor(Color.parseColor("#42A02B"));
 
         holder.note.setText(note.getNote());
+
+        holder.MAgroup.setText(note.getMagroup());
+
 
         // Displaying dot from HTML character code
         holder.dot.setText(Html.fromHtml("&#8226;"));
@@ -76,9 +84,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
      */
     private String formatDate(String dateStr) {
         try {
-            SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            @SuppressLint("SimpleDateFormat") SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             Date date = fmt.parse(dateStr);
-            SimpleDateFormat fmtOut = new SimpleDateFormat("-- dd / MM (HH:mm) --");
+            @SuppressLint("SimpleDateFormat") SimpleDateFormat fmtOut = new SimpleDateFormat("-- dd / MM (HH:mm) --");
             return fmtOut.format(date);
         } catch (ParseException ignored) {
 
