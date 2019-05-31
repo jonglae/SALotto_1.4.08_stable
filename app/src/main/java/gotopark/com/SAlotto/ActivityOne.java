@@ -73,7 +73,6 @@ public class ActivityOne extends Activity {
         Button btn9 = findViewById(R.id.button9);
 
 
-
         btn6.setOnClickListener(Lot_list);
         btn7.setOnClickListener(Num_Choice1);
         btn8.setOnClickListener(Num_Choice2);
@@ -299,6 +298,8 @@ public class ActivityOne extends Activity {
                 String[] pbnum1 = new String[winperson1.size()];
                 for (int i = 0; i < winperson1.size(); i++) {
                     pbnum1[i] = winperson1.get(i).text().substring(5);
+                    pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
+
                 }
 
                 String[] pbnum2 = new String[winperson2.size()];
@@ -311,65 +312,56 @@ public class ActivityOne extends Activity {
                     pbnum3[i] = winperson3.get(i).text();
                 }
 
-                String[] Next1 = new String[pbnum3.length];
-                String[] Next2 = new String[pbnum3.length];
-
                 /** 리스트 뷰 출력 출력 */
 
-                for (int i = 0; i <= 5; i++) {
 
+                for (int i = 0; i < 6; i++) {
+                    pbnum3[i] = pbnum3[i].replace("  ", " ");
 
-                    // 문자열 자르기 로또 번호
-                    Next1[i] = pbnum3[i].substring(0, pbnum3[i].length() - 2);
-                    Next2[i] = pbnum3[i].substring(pbnum3[i].length() - 2);
+                    switch (i) {
+                        case 0:
 
-                    // 로또 번호 보너스 번호에 + 집어 넣기
-                    pbnum3[i] = null;
-                    pbnum3[i] = Next1[i] + " + " + Next2[i];
-
-
-                    if (i == 3) {
-                        //  // 날짜 쪽에 쓸데 없는 문자 제거 4번째 것
-                        pbnum3[i] = pbnum3[i].replace("+", "");
-                        pbnum3[i] = pbnum3[i].replace("  ", " ");
-                    }
-
-
-
-                    //Next Jackpot 필요 없는 문자 잘라 네기
-                    if (i < 5) {
-                        pbnum1[i] = pbnum1[i].replaceAll(SAloto[i], "");
-                        pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
-                    }
-
-
-                    if (i == 3) {
-                        Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", 2, getString(R.string.listLast_Meg1));
-                        oneCardArrayAdapter.add(card);
-                    }
-
-                    if (i != 3) {
-
-                        if (i < 4) {
-                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 3, getString(R.string.listLast_Meg1));
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card);
+                            break;
 
-                        } else {
+                        case 1:
 
-                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], 3, getString(R.string.listLast_Meg1));
-                            oneCardArrayAdapter.add(card);
-                        }
+                            Card card1 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
+                            oneCardArrayAdapter.add(card1);
+                            break;
+
+
+                        case 2:
+
+                            Card card2 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
+                            oneCardArrayAdapter.add(card2);
+                            break;
+
+
+                        case 3:
+                            //daily Lotto
+                            Card card3 = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", 1, getString(R.string.listLast_Meg1));
+                            oneCardArrayAdapter.add(card3);
+                            break;
+
+                        case 4:
+
+                            Card card4 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i-1], 3, getString(R.string.listLast_Meg1));
+                            oneCardArrayAdapter.add(card4);
+
+                            break;
+
+                        case 5:
+                            Card card5 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i-1], 3, getString(R.string.listLast_Meg1));
+                            oneCardArrayAdapter.add(card5);
+                            break;
 
                     }
+
+
                 }
 
-                String saywords = BackProcessHandler.frontSay();
-
-                Card card2 = new Card("Wise Word", saywords, "", "", 4, "");
-                oneCardArrayAdapter.add(card2);
-
-//                Card card3 = new Card("", "", "", "", "", "");
-//                oneCardArrayAdapter.add(card3);
 
                 mProgressDialog.dismiss();
                 listView.setAdapter(oneCardArrayAdapter);

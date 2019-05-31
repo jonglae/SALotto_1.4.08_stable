@@ -9,12 +9,12 @@
 	android:descendantFocusability="beforeDescendants">
 
 	<LinearLayout
-		android:orientation="vertical"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:paddingLeft="8dp"
-		android:background="@drawable/card_background_selector"
+		android:background="@drawable/card_background"
 		android:descendantFocusability="afterDescendants"
+		android:orientation="vertical"
+		android:paddingLeft="8dp"
 		tools:ignore="UselessParent">
 
 
@@ -51,27 +51,158 @@
 			android:textAlignment="center"
 			android:textColor="@android:color/holo_orange_dark"
 			android:textSize="24sp"
-			android:textStyle="bold" />
+			android:textStyle="bold"
+			android:visibility="gone" />
 
+
+		<LinearLayout
+			android:id="@+id/Rtext"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center_horizontal"
+			android:orientation="horizontal"
+			tools:ignore="DuplicateIds">
+
+			<TextView
+				android:id="@+id/Rtext1"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext2"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext3"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext4"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext5"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext6"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:gravity="center"
+				android:shadowColor="@android:color/black"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/white"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/text_plus"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:shadowColor="@android:color/black"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/white"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext7"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_weight="1"
+				android:gravity="center"
+				android:shadowColor="@android:color/black"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/white"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+		</LinearLayout>
 
 		<TextView
 			android:id="@+id/line4"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:textColor="#C55555"
 			android:shadowColor="@android:color/background_dark"
 			android:shadowDx="3"
 			android:shadowDy="3"
 			android:shadowRadius="1"
+			android:textColor="#C55555"
 			android:textSize="14sp"
 			android:textStyle="bold" />
 
 
 		<TextView
 			android:id="@+id/line6"
-			android:textColor="@color/text_black"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"/>
+			android:layout_height="wrap_content"
+			android:textColor="@color/text_black" />
 
 
 	</LinearLayout>
