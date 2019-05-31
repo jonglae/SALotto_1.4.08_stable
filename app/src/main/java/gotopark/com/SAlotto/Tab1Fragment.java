@@ -99,7 +99,6 @@ public class Tab1Fragment extends Fragment {
         Button btnTEST2 = view.findViewById(R.id.btnTEST2);
         Button btnTEST3 = view.findViewById(R.id.btnTEST3);
         Button btnSHARE = view.findViewById(R.id.button3);
-        Button btn_list = view.findViewById(R.id.btn_list);
 
         Button btn_save1 = view.findViewById(R.id.btn_save1);
         Button btn_save2 = view.findViewById(R.id.btn_save2);
@@ -273,19 +272,6 @@ public class Tab1Fragment extends Fragment {
                 select = 3;
                 savenum(ClickCount3, ctextRlist3, select);
                 ClickCount3 = 1;
-            }
-        });
-
-
-        btn_list.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("NewApi")
-            @Override
-            public void onClick(View view) {
-                soundpool.play(tok, 1, 1, 0, 0, 0);
-
-                Intent intent = new Intent(getActivity(), Main2Activity.class);
-                startActivity(intent);
-
             }
         });
 

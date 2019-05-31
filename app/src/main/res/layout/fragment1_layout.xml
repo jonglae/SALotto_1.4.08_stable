@@ -57,23 +57,6 @@
                 android:textStyle="bold"
                 tools:ignore="RtlHardcoded" />
 
-            <Button
-                android:id="@+id/btn_list"
-                android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/ripple_list"
-                android:shadowColor="@android:color/black"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="7"
-                android:text="@string/btn_list"
-                android:textAlignment="center"
-                android:textColor="@android:color/white"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                tools:ignore="RtlHardcoded" />
         </LinearLayout>
 
     </LinearLayout>
