@@ -2,6 +2,7 @@ package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
+import android.icu.text.StringPrepParseException;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
@@ -15,6 +16,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +33,7 @@ import java.util.List;
 
 import gotopark.com.SAlotto.database.DatabaseHelper;
 import gotopark.com.SAlotto.database.model.Note;
+import gotopark.com.SAlotto.module.ArrCom;
 import gotopark.com.SAlotto.utils.MyDividerItemDecoration;
 import gotopark.com.SAlotto.utils.RecyclerTouchListener;
 
@@ -41,9 +44,10 @@ public class Main2Activity extends AppCompatActivity {
 
     private DatabaseHelper db;
 
-    int tak,tok,trash;
+    int tak, tok, trash;
     SoundPool soundpool;
 
+    private ArrCom arrcom;
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -52,9 +56,9 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        tak = soundpool.load(this , R.raw.short_click2 , 1);
+        tak = soundpool.load(this, R.raw.short_click2, 1);
         tok = soundpool.load(this, R.raw.click1_rebert1, 1);
-        trash = soundpool.load(this, R.raw.trashbin , 1);
+        trash = soundpool.load(this, R.raw.trashbin, 1);
 
         CoordinatorLayout coordinatorLayout = findViewById(R.id.coordinator_layout);
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
@@ -63,8 +67,11 @@ public class Main2Activity extends AppCompatActivity {
 
         TextView title = findViewById(R.id.saveTitle);
 
-        title.setText(getString(R.string.app_name)+" Save Numbers List");
+        title.setText(getString(R.string.app_name) + " Save Numbers List");
 
+        Node node = new Node();
+
+        arrcom = new ArrCom();
 
         db = new DatabaseHelper(this);
 
@@ -99,8 +106,70 @@ public class Main2Activity extends AppCompatActivity {
                 recyclerView, new RecyclerTouchListener.ClickListener() {
             @Override
             public void onClick(View view, final int position) {
-
                 soundpool.play(tok, 1, 1, 0, 0, 0);
+
+                String[] ClickNum = new String[6];
+                Note n = notesList.get(position);
+                String results1 = "";
+                String results2 = "";
+                String results3 = "";
+                String results4 = "";
+
+                String Balltype = n.getBalltype();
+
+                String mlotnum = n.getNote();
+                mlotnum = mlotnum.replace(" ", "");
+                ClickNum = mlotnum.split(",");
+
+                Log.d("=====Lotto=======", Node.getLotto()[0]);
+                Log.d("======Lotto======", Node.getLotto()[1]);
+                Log.d("======Lotto======", Node.getLotto()[3]);
+                Log.d("======Lotto======", Node.getLotto()[4]);
+                Log.d("======Lotto======", Node.getLotto()[5]);
+                Log.d("======Balltype======", Balltype);
+
+                switch (Balltype) {
+
+                    case "Daily Lotto":
+                        results1 = arrcom.comp(ArrCom.concatenate(Node.getDaily_Lotto() , ClickNum));
+                        updateNote2("Daily Lotto : "+ results1,position);
+
+                        break;
+
+                    case "Lotto/plus 1 2":
+                        results1 = arrcom.comp(ArrCom.concatenate(Node.getLotto(), ClickNum));
+                        results2 = arrcom.comp(ArrCom.concatenate(Node.getLotto_Pluse() , ClickNum));
+                        results3 = arrcom.comp(ArrCom.concatenate(Node.getLotto_Pluse2(), ClickNum));
+
+                        updateNote2("Lotto : "+ results1+"\n"+
+                                "Lotto Plus : " + results2 +"\n" +
+                                "Lotto Plus 2 : "+ results3,position);
+                        break;
+
+
+                    case "PowerBall/Plus":
+                        String[] ball5 = new String[5];
+                        String[] lastball = new String[1];
+
+                        ball5[0] = ClickNum[0];
+                        ball5[1] = ClickNum[1];
+                        ball5[2] = ClickNum[2];
+                        ball5[3] = ClickNum[3];
+                        ball5[4] = ClickNum[4];
+                        lastball[0] = ClickNum[5];
+
+                        results1 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_5Ball(), ball5));
+                        results2 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_last(), lastball));
+
+                        results3 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_5Ball(), ball5));
+                        results4 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_last(), lastball));
+
+
+                        updateNote2("Powerball : "+ results1+"+"+results2+"\n"+
+                                        "Powerball Plus : "+ results3+"+"+results4,position);
+
+                        break;
+                }
 
 
                 Toast.makeText(Main2Activity.this, getString(R.string.select_list), Toast.LENGTH_SHORT).show();
@@ -133,7 +202,6 @@ public class Main2Activity extends AppCompatActivity {
     };
 
 
-
     /**
      * Updating note in db and updating
      * item in the list by its position
@@ -152,6 +220,23 @@ public class Main2Activity extends AppCompatActivity {
 
         toggleEmptyNotes();
     }
+
+    private void updateNote2(String string, int position) {
+        Note n = notesList.get(position);
+
+        // updating note text
+        n.setAlot(string);
+
+        // updating note in db
+        db.updateData(n);
+
+        // refreshing the list
+        notesList.set(position, n);
+        mAdapter.notifyItemChanged(position);
+
+        toggleEmptyNotes();
+    }
+
 
     /**
      * Deleting note from SQLite and removing the

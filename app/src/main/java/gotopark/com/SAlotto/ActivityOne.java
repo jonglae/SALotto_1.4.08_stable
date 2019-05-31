@@ -317,11 +317,13 @@ public class ActivityOne extends Activity {
                 }
 
                 /** 리스트 뷰 출력 출력 */
+                Node.setWin_Result(pbnum3) ;
 
 
                 for (int i = 0; i < 6; i++) {
                     pbnum3[i] = pbnum3[i].replace("  ", " ");
                     Node node = new Node();
+
 
                     switch (i) {
 
@@ -349,18 +351,16 @@ public class ActivityOne extends Activity {
                             //daily Lotto
                             Card card3 = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", 1, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card3);
-
                             break;
 
                         case 4:
 
-                            Card card4 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i-1], 3, getString(R.string.listLast_Meg1));
+                            Card card4 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], 3, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card4);
-
                             break;
 
                         case 5:
-                            Card card5 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i-1], 3, getString(R.string.listLast_Meg1));
+                            Card card5 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], 3, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card5);
                             break;
 
