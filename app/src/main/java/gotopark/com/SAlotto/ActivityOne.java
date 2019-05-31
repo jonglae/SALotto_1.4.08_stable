@@ -132,7 +132,7 @@ public class ActivityOne extends Activity {
         }
     };
 
-
+    //daily lotto
     public Button.OnClickListener Num_Choice1 = new View.OnClickListener() {
 
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -146,6 +146,8 @@ public class ActivityOne extends Activity {
         }
     };
 
+
+    //lotto plus
     public Button.OnClickListener Num_Choice2 = new View.OnClickListener() {
 
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -159,6 +161,8 @@ public class ActivityOne extends Activity {
         }
     };
 
+
+    //powerball
     public Button.OnClickListener Num_Choice3 = new View.OnClickListener() {
 
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)

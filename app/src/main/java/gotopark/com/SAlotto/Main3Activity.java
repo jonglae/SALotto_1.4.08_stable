@@ -265,9 +265,11 @@ public class Main3Activity extends AppCompatActivity {
 
                         pbnum = pbnum.replace("[", "");
                         pbnum = pbnum.replace("]", "");
+                        pbnum = pbnum.replace(" ", "");
 
                         pbnum2 = pbnum2.replace("[", "");
                         pbnum2 = pbnum2.replace("]", "");
+                        pbnum2 = pbnum2.replace(" ", "");
 
 //                        pbnum = title + "\n" + pbnum;
 

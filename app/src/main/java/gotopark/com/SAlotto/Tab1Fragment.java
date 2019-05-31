@@ -390,9 +390,11 @@ public class Tab1Fragment extends Fragment {
         ctextR = ctextR + "\n" + "PowerBall";
         ctextR = ctextR + "\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", " + cptext6 + "\n" + App_links1 + "\n1등 ^^당첨을 기원합니다.~♡";
 
+
+        ctextRlist3 = dltext1 + "," + dltext2 + "," + dltext3 + "," + dltext4 + "," + dltext5;
         ctextRlist1 = ctext1 + "," + ctext2 + "," + ctext3 + "," + ctext4 + "," + ctext5 + "," + ctext6;
         ctextRlist2 = cptext1 + "," + cptext2 + "," + cptext3 + "," + cptext4 + "," + cptext5 + "," + cptext6;
-        ctextRlist3 = dltext1 + "," + dltext2 + "," + dltext3 + "," + dltext4 + "," + dltext5;
+
 
 
     }
@@ -485,13 +487,13 @@ public class Tab1Fragment extends Fragment {
     public void savenum(int clickcount, String ctextRlist, int Balltype) {
         switch (Balltype) {
 
-            case 1:
+            case 3:
                 typeIs = "Daily Lotto";
                 break;
-            case 2:
+            case 1:
                 typeIs = "Lotto/plus 1 2";
                 break;
-            case 3:
+            case 2:
                 typeIs = "PowerBall/Plus";
                 break;
         }

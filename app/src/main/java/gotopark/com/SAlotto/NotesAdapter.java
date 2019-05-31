@@ -90,6 +90,11 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
         switch(Ball){
 
             case "Daily Lotto":
+                holder.Rtext1.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext2.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext3.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext4.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext5.setTextColor(Color.parseColor("#FFFFFF"));
 
                 holder.BallType.setText(note.getBalltype());
 
@@ -119,6 +124,14 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.MyViewHolder
                 int dball4;
                 int dball5;
                 int dball6;
+
+
+                holder.Rtext1.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext2.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext3.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext4.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext5.setTextColor(Color.parseColor("#FFFFFF"));
+                holder.Rtext6.setTextColor(Color.parseColor("#FFFFFF"));
 
                 holder.Rtext1.setText(lotnum[0]);
                 holder.Rtext2.setText(lotnum[1]);

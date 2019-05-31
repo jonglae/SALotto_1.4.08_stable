@@ -135,6 +135,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         viewHolder.line6.setText(card.getLine6());
 
         switch (select) {
+            //daily lotto
             case 1:
 
                 viewHolder.Rtext1.setText(Lotnum[0]);
@@ -151,6 +152,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
 
                 break;
 
+                //lotto
             case 2:
                 numtoimg NumtoI = new numtoimg();
 
@@ -200,6 +202,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 viewHolder.textplus.setVisibility(View.VISIBLE);
                 break;
 
+                //powerball
             case 3:
                 viewHolder.Rtext6.setVisibility(View.GONE);
                 viewHolder.textplus.setVisibility(View.GONE);

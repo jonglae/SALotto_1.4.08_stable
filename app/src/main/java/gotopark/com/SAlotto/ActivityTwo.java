@@ -16,7 +16,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,7 +32,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 import gotopark.com.SAlotto.listview.Card;
 import gotopark.com.SAlotto.listview.OneCardArrayAdapter;
@@ -51,16 +49,16 @@ public class ActivityTwo extends Activity {
     Button button4;
     Button button5;
     String str = "";
-    int tak,tok;
+    int tak, tok;
     SoundPool soundpool;
+    int select;
 
 
-
-    String[] SAloto = {"Lotto Past Draws", "Lotto Plus Past Draws", "PowerBall Past Draws", "PowerBall Plus Past Draws","Daily Lotto"};
+    String[] SAloto = {"Lotto Past Draws", "Lotto Plus Past Draws", "PowerBall Past Draws", "PowerBall Plus Past Draws", "Daily Lotto"};
     int SAlotoChoice;
     String url;
     int SliceNumber, infoBallChoice;
-//    String[] InfoBall = {"(Last Number is Bonus Ball)", "(Last Number is PowerBall)"};
+    //    String[] InfoBall = {"(Last Number is Bonus Ball)", "(Last Number is PowerBall)"};
     String iInfo1;
 
     @Override
@@ -69,7 +67,7 @@ public class ActivityTwo extends Activity {
         setContentView(R.layout.activity_two);
 
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        tak = soundpool.load(this , R.raw.short_click2 , 1);
+        tak = soundpool.load(this, R.raw.short_click2, 1);
         tok = soundpool.load(this, R.raw.click1_rebert1, 1);
 
         setTitle("Check the Your Numbers");
@@ -130,23 +128,7 @@ public class ActivityTwo extends Activity {
         });
 
 
-        button5.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.N)
-            @Override
-            public void onClick(View view) {
-                soundpool.play(tok, 1, 1, 0, 0, 0);
-
-                SAlotoChoice = 4;
-                url = getString(R.string.JsoupLink5);
-                SliceNumber = 7;
-                infoBallChoice = 0;
-
-                netcheckMesg();
-
-            }
-        });
-
-
+        //lotto
         button1.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -157,13 +139,13 @@ public class ActivityTwo extends Activity {
                 url = getString(R.string.JsoupLink1);
                 SliceNumber = 7;
                 infoBallChoice = 0;
-
+                select = 2;
                 netcheckMesg();
 
             }
         });
 
-
+        //lotto plus
         button2.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -174,13 +156,13 @@ public class ActivityTwo extends Activity {
                 url = getString(R.string.JsoupLink2);
                 SliceNumber = 7;
                 infoBallChoice = 0;
-
+                select = 2;
                 netcheckMesg();
 
             }
         });
 
-
+        //powerball
         button3.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -191,13 +173,13 @@ public class ActivityTwo extends Activity {
                 url = getString(R.string.JsoupLink3);
                 SliceNumber = 6;
                 infoBallChoice = 1;
-
+                select = 3;
                 netcheckMesg();
 
             }
         });
 
-
+        //powerball plus
         button4.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -208,16 +190,34 @@ public class ActivityTwo extends Activity {
                 url = getString(R.string.JsoupLink4);
                 SliceNumber = 6;
                 infoBallChoice = 1;
-
+                select = 3;
                 netcheckMesg();
 
             }
         });
 
+        //daily lotto
+        button5.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View view) {
+                soundpool.play(tok, 1, 1, 0, 0, 0);
+
+                SAlotoChoice = 4;
+                url = getString(R.string.JsoupLink5);
+                SliceNumber = 7;
+                infoBallChoice = 0;
+                select = 1;
+                netcheckMesg();
+
+            }
+        });
+
+
     }
 
 
-    public void netcheckMesg(){
+    public void netcheckMesg() {
         oneCardArrayAdapter.cardList.clear();
         if (iInfo1 == "Network Error!") {
 
@@ -319,12 +319,11 @@ public class ActivityTwo extends Activity {
         String iInfo = "SA Lotto Past Winning Numbers";
 
         String saywords = BackProcessHandler.frontSay();
-        Card card = new Card(iInfo, saywords, "", "",4 , "");
+        Card card = new Card(iInfo, saywords, "", "", 4, "");
 
         oneCardArrayAdapter.add(card);
         listView.setAdapter(oneCardArrayAdapter);
     }
-
 
 
     @SuppressLint("StaticFieldLeak")
@@ -380,7 +379,6 @@ public class ActivityTwo extends Activity {
 
                 String[] SaLot_date = new String[f13.size()];
                 String[] pbnum1 = new String[f13.size()];
-                ArrayList<String> pbnum2 = new ArrayList<>();
                 String[] pbnum4 = new String[f14.size()];
 
                 for (int i = 0; i < f13.size(); i++) {
@@ -389,50 +387,20 @@ public class ActivityTwo extends Activity {
                     SaLot_date[i] = SaLot_date[i].substring(8);
                 }
 
-                String[] Next1 = new String[pbnum4.length];
-                String[] Next2 = new String[pbnum4.length];
 
                 for (int i = 0; i < f14.size(); i++) {
                     pbnum4[i] = f14.get(i).text().replaceAll("\\<.*?>", "");
 
-                    // 문자열 자르기 로또 번호
-                    Next1[i] = pbnum4[i].substring(0, pbnum4[i].length() - 2);
-                    Next2[i] = pbnum4[i].substring(pbnum4[i].length() - 2);
-
-
-                    if (SAlotoChoice != 4 ) {
-                        // 로또 번호 보너스 번호에 + 집어 넣기
-                        pbnum4[i] = null;
-                        pbnum4[i] = Next1[i] + " + " + Next2[i];
-                    }
-
-
                 }
 
-                // ArrayList Divide
-//                List <List <String>> Pblist = parted1.chopped (pbnum2, SliceNumber);
 
                 for (int i = 0; i < f13.size(); i++) {
-//                    pbnum3[i] = f13.get (i).toString ();
 
-                    Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", 4, getString(R.string.listLast_Meg1));
+                    Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", select, getString(R.string.listLast_Meg1));
                     oneCardArrayAdapter.add(card);
 
 
-                    str = SAloto[SAlotoChoice];
-
-
                 }
-
-                String saywords = BackProcessHandler.frontSay();
-
-                Card card = new Card("Be the happy rich", saywords, "", "", 4, "(EOF)");
-                oneCardArrayAdapter.add(card);
-
-                Card card2 = new Card("", "", "", "", 4, "");
-                oneCardArrayAdapter.add(card2);
-
-                Log.e(TAG, "===================================>" + str);
 
                 mProgressDialog.dismiss();
                 listView.setAdapter(oneCardArrayAdapter);
