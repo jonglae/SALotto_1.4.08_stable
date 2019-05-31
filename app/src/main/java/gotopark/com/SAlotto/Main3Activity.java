@@ -96,7 +96,7 @@ public class Main3Activity extends AppCompatActivity {
                 numbers = ball.getStringArray(array.lotto);
                 ballgiri = 6;
                 numbers2 = null;
-                title = "Lotto Plus/2";
+                title = "Lotto/plus 1 2";
 
                 break;
 
@@ -104,7 +104,7 @@ public class Main3Activity extends AppCompatActivity {
                 ballgiri = 5;
                 numbers = ball.getStringArray(array.powerfive);
                 numbers2 = ball.getStringArray(array.powerball);
-                title = "Powerball/Plus";
+                title = "PowerBall/Plus";
 
                 break;
         }
@@ -269,12 +269,12 @@ public class Main3Activity extends AppCompatActivity {
                         pbnum2 = pbnum2.replace("[", "");
                         pbnum2 = pbnum2.replace("]", "");
 
-                        pbnum = title + "\n" + pbnum;
+//                        pbnum = title + "\n" + pbnum;
 
                         if (select == 3) {
-                            pbnum = pbnum + " (" + pbnum2 + ")";
+                            pbnum = pbnum + "," + pbnum2;
                         }
-                        Card card = new Card(LottoCount + "St Number", pbnum, "", "", select, "");
+                        Card card = new Card(LottoCount + "St Number was Save", pbnum, "", "", select, "");
 
                         //DB 입력
                         db.insertNote(pbnum, title, "Manual Select Number");

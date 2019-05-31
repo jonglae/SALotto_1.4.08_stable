@@ -345,11 +345,11 @@ public class Tab3Fragment extends Fragment {
     public void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
-            db.insertNote(ctextRlist1, "PowerBall", "5 Auto 1");
-            db.insertNote(ctextRlist2, "PowerBall", "5 Auto 2");
-            db.insertNote(ctextRlist3, "PowerBall", "5 Auto 3");
-            db.insertNote(ctextRlist4, "PowerBall", "5 Auto 4");
-            db.insertNote(ctextRlist5, "PowerBall", "5 Auto 5");
+            db.insertNote(ctextRlist1, "PowerBall/Plus", "5 Auto 1");
+            db.insertNote(ctextRlist2, "PowerBall/Plus", "5 Auto 2");
+            db.insertNote(ctextRlist3, "PowerBall/Plus", "5 Auto 3");
+            db.insertNote(ctextRlist4, "PowerBall/Plus", "5 Auto 4");
+            db.insertNote(ctextRlist5, "PowerBall/Plus", "5 Auto 5");
 
 
             String Mesg1 = ctextRlist + " -> " + "Number has been saved.";

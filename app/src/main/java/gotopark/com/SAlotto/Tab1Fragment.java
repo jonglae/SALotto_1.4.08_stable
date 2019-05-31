@@ -492,7 +492,7 @@ public class Tab1Fragment extends Fragment {
                 typeIs = "Lotto/plus 1 2";
                 break;
             case 3:
-                typeIs = "PowerBall";
+                typeIs = "PowerBall/Plus";
                 break;
         }
 

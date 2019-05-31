@@ -4,8 +4,10 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -118,6 +120,13 @@ public class OneCardAdapter2 extends ArrayAdapter<Card> {
 
         switch (select) {
             case 1:
+
+                viewHolder.Rtext1.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext2.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext3.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext4.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext5.setTextColor(Color.parseColor("#FFFFFF"));
+//        viewHolder.line3.setTextSize(TypedValue.COMPLEX_UNIT_SP, 30);
 
                 viewHolder.Rtext1.setText(Lotnum[0]);
                 viewHolder.Rtext2.setText(Lotnum[1]);

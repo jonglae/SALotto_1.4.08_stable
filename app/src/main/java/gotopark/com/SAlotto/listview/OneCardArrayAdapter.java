@@ -62,8 +62,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
     }
 
     @Override
-    public Card getItem(int index)
-    {
+    public Card getItem(int index) {
 
         return this.cardList.get(index);
 
@@ -111,7 +110,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         } else {
 
 
-            viewHolder = (CardViewHolder)row.getTag();
+            viewHolder = (CardViewHolder) row.getTag();
 
         }
 
@@ -162,7 +161,7 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 int dball5;
                 int dball6;
                 int dball7;
-                viewHolder.Rtext6.setVisibility(View.VISIBLE) ;
+
 
                 viewHolder.Rtext1.setText(Lotnum[0]);
                 viewHolder.Rtext2.setText(Lotnum[1]);
@@ -197,9 +196,13 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 viewHolder.Rtext6.setBackgroundResource(dball6);
                 viewHolder.Rtext7.setBackgroundResource(dball7);
 
+                viewHolder.Rtext6.setVisibility(View.VISIBLE);
+                viewHolder.textplus.setVisibility(View.VISIBLE);
                 break;
 
             case 3:
+                viewHolder.Rtext6.setVisibility(View.GONE);
+                viewHolder.textplus.setVisibility(View.GONE);
 
                 viewHolder.Rtext1.setText(Lotnum[0]);
                 viewHolder.Rtext2.setText(Lotnum[1]);
@@ -208,7 +211,6 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 viewHolder.Rtext5.setText(Lotnum[4]);
 
 //                viewHolder.Rtext6.setText("+");
-                viewHolder.Rtext6.setVisibility(View.GONE) ;
                 viewHolder.Rtext7.setText(Lotnum[5]);
 
                 viewHolder.Rtext1.setBackgroundResource(R.drawable.pball1);
@@ -220,9 +222,9 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 viewHolder.Rtext7.setBackgroundResource(R.drawable.pball2);
 
                 break;
+
+
         }
-
-
 
         return row;
 
