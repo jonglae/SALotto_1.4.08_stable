@@ -58,7 +58,13 @@ public class Tab2Fragment extends Fragment {
     private Random rand;
     int count,primeWord;
 
+    String ctextRlist;
     String ctextRlist1;
+    String ctextRlist2;
+    String ctextRlist3;
+    String ctextRlist4;
+    String ctextRlist5;
+    
     DatabaseHelper db;
     int ClickCount1 = 1;
 
@@ -279,7 +285,15 @@ public class Tab2Fragment extends Fragment {
         ctextR = ctextR + (SLot1num3[0] + ", " + SLot1num3[1] + ", " + SLot1num3[2] + ", " + SLot1num3[3] + ", " + SLot1num3[4] + ", " + SLot1num3[5] + "\n");
         ctextR = ctextR + (SLot1num4[0] + ", " + SLot1num4[1] + ", " + SLot1num4[2] + ", " + SLot1num4[3] + ", " + SLot1num4[4] + ", " + SLot1num4[5] + "\n");
         ctextR = ctextR + (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + ", " + SLot1num5[5]);
-        ctextRlist1 = ctextR;
+
+        ctextRlist = ctextR;
+
+        ctextRlist1 = Lot1num1[0] + "," + Lot1num1[1] + "," + Lot1num1[2] + "," + Lot1num1[3] + "," + Lot1num1[4] + "," + Lot1num1[5];
+        ctextRlist2 = Lot1num2[0] + "," + Lot1num2[1] + "," + Lot1num2[2] + "," + Lot1num2[3] + "," + Lot1num2[4] + "," + Lot1num2[5];
+        ctextRlist3 = Lot1num3[0] + "," + Lot1num3[1] + "," + Lot1num3[2] + "," + Lot1num3[3] + "," + Lot1num3[4] + "," + Lot1num3[5];
+        ctextRlist4 = Lot1num4[0] + "," + Lot1num4[1] + "," + Lot1num4[2] + "," + Lot1num4[3] + "," + Lot1num4[4] + "," + Lot1num4[5];
+        ctextRlist5 = Lot1num5[0] + "," + Lot1num5[1] + "," + Lot1num5[2] + "," + Lot1num5[3] + "," + Lot1num5[4] + "," + Lot1num5[5];
+
         ctextR = ctextR + "\n\n" + App_links1 + "\n" + App_Share + "★Good Luck★";
 
     }
@@ -465,7 +479,13 @@ public class Tab2Fragment extends Fragment {
     public void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
-            db.insertNote(ctextRlist,"AUTO");
+
+            db.insertNote(ctextRlist1, "Lotto/plus 1 2", "5 Auto 1");
+            db.insertNote(ctextRlist2, "Lotto/plus 1 2", "5 Auto 2");
+            db.insertNote(ctextRlist3, "Lotto/plus 1 2", "5 Auto 3");
+            db.insertNote(ctextRlist4, "Lotto/plus 1 2", "5 Auto 4");
+            db.insertNote(ctextRlist5, "Lotto/plus 1 2", "5 Auto 5");
+
             String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
 
             showGuide(Mesg1);

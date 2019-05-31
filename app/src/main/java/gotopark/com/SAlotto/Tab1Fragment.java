@@ -72,9 +72,11 @@ public class Tab1Fragment extends Fragment {
 
     int count, primeWord;
 
-    int tak,tok;
+    int tak, tok;
     SoundPool soundpool;
 
+    int select;
+    String typeIs;
 
     @SuppressLint("CutPasteId")
     @Nullable
@@ -87,7 +89,7 @@ public class Tab1Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        tak = soundpool.load(getActivity() , R.raw.short_click2 , 1);
+        tak = soundpool.load(getActivity(), R.raw.short_click2, 1);
         tok = soundpool.load(getActivity(), R.raw.click1_rebert1, 1);
 
         wisetext1 = view.findViewById(R.id.wisetext);
@@ -149,7 +151,6 @@ public class Tab1Fragment extends Fragment {
                 int millisec = Times_Ran[xnum];
 
 
-
                 CountDownTimer start = new CountDownTimer(millisec, 10) {
                     public void onTick(long millisUntilFinished) {
                         soundpool.play(tak, 1, 1, 0, 0, 1);
@@ -182,7 +183,6 @@ public class Tab1Fragment extends Fragment {
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
-
 
 
                 CountDownTimer start = new CountDownTimer(millisec, 10) {
@@ -218,8 +218,6 @@ public class Tab1Fragment extends Fragment {
                 int millisec = Times_Ran[xnum];
 
 
-
-
                 CountDownTimer start = new CountDownTimer(millisec, 10) {
                     public void onTick(long millisUntilFinished) {
 
@@ -247,8 +245,8 @@ public class Tab1Fragment extends Fragment {
             public void onClick(View view) {
                 LotCOPY();
                 soundpool.play(tok, 1, 1, 0, 0, 0);
-
-                savenum(ClickCount1, ctextRlist1);
+                select = 1;
+                savenum(ClickCount1, ctextRlist1, select);
                 ClickCount1 = 1;
             }
         });
@@ -260,8 +258,8 @@ public class Tab1Fragment extends Fragment {
                 soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 LotCOPY();
-
-                savenum(ClickCount2, ctextRlist2);
+                select = 2;
+                savenum(ClickCount2, ctextRlist2, select);
                 ClickCount2 = 1;
             }
         });
@@ -272,8 +270,8 @@ public class Tab1Fragment extends Fragment {
                 soundpool.play(tok, 1, 1, 0, 0, 0);
 
                 LotCOPY();
-
-                savenum(ClickCount3, ctextRlist3);
+                select = 3;
+                savenum(ClickCount3, ctextRlist3, select);
                 ClickCount3 = 1;
             }
         });
@@ -392,9 +390,9 @@ public class Tab1Fragment extends Fragment {
         ctextR = ctextR + "\n" + "PowerBall";
         ctextR = ctextR + "\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", " + cptext6 + "\n" + App_links1 + "\n1등 ^^당첨을 기원합니다.~♡";
 
-        ctextRlist1 = "Lotto and plus1,2\n" + ctext1 + ", " + ctext2 + ", " + ctext3 + ", " + ctext4 + ", " + ctext5 + ", " + ctext6;
-        ctextRlist2 = "PowerBall\n" + cptext1 + ", " + cptext2 + ", " + cptext3 + ", " + cptext4 + ", " + cptext5 + ", (" + cptext6 + ")";
-        ctextRlist3 = "Daily Lotto\n" + dltext1 + ", " + dltext2 + ", " + dltext3 + ", " + dltext4 + ", " + dltext5;
+        ctextRlist1 = ctext1 + "," + ctext2 + "," + ctext3 + "," + ctext4 + "," + ctext5 + "," + ctext6;
+        ctextRlist2 = cptext1 + "," + cptext2 + "," + cptext3 + "," + cptext4 + "," + cptext5 + "," + cptext6;
+        ctextRlist3 = dltext1 + "," + dltext2 + "," + dltext3 + "," + dltext4 + "," + dltext5;
 
 
     }
@@ -484,20 +482,32 @@ public class Tab1Fragment extends Fragment {
         DLtext5.setText(String.valueOf(Lot1num1[4]));
     }
 
-    public void savenum(int clickcount, String ctextRlist) {
+    public void savenum(int clickcount, String ctextRlist, int Balltype) {
+        switch (Balltype) {
 
-            if (clickcount == 0) {
-                MainActivity.db.insertNote(ctextRlist,"AUTO");
-                String Mesg1 = ctextRlist + " -> "+ "Number has been saved.";
+            case 1:
+                typeIs = "Daily Lotto";
+                break;
+            case 2:
+                typeIs = "Lotto/plus 1 2";
+                break;
+            case 3:
+                typeIs = "PowerBall";
+                break;
+        }
 
-                //The number has been saved.
+        if (clickcount == 0) {
+            MainActivity.db.insertNote(ctextRlist, typeIs, "AUTO");
+            String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
+
+            //The number has been saved.
 //            wisetext1.setText(Mesg1);
-                Toast.makeText(getActivity(), Mesg1, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), Mesg1, Toast.LENGTH_SHORT).show();
 
-            } else {
-                wisetext1.setText(getString(R.string.btn_save_Mesg1));
+        } else {
+            wisetext1.setText(getString(R.string.btn_save_Mesg1));
 
-            }
+        }
 
     }
 

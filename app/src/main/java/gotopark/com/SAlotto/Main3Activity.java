@@ -47,7 +47,7 @@ public class Main3Activity extends AppCompatActivity {
     private DatabaseHelper db;
     private static final String TAG = "Main3Activity";
 
-    public OneCardAdapter2 cardArrayAdapter;
+    public OneCardAdapter2 cardAdapter;
     public ListView listView;
     int LottoCount = 0;
 
@@ -71,6 +71,7 @@ public class Main3Activity extends AppCompatActivity {
     int ballgiri;
 
     String title;
+    int select;
 
     @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -80,7 +81,7 @@ public class Main3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main3);
 
         Intent intent = getIntent();
-        final int select = Objects.requireNonNull(intent.getExtras()).getInt("select");
+        select = Objects.requireNonNull(intent.getExtras()).getInt("select");
         ball = getResources();
         TextView Seltext = findViewById(id.seltext);
         switch (select) {
@@ -88,14 +89,14 @@ public class Main3Activity extends AppCompatActivity {
                 numbers = ball.getStringArray(array.daily);
                 ballgiri = 5;
                 numbers2 = null;
-                title ="Daily Lotto";
+                title = "Daily Lotto";
 
                 break;
             case 2:
                 numbers = ball.getStringArray(array.lotto);
                 ballgiri = 6;
                 numbers2 = null;
-                title ="Lotto Plus/2";
+                title = "Lotto Plus/2";
 
                 break;
 
@@ -103,7 +104,7 @@ public class Main3Activity extends AppCompatActivity {
                 ballgiri = 5;
                 numbers = ball.getStringArray(array.powerfive);
                 numbers2 = ball.getStringArray(array.powerball);
-                title ="Powerball/Plus";
+                title = "Powerball/Plus";
 
                 break;
         }
@@ -130,7 +131,7 @@ public class Main3Activity extends AppCompatActivity {
         selectedStrings_star2 = new ArrayList<>();
 
         listView = findViewById(id.card_listView);
-        cardArrayAdapter = new OneCardAdapter2(getApplicationContext(), R.layout.tab1_lot_list);
+        cardAdapter = new OneCardAdapter2(getApplicationContext(), R.layout.tab1_lot_list);
 
         gridView1.setAdapter(adapter);
         if (numbers2 != null) {
@@ -240,9 +241,9 @@ public class Main3Activity extends AppCompatActivity {
                     case 1:
                         star2_Size = 1;
                         break;
+
                     case 2:
                         star2_Size = 1;
-
                         break;
 
                     case 3:
@@ -268,19 +269,19 @@ public class Main3Activity extends AppCompatActivity {
                         pbnum2 = pbnum2.replace("[", "");
                         pbnum2 = pbnum2.replace("]", "");
 
-                        pbnum = title +"\n"+pbnum;
+                        pbnum = title + "\n" + pbnum;
 
                         if (select == 3) {
                             pbnum = pbnum + " (" + pbnum2 + ")";
                         }
-                        Card card = new Card(LottoCount + "St Number", pbnum, "", "", "", "");
+                        Card card = new Card(LottoCount + "St Number", pbnum, "", select, "", "");
 
                         //DB 입력
-                        db.insertNote(pbnum,"Manual Select Number");
+                        db.insertNote(pbnum, title, "Manual Select Number");
 
 
-                        cardArrayAdapter.add(card);
-                        listView.setAdapter(cardArrayAdapter);
+                        cardAdapter.add(card);
+                        listView.setAdapter(cardAdapter);
 
 
                         Click_true = 1;

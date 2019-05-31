@@ -56,10 +56,16 @@ public class Tab3Fragment extends Fragment {
     int count, primeWord;
     public TextView wisetext1;
 
+    String ctextRlist;
     String ctextRlist1;
+    String ctextRlist2;
+    String ctextRlist3;
+    String ctextRlist4;
+    String ctextRlist5;
+
     int ClickCount1 = 1;
 
-    int tak,tok;
+    int tak, tok;
     SoundPool soundpool;
 
     DatabaseHelper db;
@@ -74,7 +80,7 @@ public class Tab3Fragment extends Fragment {
         primeWord = rand.nextInt(13) + 4;
 
         soundpool = new SoundPool(1, AudioManager.STREAM_MUSIC, 0);
-        tak = soundpool.load(getActivity() , R.raw.click1, 1);
+        tak = soundpool.load(getActivity(), R.raw.click1, 1);
         tok = soundpool.load(getActivity(), R.raw.click1_rebert1, 1);
 
         db = new DatabaseHelper(getActivity());
@@ -135,7 +141,6 @@ public class Tab3Fragment extends Fragment {
                 int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
                 int xnum = rand.nextInt(5);
                 int millisec = Times_Ran[xnum];
-
 
 
                 CountDownTimer start = new CountDownTimer(millisec, 10) {
@@ -254,7 +259,14 @@ public class Tab3Fragment extends Fragment {
         ctextR = ctextR + (SLot1num3[0] + ", " + SLot1num3[1] + ", " + SLot1num3[2] + ", " + SLot1num3[3] + ", " + SLot1num3[4] + " (" + Srednum3 + ")\n");
         ctextR = ctextR + (SLot1num4[0] + ", " + SLot1num4[1] + ", " + SLot1num4[2] + ", " + SLot1num4[3] + ", " + SLot1num4[4] + " (" + Srednum4 + ")\n");
         ctextR = ctextR + (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + " (" + Srednum5 + ")");
-        ctextRlist1 = ctextR;
+
+        ctextRlist = ctextR;
+
+        ctextRlist1 = Lot1num1[0] + "," + Lot1num1[1] + "," + Lot1num1[2] + "," + Lot1num1[3] + "," + Lot1num1[4] + "," + rednum1[0];
+        ctextRlist2 = Lot1num2[0] + "," + Lot1num2[1] + "," + Lot1num2[2] + "," + Lot1num2[3] + "," + Lot1num2[4] + "," + rednum2[0];
+        ctextRlist3 = Lot1num3[0] + "," + Lot1num3[1] + "," + Lot1num3[2] + "," + Lot1num3[3] + "," + Lot1num3[4] + "," + rednum3[0];
+        ctextRlist4 = Lot1num4[0] + "," + Lot1num4[1] + "," + Lot1num4[2] + "," + Lot1num4[3] + "," + Lot1num4[4] + "," + rednum4[0];
+        ctextRlist5 = Lot1num5[0] + "," + Lot1num5[1] + "," + Lot1num5[2] + "," + Lot1num5[3] + "," + Lot1num5[4] + "," + rednum5[0];
 
         ctextR = ctextR + "\n\n" + App_links1 + "\n" + App_Share + "★Good Luck★";
 
@@ -333,7 +345,13 @@ public class Tab3Fragment extends Fragment {
     public void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
-            db.insertNote(ctextRlist,"AUTO");
+            db.insertNote(ctextRlist1, "PowerBall", "5 Auto 1");
+            db.insertNote(ctextRlist2, "PowerBall", "5 Auto 2");
+            db.insertNote(ctextRlist3, "PowerBall", "5 Auto 3");
+            db.insertNote(ctextRlist4, "PowerBall", "5 Auto 4");
+            db.insertNote(ctextRlist5, "PowerBall", "5 Auto 5");
+
+
             String Mesg1 = ctextRlist + " -> " + "Number has been saved.";
 
             showGuide(Mesg1);

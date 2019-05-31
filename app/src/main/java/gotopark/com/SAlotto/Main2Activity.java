@@ -1,5 +1,6 @@
 package gotopark.com.SAlotto;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.SoundPool;
@@ -13,7 +14,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +45,7 @@ public class Main2Activity extends AppCompatActivity {
     SoundPool soundpool;
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -131,28 +132,7 @@ public class Main2Activity extends AppCompatActivity {
         }
     };
 
-    /**
-     * Inserting new note in db
-     * and refreshing the list
-     */
-    private void createNote(String note,String magroup) {
-        // inserting note in db and getting
-        // newly inserted note id
-        long id = db.insertNote(note, magroup);
 
-        // get the newly inserted note from db
-        Note n = db.getNote(id);
-
-        if (n != null) {
-            // adding new note to array list at 0 position
-            notesList.add(0, n);
-
-            // refreshing the list
-            mAdapter.notifyDataSetChanged();
-
-            toggleEmptyNotes();
-        }
-    }
 
     /**
      * Updating note in db and updating
@@ -271,7 +251,8 @@ public class Main2Activity extends AppCompatActivity {
                     updateNote(inputNote.getText().toString(), position);
                 } else {
                     // create new note
-//                    createNote(inputNote.getText().toString());
+
+
                 }
             }
         });

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
@@ -8,11 +9,8 @@
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:background="#224A6B"
 		android:descendantFocusability="afterDescendants"
 		android:orientation="vertical"
-		android:paddingTop="2dp"
-		android:paddingBottom="2dp"
 		tools:ignore="UselessParent">
 
 
@@ -20,44 +18,127 @@
 			android:id="@+id/line1"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:textAlignment="center"
 			android:textColor="#EF6C00"
-			android:textSize="18sp" />
-
-		<View
-			android:id="@+id/divider4"
-			android:layout_width="match_parent"
-			android:layout_height="2dp"
-			android:layout_marginLeft="20dp"
-			android:layout_marginRight="20dp"
-			android:background="@color/msg_no_notes" />
-
-		<TextView
-			android:id="@+id/line2"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:textAlignment="center"
-			android:textColor="@android:color/white"
-			android:textSize="24sp"
+			android:textSize="16sp"
 			android:textStyle="bold" />
 
 		<View
-			android:id="@+id/divider"
+			android:id="@+id/divider5"
 			android:layout_width="match_parent"
 			android:layout_height="2dp"
-			android:background="#FF8F00" />
+			android:layout_marginLeft="20dp"
+			android:layout_marginTop="2dp"
+			android:layout_marginRight="20dp"
+			android:layout_marginBottom="2dp"
+			android:layout_weight="9.5"
+			android:background="@color/hint_enter_note" />
 
-		<!--<TextView-->
-		<!--android:id="@+id/textView"-->
-		<!--android:layout_width="match_parent"-->
-		<!--android:layout_height="wrap_content"-->
-		<!--android:layout_weight="1"-->
-		<!--android:background="@android:color/holo_orange_light"-->
-		<!--android:gravity="center_vertical|center_horizontal"-->
-		<!--android:text="[삭          제]"-->
-		<!--android:textSize="10sp"-->
-		<!--android:textStyle="bold" />-->
+		<LinearLayout
+			android:id="@+id/Rtext"
+			android:layout_gravity="center_horizontal"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			tools:ignore="DuplicateIds">
 
+			<TextView
+				android:id="@+id/Rtext1"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext2"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext3"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext4"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext5"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:layout_marginRight="4dp"
+				android:gravity="center"
+				android:shadowColor="#ACACAC"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/black"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+			<TextView
+				android:id="@+id/Rtext6"
+				android:layout_width="40dp"
+				android:layout_height="40dp"
+				android:gravity="center"
+				android:shadowColor="@android:color/black"
+				android:shadowDx="4"
+				android:shadowDy="4"
+				android:shadowRadius="1.4"
+				android:textAlignment="center"
+				android:textColor="@android:color/white"
+				android:textSize="20sp"
+				android:textStyle="bold" />
+
+		</LinearLayout>
+
+		<View
+			android:id="@+id/divider6"
+			android:layout_width="match_parent"
+			android:layout_height="2dp"
+			android:layout_marginTop="4dp"
+			android:layout_weight="9.5"
+			android:background="#EF6C00" />
 
 	</LinearLayout>
 

@@ -15,19 +15,22 @@ import gotopark.com.SAlotto.database.model.Note;
 /**
  * Created by ravi on 15/03/18.
  */
-
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Database Version
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
 
     // Database Name
     private static final String DATABASE_NAME = "notes_db";
-
+    private final Context context;
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.context = context;
+
     }
+
+
 
     // Creating Tables
     @Override
@@ -47,15 +50,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long insertNote(String note,String magroup) {
+    public long insertNote(String note,String balltype,String magroup) {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
         ContentValues values = new ContentValues();
+
         // `id` and `timestamp` will be inserted automatically.
         // no need to add them
         values.put(Note.COLUMN_NOTE, note);
-        values.put(Note.COLUMN_MAGROUP, magroup);
+        values.put(Note.COLUMN_NOTETYPE, balltype);
+        values.put(Note.COLUMN_MAGROUP , magroup);
 
         // insert row
         long id = db.insert(Note.TABLE_NAME, null, values);
@@ -67,6 +72,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return id;
     }
 
+    public long insertColumn(String note, String alot,String magroup) {
+//         get writable database as we want to write data
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues values = new ContentValues();
+
+
+
+        values.put(Note.COLUMN_NOTE, note);
+        values.put(Note.COLUMN_AUTOALOT, alot);
+        values.put(Note.COLUMN_MAGROUP, magroup);
+        // insert row
+
+        long id = db.insert(Note.TABLE_NAME, null, values);
+        db.close();
+        // return newly inserted row id
+
+        return id;
+    }
+
+
+
+
     public Note getNote(long id) {
         // get readable database as we are not inserting anything
         SQLiteDatabase db = this.getReadableDatabase();
@@ -74,6 +101,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.query(Note.TABLE_NAME,
                 new String[]{Note.COLUMN_ID,
                         Note.COLUMN_NOTE,
+                        Note.COLUMN_NOTETYPE,
+                        Note.COLUMN_AUTOALOT,
                         Note.COLUMN_MAGROUP,
                         Note.COLUMN_TIMESTAMP},
                 Note.COLUMN_ID + "=?",
@@ -87,6 +116,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Note note = new Note(
                 cursor.getInt(cursor.getColumnIndex(Note.COLUMN_ID)),
                 cursor.getString(cursor.getColumnIndex(Note.COLUMN_NOTE)),
+                cursor.getString(cursor.getColumnIndex(Note.COLUMN_NOTETYPE)),
+                cursor.getString(cursor.getColumnIndex(Note.COLUMN_AUTOALOT)),
                 cursor.getString(cursor.getColumnIndex(Note.COLUMN_MAGROUP )),
                 cursor.getString(cursor.getColumnIndex(Note.COLUMN_TIMESTAMP)));
 
@@ -113,6 +144,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 Note note = new Note();
                 note.setId(cursor.getInt(cursor.getColumnIndex(Note.COLUMN_ID)));
                 note.setNote(cursor.getString(cursor.getColumnIndex(Note.COLUMN_NOTE)));
+                note.setBalltype(cursor.getString(cursor.getColumnIndex(Note.COLUMN_NOTETYPE)));
+                note.setAlot(cursor.getString(cursor.getColumnIndex(Note.COLUMN_AUTOALOT)));
                 note.setMagroup(cursor.getString(cursor.getColumnIndex(Note.COLUMN_MAGROUP))) ;
                 note.setTimestamp(cursor.getString(cursor.getColumnIndex(Note.COLUMN_TIMESTAMP)));
 
@@ -149,12 +182,28 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // updating row
         db.update(Note.TABLE_NAME, values, Note.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(note.getId())});
+
+
     }
+
+    public void updateData(Note note) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(Note.COLUMN_AUTOALOT, note.getAlot());
+
+        // updating row
+        db.update(Note.TABLE_NAME, values, Note.COLUMN_ID + " = ?",
+                new String[]{String.valueOf(note.getId())});
+    }
+
 
     public void deleteNote(Note note) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(Note.TABLE_NAME, Note.COLUMN_ID + " = ?",
                 new String[]{String.valueOf(note.getId())});
+
         db.close();
     }
+
 }
