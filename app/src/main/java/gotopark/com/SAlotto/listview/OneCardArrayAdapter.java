@@ -1,6 +1,7 @@
 package gotopark.com.SAlotto.listview;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -138,6 +139,12 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
             //daily lotto
             case 1:
 
+                viewHolder.Rtext1.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext2.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext3.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext4.setTextColor(Color.parseColor("#FFFFFF"));
+                viewHolder.Rtext5.setTextColor(Color.parseColor("#FFFFFF"));
+
                 viewHolder.Rtext1.setText(Lotnum[0]);
                 viewHolder.Rtext2.setText(Lotnum[1]);
                 viewHolder.Rtext3.setText(Lotnum[2]);
@@ -163,6 +170,8 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 int dball5;
                 int dball6;
                 int dball7;
+
+                viewHolder.Rtext6.setTextColor(Color.parseColor("#000000"));
 
 
                 viewHolder.Rtext1.setText(Lotnum[0]);
@@ -206,6 +215,13 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
             case 3:
                 viewHolder.Rtext6.setVisibility(View.GONE);
                 viewHolder.textplus.setVisibility(View.GONE);
+
+
+                viewHolder.Rtext1.setTextColor(Color.parseColor("#000000"));
+                viewHolder.Rtext2.setTextColor(Color.parseColor("#000000"));
+                viewHolder.Rtext3.setTextColor(Color.parseColor("#000000"));
+                viewHolder.Rtext4.setTextColor(Color.parseColor("#000000"));
+                viewHolder.Rtext5.setTextColor(Color.parseColor("#000000"));
 
                 viewHolder.Rtext1.setText(Lotnum[0]);
                 viewHolder.Rtext2.setText(Lotnum[1]);

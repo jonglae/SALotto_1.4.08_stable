@@ -143,7 +143,7 @@
 				android:layout_width="40dp"
 				android:layout_height="40dp"
 				android:gravity="center"
-				android:shadowColor="@android:color/black"
+				android:shadowColor="#ACACAC"
 				android:shadowDx="4"
 				android:shadowDy="4"
 				android:shadowRadius="1.4"
