@@ -98,7 +98,7 @@ class Node {
 
     public static String[] getPowerBall_Plus_last() {
         String[] lastball = new String[1];
-        String inLotto = getWin_Result()[4];
+        String inLotto = getWin_Result()[5];
         inLotto = inLotto.replace(" ", ",");
 
         String[] aaaa = inLotto.split(",");

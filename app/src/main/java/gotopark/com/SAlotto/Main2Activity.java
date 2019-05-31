@@ -121,16 +121,17 @@ public class Main2Activity extends AppCompatActivity {
                 mlotnum = mlotnum.replace(" ", "");
                 ClickNum = mlotnum.split(",");
 
-                Log.d("=====Lotto=======", Node.getLotto()[0]);
-                Log.d("======Lotto======", Node.getLotto()[1]);
-                Log.d("======Lotto======", Node.getLotto()[3]);
-                Log.d("======Lotto======", Node.getLotto()[4]);
-                Log.d("======Lotto======", Node.getLotto()[5]);
-                Log.d("======Balltype======", Balltype);
 
                 switch (Balltype) {
 
                     case "Daily Lotto":
+
+                        Log.d("=====Daily=======", Node.getDaily_Lotto()[0]);
+                        Log.d("======Daily======", Node.getDaily_Lotto()[1]);
+                        Log.d("======Lotto======", Node.getDaily_Lotto()[2]);
+                        Log.d("======Daily======", Node.getDaily_Lotto()[3]);
+                        Log.d("======Daily======", Node.getDaily_Lotto()[4]);
+
                         results1 = arrcom.comp(ArrCom.concatenate(Node.getDaily_Lotto() , ClickNum));
                         updateNote2("Daily Lotto : "+ results1,position);
 
