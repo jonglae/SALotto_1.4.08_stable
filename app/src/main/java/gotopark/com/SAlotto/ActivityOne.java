@@ -140,6 +140,7 @@ public class ActivityOne extends Activity {
         @Override
         public void onClick(View v) {
             soundpool.play(tok, 1, 1, 1, 0, 1);
+
             Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
             intent.putExtra("select", 1);
             startActivity(intent);
@@ -152,6 +153,7 @@ public class ActivityOne extends Activity {
         @Override
         public void onClick(View v) {
             soundpool.play(tok, 1, 1, 1, 0, 1);
+
             Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
             intent.putExtra("select", 2);
             startActivity(intent);
@@ -164,6 +166,7 @@ public class ActivityOne extends Activity {
         @Override
         public void onClick(View v) {
             soundpool.play(tok, 1, 1, 1, 0, 1);
+
             Intent intent = new Intent(ActivityOne.this, Main3Activity.class);
             intent.putExtra("select", 3);
             startActivity(intent);
@@ -222,7 +225,7 @@ public class ActivityOne extends Activity {
                 String iInfo2 = getString(R.string.net_Info1);
                 String iInfo3 = getString(R.string.net_Info2);
 
-                Card card = new Card(iInfo1, iInfo2, iInfo3, "^.^;;", "", "");
+                Card card = new Card(iInfo1, iInfo2, iInfo3, "^.^;;", 4, "");
                 oneCardArrayAdapter.add(card);
                 listView.setAdapter(oneCardArrayAdapter);
 
@@ -341,19 +344,19 @@ public class ActivityOne extends Activity {
 
 
                     if (i == 3) {
-                        Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", "", getString(R.string.listLast_Meg1));
+                        Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", 2, getString(R.string.listLast_Meg1));
                         oneCardArrayAdapter.add(card);
                     }
 
                     if (i != 3) {
 
                         if (i < 4) {
-                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], "", getString(R.string.listLast_Meg1));
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 3, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card);
 
                         } else {
 
-                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], "", getString(R.string.listLast_Meg1));
+                            Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], 3, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card);
                         }
 
@@ -362,7 +365,7 @@ public class ActivityOne extends Activity {
 
                 String saywords = BackProcessHandler.frontSay();
 
-                Card card2 = new Card("Wise Word", saywords, "", "", "", "");
+                Card card2 = new Card("Wise Word", saywords, "", "", 4, "");
                 oneCardArrayAdapter.add(card2);
 
 //                Card card3 = new Card("", "", "", "", "", "");
@@ -384,7 +387,7 @@ public class ActivityOne extends Activity {
                     String iInfo4 = getString(R.string.net_Info3);
 
 
-                    Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, "", "");
+                    Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, 4, "");
                     oneCardArrayAdapter.add(card);
                     listView.setAdapter(oneCardArrayAdapter);
 

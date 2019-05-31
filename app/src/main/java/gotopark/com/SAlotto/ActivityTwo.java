@@ -304,11 +304,11 @@ public class ActivityTwo extends Activity {
         String iInfo3 = getString(R.string.net_Info2);
 
 
-        Card card = new Card(iInfo1, "", iInfo2, "", iInfo3, "");
+        Card card = new Card(iInfo1, "", iInfo2, "", 4, "");
         oneCardArrayAdapter.add(card);
         listView.setAdapter(oneCardArrayAdapter);
 
-        Card card2 = new Card("", "", "", "", iInfo3, "");
+        Card card2 = new Card("", "", "", "", 4, "");
 
 
     }
@@ -319,7 +319,7 @@ public class ActivityTwo extends Activity {
         String iInfo = "SA Lotto Past Winning Numbers";
 
         String saywords = BackProcessHandler.frontSay();
-        Card card = new Card(iInfo, saywords, "", "","" , "");
+        Card card = new Card(iInfo, saywords, "", "",4 , "");
 
         oneCardArrayAdapter.add(card);
         listView.setAdapter(oneCardArrayAdapter);
@@ -415,7 +415,7 @@ public class ActivityTwo extends Activity {
                 for (int i = 0; i < f13.size(); i++) {
 //                    pbnum3[i] = f13.get (i).toString ();
 
-                    Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", "", getString(R.string.listLast_Meg1));
+                    Card card = new Card(SAloto[SAlotoChoice] + " : " + (i + 1), SaLot_date[i], pbnum4[i], "", 4, getString(R.string.listLast_Meg1));
                     oneCardArrayAdapter.add(card);
 
 
@@ -426,10 +426,10 @@ public class ActivityTwo extends Activity {
 
                 String saywords = BackProcessHandler.frontSay();
 
-                Card card = new Card("Be the happy rich", saywords, "", "", "", "(EOF)");
+                Card card = new Card("Be the happy rich", saywords, "", "", 4, "(EOF)");
                 oneCardArrayAdapter.add(card);
 
-                Card card2 = new Card("", "", "", "", "", "");
+                Card card2 = new Card("", "", "", "", 4, "");
                 oneCardArrayAdapter.add(card2);
 
                 Log.e(TAG, "===================================>" + str);

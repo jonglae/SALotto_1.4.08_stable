@@ -137,7 +137,7 @@ public class ActivityThree extends AppCompatActivity {
             String iInfo3 = getString(R.string.net_Info2);
             String iInfo4 = getString(R.string.net_Info3);
 
-            Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, "", "");
+            Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, 4, "");
             oneCardArrayAdapter.add(card);
             listView.setAdapter(oneCardArrayAdapter);
 

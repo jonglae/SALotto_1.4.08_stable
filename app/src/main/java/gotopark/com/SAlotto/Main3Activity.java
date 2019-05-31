@@ -274,7 +274,7 @@ public class Main3Activity extends AppCompatActivity {
                         if (select == 3) {
                             pbnum = pbnum + " (" + pbnum2 + ")";
                         }
-                        Card card = new Card(LottoCount + "St Number", pbnum, "", select, "", "");
+                        Card card = new Card(LottoCount + "St Number", pbnum, "", "", select, "");
 
                         //DB 입력
                         db.insertNote(pbnum, title, "Manual Select Number");

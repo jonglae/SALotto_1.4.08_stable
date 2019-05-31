@@ -107,7 +107,7 @@ public class OneCardAdapter2 extends ArrayAdapter<Card> {
         Lotnum = sLotnum.split(",");
 
 
-        int select = card.getLine4();
+        int select = card.getLine5();
 //        Log.e(TAG,"================>"+ Arrays.toString(Lotnum));
 //
         Log.e(TAG, "========select========>" + select);

@@ -5,13 +5,13 @@ public class Card {
     private String line1;
     private String line2;
     private String line3;
-    private int line4;
-    private String line5;
+    private String line4;
+    private int line5;
     private String line6;
 
 
 
-    public Card(String line1, String line2, String line3, int line4, String line5, String line6) {
+    public Card(String line1, String line2, String line3, String line4, int line5, String line6) {
         this.line1 = line1;
         this.line2 = line2;
         this.line3 = line3;
@@ -33,11 +33,11 @@ public class Card {
         return line3;
     }
 
-    int getLine4() {
+    String getLine4() {
         return line4;
     }
 
-    String getLine5() {
+    int getLine5() {
         return line5;
     }
 
