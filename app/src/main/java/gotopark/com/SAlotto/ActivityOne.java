@@ -321,8 +321,10 @@ public class ActivityOne extends Activity {
 
                 for (int i = 0; i < 6; i++) {
                     pbnum3[i] = pbnum3[i].replace("  ", " ");
+                    Node node = new Node();
 
                     switch (i) {
+
                         case 0:
 
                             Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
@@ -347,6 +349,7 @@ public class ActivityOne extends Activity {
                             //daily Lotto
                             Card card3 = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", 1, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card3);
+
                             break;
 
                         case 4:
