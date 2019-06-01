@@ -84,6 +84,7 @@ public class Main3Activity extends AppCompatActivity {
         select = Objects.requireNonNull(intent.getExtras()).getInt("select");
         ball = getResources();
         TextView Seltext = findViewById(id.seltext);
+
         switch (select) {
             case 1:
                 numbers = ball.getStringArray(array.daily);
@@ -114,8 +115,8 @@ public class Main3Activity extends AppCompatActivity {
         db = new DatabaseHelper(this);
 
 
-        GridView gridView1 = findViewById(id.grid);
-        GridView gridView2 = findViewById(id.grid2);
+        final GridView gridView1 = findViewById(id.grid);
+        final GridView gridView2 = findViewById(id.grid2);
 
 
         adapter = new GridViewAdapter(numbers, this);
@@ -126,6 +127,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
         View btnGo = findViewById(id.button);
+        View btnClear = findViewById(id.button10);
 
         selectedStrings = new ArrayList<>();
         selectedStrings_star2 = new ArrayList<>();
@@ -220,9 +222,24 @@ public class Main3Activity extends AppCompatActivity {
                         adapter2.selectedPositions.add(position);
                         ((GridItemView) v).display(true);
                         selectedStrings_star2.add((String) parent.getItemAtPosition(position));
+
                     }
 
                 }
+
+            }
+        });
+
+
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onClick(View v) {
+                soundpool.play(tok, 1, 1, 0, 0, 1);
+                adapter.selectedPositions.clear();
+                selectedStrings.clear();
+                adapter.notifyDataSetChanged();
+
 
             }
         });
@@ -271,8 +288,6 @@ public class Main3Activity extends AppCompatActivity {
                         pbnum2 = pbnum2.replace("]", "");
                         pbnum2 = pbnum2.replace(" ", "");
 
-//                        pbnum = title + "\n" + pbnum;
-
                         if (select == 3) {
                             pbnum = pbnum + "," + pbnum2;
                         }
@@ -281,13 +296,10 @@ public class Main3Activity extends AppCompatActivity {
                         //DB 입력
                         db.insertNote(pbnum, title, "Manual Select Number");
 
-
                         cardAdapter.add(card);
                         listView.setAdapter(cardAdapter);
 
-
                         Click_true = 1;
-
 
                     }
 
@@ -301,6 +313,7 @@ public class Main3Activity extends AppCompatActivity {
 
 
     }
+
 
     public void Admob_is() {
 

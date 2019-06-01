@@ -2,7 +2,7 @@ package gotopark.com.SAlotto;
 
 class Node {
 
-    public static String[] Win_Result = new String[6];
+    private static String[] Win_Result = new String[6];
     private static String[] Lotto = new String[6];
     private static String[] Lotto_Pluse = new String[6];
     private static String[] Lotto_Pluse2 = new String[6];
@@ -18,7 +18,7 @@ class Node {
     private static String[] PowerBall_Plus_last = new String[1];
 
 
-    public static String[] getWin_Result() {
+    private static String[] getWin_Result() {
         return Win_Result;
     }
 
@@ -29,7 +29,7 @@ class Node {
     }
 
 
-    public static String[] getPowerBall_5Ball() {
+    static String[] getPowerBall_5Ball() {
         String[] ball5 = new String[5];
         String inLotto = getWin_Result()[4];
         inLotto = inLotto.replace(" ", ",");
@@ -38,7 +38,7 @@ class Node {
     }
 
 
-    public static String[] getPowerBall_last() {
+    static String[] getPowerBall_last() {
         String[] lastball = new String[1];
         String inLotto = getWin_Result()[4];
         inLotto = inLotto.replace(" ", ",");
@@ -58,13 +58,13 @@ class Node {
     }
 
 
-    public static String[] getDaily_Lotto() {
+    static String[] getDaily_Lotto() {
         String inLotto = getWin_Result()[3];
         inLotto = inLotto.replace(" ", ",");
         return inLotto.split(",");
     }
 
-    public static String[] getLotto_Pluse() {
+    static String[] getLotto_Pluse() {
         String inLotto = getWin_Result()[1];
         inLotto = inLotto.replace(" ", ",");
         return inLotto.split(",");
@@ -72,23 +72,13 @@ class Node {
 
 
 
-    public static String[] getLotto_Pluse2() {
+    static String[] getLotto_Pluse2() {
         String inLotto = getWin_Result()[2];
         inLotto = inLotto.replace(" ", ",");
         return inLotto.split(",");
     }
 
-
-    public static String[] getPowerBall_Plus() {
-        String[] ball5 = new String[6];
-        String inLotto = getWin_Result()[5];
-        inLotto = inLotto.replace(" ", ",");
-        ball5 = inLotto.split(",");
-        return ball5;
-    }
-
-
-    public static String[] getPowerBall_Plus_5Ball() {
+    static String[] getPowerBall_Plus_5Ball() {
         String[] ball5 = new String[5];
         String inLotto = getWin_Result()[5];
         inLotto = inLotto.replace(" ", ",");
@@ -96,7 +86,7 @@ class Node {
         return ball5;
     }
 
-    public static String[] getPowerBall_Plus_last() {
+    static String[] getPowerBall_Plus_last() {
         String[] lastball = new String[1];
         String inLotto = getWin_Result()[5];
         inLotto = inLotto.replace(" ", ",");

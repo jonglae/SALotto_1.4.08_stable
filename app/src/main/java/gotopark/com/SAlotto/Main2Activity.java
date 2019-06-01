@@ -2,7 +2,6 @@ package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
-import android.icu.text.StringPrepParseException;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Build;
@@ -16,7 +15,6 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -125,13 +123,6 @@ public class Main2Activity extends AppCompatActivity {
                 switch (Balltype) {
 
                     case "Daily Lotto":
-
-                        Log.d("=====Daily=======", Node.getDaily_Lotto()[0]);
-                        Log.d("======Daily======", Node.getDaily_Lotto()[1]);
-                        Log.d("======Lotto======", Node.getDaily_Lotto()[2]);
-                        Log.d("======Daily======", Node.getDaily_Lotto()[3]);
-                        Log.d("======Daily======", Node.getDaily_Lotto()[4]);
-
                         results1 = arrcom.comp(ArrCom.concatenate(Node.getDaily_Lotto() , ClickNum));
                         updateNote2("Daily Lotto : "+ results1,position);
 
