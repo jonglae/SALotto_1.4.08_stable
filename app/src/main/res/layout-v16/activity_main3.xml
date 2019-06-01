@@ -67,7 +67,8 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textAlignment="center"
-            android:textColor="#9A2DDC"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <GridView
@@ -116,6 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:background="#61ACACAC"
             android:cacheColorHint="@android:color/transparent"
             android:divider="@null"
             android:dividerHeight="2dp"

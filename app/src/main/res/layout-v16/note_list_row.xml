@@ -175,7 +175,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#585757"
-            android:paddingLeft="20dp"
             android:shadowColor="@android:color/black"
             android:shadowDx="5"
             android:shadowDy="5"

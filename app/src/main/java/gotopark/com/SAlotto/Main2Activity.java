@@ -119,51 +119,58 @@ public class Main2Activity extends AppCompatActivity {
                 mlotnum = mlotnum.replace(" ", "");
                 ClickNum = mlotnum.split(",");
 
+                if (Node.getWin_Result()[0] == null) {
 
-                switch (Balltype) {
+                    Toast.makeText(Main2Activity.this, "Wifi Or Internet", Toast.LENGTH_SHORT).show();
+                    updateNote2("Need Internet Next Time retry", position);
 
-                    case "Daily Lotto":
-                        results1 = arrcom.comp(ArrCom.concatenate(Node.getDaily_Lotto() , ClickNum));
-                        updateNote2("Daily Lotto : "+ results1,position);
+                } else {
 
-                        break;
+                    switch (Balltype) {
 
-                    case "Lotto/plus 1 2":
-                        results1 = arrcom.comp(ArrCom.concatenate(Node.getLotto(), ClickNum));
-                        results2 = arrcom.comp(ArrCom.concatenate(Node.getLotto_Pluse() , ClickNum));
-                        results3 = arrcom.comp(ArrCom.concatenate(Node.getLotto_Pluse2(), ClickNum));
+                        case "Daily Lotto":
+                            results1 = arrcom.comp(ArrCom.concatenate(Node.getDaily_Lotto(), ClickNum));
+                            updateNote2("Daily Lotto : " + results1, position);
 
-                        updateNote2("Lotto : "+ results1+"\n"+
-                                "Lotto Plus : " + results2 +"\n" +
-                                "Lotto Plus 2 : "+ results3,position);
-                        break;
+                            break;
 
+                        case "Lotto/plus 1 2":
+                            results1 = arrcom.comp(ArrCom.concatenate(Node.getLotto(), ClickNum));
+                            results2 = arrcom.comp(ArrCom.concatenate(Node.getLotto_Pluse(), ClickNum));
+                            results3 = arrcom.comp(ArrCom.concatenate(Node.getLotto_Pluse2(), ClickNum));
 
-                    case "PowerBall/Plus":
-                        String[] ball5 = new String[5];
-                        String[] lastball = new String[1];
-
-                        ball5[0] = ClickNum[0];
-                        ball5[1] = ClickNum[1];
-                        ball5[2] = ClickNum[2];
-                        ball5[3] = ClickNum[3];
-                        ball5[4] = ClickNum[4];
-                        lastball[0] = ClickNum[5];
-
-                        results1 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_5Ball(), ball5));
-                        results2 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_last(), lastball));
-
-                        results3 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_5Ball(), ball5));
-                        results4 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_last(), lastball));
+                            updateNote2("Lotto : " + results1 + "\n" +
+                                    "Lotto Plus : " + results2 + "\n" +
+                                    "Lotto Plus 2 : " + results3, position);
+                            break;
 
 
-                        updateNote2("Powerball : "+ results1+"+"+results2+"\n"+
-                                        "Powerball Plus : "+ results3+"+"+results4,position);
+                        case "PowerBall/Plus":
+                            String[] ball5 = new String[5];
+                            String[] lastball = new String[1];
 
-                        break;
+                            ball5[0] = ClickNum[0];
+                            ball5[1] = ClickNum[1];
+                            ball5[2] = ClickNum[2];
+                            ball5[3] = ClickNum[3];
+                            ball5[4] = ClickNum[4];
+                            lastball[0] = ClickNum[5];
+
+                            results1 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_5Ball(), ball5));
+                            results2 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_last(), lastball));
+
+                            results3 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_5Ball(), ball5));
+                            results4 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_last(), lastball));
+
+
+                            updateNote2("Powerball : " + results1 + "+" + results2 + "\n" +
+                                    "Powerball Plus : " + results3 + "+" + results4, position);
+
+                            break;
+                    }
+
+
                 }
-
-
                 Toast.makeText(Main2Activity.this, getString(R.string.select_list), Toast.LENGTH_SHORT).show();
             }
 
