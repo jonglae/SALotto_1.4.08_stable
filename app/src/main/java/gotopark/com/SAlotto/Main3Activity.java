@@ -80,6 +80,8 @@ public class Main3Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
+        View divier_bottom = findViewById(id.bottom_divider);
+
         Intent intent = getIntent();
         select = Objects.requireNonNull(intent.getExtras()).getInt("select");
         ball = getResources();
@@ -87,6 +89,7 @@ public class Main3Activity extends AppCompatActivity {
 
         switch (select) {
             case 1:
+                divier_bottom.setVisibility(View.GONE);
                 numbers = ball.getStringArray(array.daily);
                 ballgiri = 5;
                 numbers2 = null;
@@ -94,6 +97,7 @@ public class Main3Activity extends AppCompatActivity {
 
                 break;
             case 2:
+                divier_bottom.setVisibility(View.GONE);
                 numbers = ball.getStringArray(array.lotto);
                 ballgiri = 6;
                 numbers2 = null;
@@ -236,12 +240,41 @@ public class Main3Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 soundpool.play(tok, 1, 1, 0, 0, 1);
+
+
+                switch (title) {
+
+                    case "Daily Lotto":
+                        adapter1_clear();
+                        break;
+
+                    case "Lotto/plus 1 2":
+                        adapter1_clear();
+                        break;
+
+                    case "PowerBall/Plus":
+                        adapter1_clear();
+                        adapter2_clear();
+                        break;
+                }
+            }
+
+
+            void adapter1_clear() {
+
                 adapter.selectedPositions.clear();
                 selectedStrings.clear();
                 adapter.notifyDataSetChanged();
-
-
             }
+
+            void adapter2_clear() {
+
+                adapter2.selectedPositions.clear();
+                selectedStrings_star2.clear();
+                adapter2.notifyDataSetChanged();
+            }
+
+
         });
 
 

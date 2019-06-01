@@ -23,41 +23,43 @@
             ads:adUnitId="@string/banner_ad_unit_id2"
             app:adSize="SMART_BANNER" />
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="4dp"
-            android:background="@drawable/ripple_copy"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="1.5"
-            android:text="Select Confirm(Click)"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:textColor="#1565C0"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginRight="4dp"
-            android:background="@drawable/ripple_share1"
-            android:shadowColor="@android:color/black"
-            android:shadowDx="5"
-            android:shadowDy="5"
-            android:shadowRadius="1.5"
-            android:text="Clear Select"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:textColor="#1565C0"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="2"
+                android:background="@drawable/ripple_copy"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="1.5"
+                android:text="Select Confirm(Click)"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:textColor="#1565C0"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button10"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="8"
+                android:background="@drawable/ripple_share1"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="1.5"
+                android:text="Clear"
+                android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/seltext"
@@ -101,13 +103,13 @@
 
         </GridView>
 
+
         <View
-            android:id="@+id/divider3"
+            android:id="@+id/bottom_divider"
             android:layout_width="match_parent"
             android:layout_height="4dp"
             android:layout_marginTop="4dp"
-            android:background="#AC2E63" />
-
+            android:background="#944069" />
 
         <ListView
             android:id="@+id/card_listView"
