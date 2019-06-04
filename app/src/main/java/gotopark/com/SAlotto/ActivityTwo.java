@@ -48,7 +48,7 @@ public class ActivityTwo extends Activity {
     Button button3;
     Button button4;
     Button button5;
-    String str = "";
+
     int tak, tok;
     SoundPool soundpool;
     int select;
@@ -58,7 +58,7 @@ public class ActivityTwo extends Activity {
     int SAlotoChoice;
     String url;
     int SliceNumber, infoBallChoice;
-    //    String[] InfoBall = {"(Last Number is Bonus Ball)", "(Last Number is PowerBall)"};
+
     String iInfo1;
 
     @Override
