@@ -1,6 +1,7 @@
 package gotopark.com.SAlotto;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
 
-
+    public static Context CONTEXT;
     BackProcessHandler backHandler;
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        CONTEXT = this;
         db = new DatabaseHelper(this);
 
         backHandler = new BackProcessHandler(this);
@@ -123,5 +126,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         BackProcessHandler.onBackPressed();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        Jsoup_Lotto jsoup_lotto = new Jsoup_Lotto();
+        jsoup_lotto.execute();
+
     }
 }

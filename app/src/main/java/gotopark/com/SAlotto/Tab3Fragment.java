@@ -17,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -70,6 +71,12 @@ public class Tab3Fragment extends Fragment {
 
     DatabaseHelper db;
 
+    int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
+    int millisec;
+    int static_millisec=20;
+    int InTerval =10;
+    int MultiClick;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -88,6 +95,7 @@ public class Tab3Fragment extends Fragment {
         Button btnTEST = view.findViewById(R.id.btnTEST);
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         Button btn_save = view.findViewById(R.id.button3);
+        final Switch sw1 = view.findViewById(R.id.switch1);
 
 
         F1TV1 = view.findViewById(R.id.F1TV1);
@@ -129,6 +137,19 @@ public class Tab3Fragment extends Fragment {
 
         wisetext1 = view.findViewById(R.id.wisetext3);
 
+
+        sw1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                soundpool.play(tak, 1, 1, 1, 0, 1);
+                if (sw1.isChecked()) {
+                    MultiClick = 1;
+                } else {
+                    MultiClick = 0;
+                }
+            }
+        });
+
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
@@ -136,12 +157,17 @@ public class Tab3Fragment extends Fragment {
                 // 반복 회수 끝
                 soundpool.play(tak, 1, 1, 0, 0, 1);
 
-                Random rand = new Random();
-                // 반복 회수 지정
-                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
-                int xnum = rand.nextInt(5);
-                int millisec = Times_Ran[xnum];
 
+                if (MultiClick == 1) {
+                    // 반복 회수 지정
+
+                    int xnum = rand.nextInt(9);
+                    millisec = Times_Ran[xnum];
+                } else {
+
+
+                    millisec = static_millisec;
+                }
 
                 CountDownTimer start = new CountDownTimer(millisec, 10) {
                     public void onTick(long millisUntilFinished) {

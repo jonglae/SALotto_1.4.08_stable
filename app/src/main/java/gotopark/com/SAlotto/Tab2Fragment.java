@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,6 +72,12 @@ public class Tab2Fragment extends Fragment {
     int tak,tok;
     SoundPool soundpool;
 
+    int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
+    int millisec;
+    int static_millisec=20;
+    int InTerval =10;
+    int MultiClick;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -93,6 +100,7 @@ public class Tab2Fragment extends Fragment {
 
 
         wisetext1 = view.findViewById(R.id.wisetext2);
+        final Switch sw1 = view.findViewById(R.id.switch1);
 
 
         F1TV1 = view.findViewById(R.id.F1TV1);
@@ -166,6 +174,17 @@ public class Tab2Fragment extends Fragment {
         F5MIV6 = view.findViewById(R.id.F5MIV6);
 
 
+        sw1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                soundpool.play(tak, 1, 1, 1, 0, 1);
+                if (sw1.isChecked()) {
+                    MultiClick = 1;
+                } else {
+                    MultiClick = 0;
+                }
+            }
+        });
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("NewApi")
@@ -187,9 +206,17 @@ public class Tab2Fragment extends Fragment {
                 // 반복 회수 끝
                 soundpool.play(tak, 1, 1, 0, 0, 1);
                // 반복 회수 지정
-                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
-                int xnum = rand.nextInt(5);
-                int millisec = Times_Ran[xnum];
+
+                if (MultiClick == 1) {
+                    // 반복 회수 지정
+
+                    int xnum = rand.nextInt(9);
+                    millisec = Times_Ran[xnum];
+                } else {
+
+
+                    millisec = static_millisec;
+                }
 
 
                 CountDownTimer start = new CountDownTimer(millisec, 10) {

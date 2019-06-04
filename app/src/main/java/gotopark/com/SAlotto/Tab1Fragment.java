@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ import gotopark.com.SAlotto.module.randomNum;
 public class Tab1Fragment extends Fragment {
     private static final String TAG = "Tab1Fragment";
     private String ctextR;
+    private Switch sw1, sw2;
 
     private TextView text1, wisetext1;
 
@@ -78,6 +80,13 @@ public class Tab1Fragment extends Fragment {
     int select;
     String typeIs;
 
+    int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
+    int millisec;
+    int static_millisec=20;
+    int InTerval =10;
+    int MultiClick;
+
+
     @SuppressLint("CutPasteId")
     @Nullable
     @Override
@@ -99,6 +108,7 @@ public class Tab1Fragment extends Fragment {
         Button btnTEST2 = view.findViewById(R.id.btnTEST2);
         Button btnTEST3 = view.findViewById(R.id.btnTEST3);
         Button btnSHARE = view.findViewById(R.id.button3);
+        Button btn_list = view.findViewById(R.id.button4);
 
         Button btn_save1 = view.findViewById(R.id.btn_save1);
         Button btn_save2 = view.findViewById(R.id.btn_save2);
@@ -132,10 +142,38 @@ public class Tab1Fragment extends Fragment {
         DLtext4 = view.findViewById(R.id.dltext4);
         DLtext5 = view.findViewById(R.id.dltext5);
 
-
         btnTEST.setTextColor(Color.parseColor("#ffffff"));
         btnTEST2.setTextColor(Color.parseColor("#ffffff"));
+        sw1 = view.findViewById(R.id.switch1);
 
+
+
+        btn_list.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.N)
+            @Override
+            public void onClick(View view) {
+                // 사운드 재생
+                soundpool.play(tok, 1, 1, 0, 0, 1);
+
+                Intent intent = new Intent(getActivity(), Main2Activity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
+        sw1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                soundpool.play(tak, 1, 1, 1, 0, 1);
+                if (sw1.isChecked()) {
+                    MultiClick = 1;
+                } else {
+                    MultiClick = 0;
+                }
+            }
+        });
 
         btnTEST.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.N)
@@ -145,12 +183,20 @@ public class Tab1Fragment extends Fragment {
                 soundpool.play(tak, 1, 1, 0, 0, 1);
 
                 // 반복 회수 지정
-                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
-                int xnum = rand.nextInt(5);
-                int millisec = Times_Ran[xnum];
+
+                if (MultiClick == 1) {
+                    // 반복 회수 지정
+
+                    int xnum = rand.nextInt(9);
+                    millisec = Times_Ran[xnum];
+                } else {
 
 
-                CountDownTimer start = new CountDownTimer(millisec, 10) {
+                    millisec = static_millisec;
+                }
+
+
+                CountDownTimer start = new CountDownTimer(millisec, InTerval) {
                     public void onTick(long millisUntilFinished) {
                         soundpool.play(tak, 1, 1, 0, 0, 1);
 
@@ -162,6 +208,8 @@ public class Tab1Fragment extends Fragment {
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
                         wiseWord();
+
+
                         ClickCount1 = 0;
 
                     }
@@ -173,18 +221,26 @@ public class Tab1Fragment extends Fragment {
         });
 
         btnTEST2.setOnClickListener(new View.OnClickListener() {
+
             @RequiresApi(api = Build.VERSION_CODES.N)
             @Override
             public void onClick(View view) {
                 // 사운드 재생
                 soundpool.play(tak, 1, 1, 0, 0, 1);
-                // 반복 회수 지정
-                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
-                int xnum = rand.nextInt(5);
-                int millisec = Times_Ran[xnum];
 
 
-                CountDownTimer start = new CountDownTimer(millisec, 10) {
+                if (MultiClick == 1) {
+                    // 반복 회수 지정
+
+                    int xnum = rand.nextInt(9);
+                    millisec = Times_Ran[xnum];
+                } else {
+
+                    millisec = static_millisec;
+                }
+
+
+                CountDownTimer start = new CountDownTimer(millisec, InTerval) {
                     public void onTick(long millisUntilFinished) {
                         soundpool.play(tak, 1, 1, 0, 0, 1);
 
@@ -211,13 +267,15 @@ public class Tab1Fragment extends Fragment {
             public void onClick(View view) {
                 // 사운드 재생
                 soundpool.play(tak, 1, 1, 0, 0, 1);
-                // 반복 회수 지정
-                int[] Times_Ran = {250, 350, 650, 850, 950, 1150};
-                int xnum = rand.nextInt(5);
-                int millisec = Times_Ran[xnum];
 
+                if (MultiClick == 1) {
+                    int xnum = rand.nextInt(9);
+                    millisec = Times_Ran[xnum];
+                } else {
+                    millisec = static_millisec;
+                }
 
-                CountDownTimer start = new CountDownTimer(millisec, 10) {
+                CountDownTimer start = new CountDownTimer(millisec, InTerval) {
                     public void onTick(long millisUntilFinished) {
 
                         soundpool.play(tak, 1, 1, 0, 0, 1);
@@ -434,7 +492,7 @@ public class Tab1Fragment extends Fragment {
             String saywords = BackProcessHandler.frontSay();
             wisetext1.setText(saywords);
             count = 0;
-            primeWord = rand.nextInt(11) + 3;
+            primeWord = rand.nextInt(30) + 10;
         }
 
     }
