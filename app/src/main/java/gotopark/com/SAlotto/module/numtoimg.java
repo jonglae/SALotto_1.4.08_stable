@@ -1,7 +1,5 @@
 package gotopark.com.SAlotto.module;
 
-import org.jsoup.select.Elements;
-
 import gotopark.com.SAlotto.R;
 
 /**
@@ -9,16 +7,12 @@ import gotopark.com.SAlotto.R;
  */
 
 public class numtoimg {
-
     public int Numimg(int input1) {
-
-
         final int[] Imgnum = {
                 R.drawable.ball1,
                 R.drawable.ball2,
                 R.drawable.ball3,
                 R.drawable.ball4};
-
         if (input1 >= 1 && input1 <= 13) {
             return Imgnum[0];
         } else if (input1 >= 14 && input1 <= 26) {
@@ -29,15 +23,7 @@ public class numtoimg {
             return Imgnum[3];
         } else {
             return Imgnum[3];
-
         }
-
-
     }
-
-
-
-
-
 }
 

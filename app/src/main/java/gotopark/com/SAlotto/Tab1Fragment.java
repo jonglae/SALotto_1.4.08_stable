@@ -479,8 +479,6 @@ public class Tab1Fragment extends Fragment {
         limg4.setImageResource(dball4);
         limg5.setImageResource(dball5);
         limg6.setImageResource(dball6);
-
-
     }
 
     public void wiseWord() {

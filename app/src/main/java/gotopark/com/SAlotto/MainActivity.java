@@ -1,6 +1,7 @@
 package gotopark.com.SAlotto;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -25,10 +26,12 @@ import gotopark.com.SAlotto.database.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
 
+    @SuppressLint("StaticFieldLeak")
     public static DatabaseHelper db;
 
     private static final String TAG = "MainActivity";
 
+    @SuppressLint("StaticFieldLeak")
     public static Context CONTEXT;
     BackProcessHandler backHandler;
 

@@ -4,19 +4,6 @@ class Node {
 
 
     private static String[] Win_Result = new String[6];
-//    private static String[] Lotto = new String[6];
-//    private static String[] Lotto_Pluse = new String[6];
-//    private static String[] Lotto_Pluse2 = new String[6];
-//
-//    private static String[] Daily_Lotto = new String[5];
-//
-//    private static String[] PowerBall = new String[6];
-//    private static String[] PowerBall_5Ball = new String[5];
-//    private static String[] powerBall_last = new String[1];
-//
-//    private static String[] PowerBall_Plus = new String[6];
-//    private static String[] PowerBall_Plus_5Ball = new String[5];
-//    private static String[] PowerBall_Plus_last = new String[1];
 
     static String[] getWin_Result() {
         return Win_Result;

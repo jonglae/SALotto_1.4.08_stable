@@ -15,7 +15,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.design.widget.BottomNavigationView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -36,7 +35,6 @@ import java.io.IOException;
 import gotopark.com.SAlotto.listview.Card;
 import gotopark.com.SAlotto.listview.OneCardArrayAdapter;
 
-
 public class ActivityOne extends Activity {
 
     private static final String TAG = "ActivityOne";
@@ -46,7 +44,6 @@ public class ActivityOne extends Activity {
 
     int tak, tok;
     SoundPool soundpool;
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,18 +57,15 @@ public class ActivityOne extends Activity {
         tak = soundpool.load(this, R.raw.short_click2, 1);
         tok = soundpool.load(this, R.raw.click1_rebert1, 1);
 
-
         oneCardArrayAdapter = new OneCardArrayAdapter(getApplicationContext(), R.layout.list_item_card1);
 
         listView.addHeaderView(new View(this));
         listView.addFooterView(new View(this));
 
-
         Button btn6 = findViewById(R.id.button6);
         Button btn7 = findViewById(R.id.button7);
         Button btn8 = findViewById(R.id.button8);
         Button btn9 = findViewById(R.id.button9);
-
 
         btn6.setOnClickListener(Lot_list);
         btn7.setOnClickListener(Num_Choice1);
@@ -93,7 +87,6 @@ public class ActivityOne extends Activity {
                         break;
 
                     case R.id.ic_android:
-
                         break;
 
                     case R.id.ic_books:
@@ -212,41 +205,30 @@ public class ActivityOne extends Activity {
             } else if (activeNetwork.getType() == ConnectivityManager.TYPE_MOBILE) {
                 // connected to the mobile provider's data plan
                 Toast.makeText(context, activeNetwork.getTypeName(), Toast.LENGTH_SHORT).show();
-
                 /** 모바일 연결시 시도  */
                 new LotonumCall().execute();
-
-
             }
 
         } else {
             /** 네트웍 문제 메세지 출력 */
-
             for (int i = 0; i < 3; i++) {
-
                 String iInfo1 = getString(R.string.net_Info);
                 String iInfo2 = getString(R.string.net_Info1);
                 String iInfo3 = getString(R.string.net_Info2);
-
                 Card card = new Card(iInfo1, iInfo2, iInfo3, "^.^;;", 4, "");
                 oneCardArrayAdapter.add(card);
                 listView.setAdapter(oneCardArrayAdapter);
-
             }
-
         }
     }
 
 
     @SuppressLint("StaticFieldLeak")
     private class LotonumCall extends AsyncTask<Void, Void, Void> {
-
-
         Elements winperson1;
         Elements winperson2;
         Elements winperson3;
         Elements winperson4;
-
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -265,8 +247,6 @@ public class ActivityOne extends Activity {
         public Void doInBackground(Void... params) {
 
             String url = getString(R.string.active_one);
-
-
             try {
                 // Connect to the web site
                 Document document = Jsoup.connect(url)
@@ -274,14 +254,10 @@ public class ActivityOne extends Activity {
                         .get();
 
                 if (document != null) {
-
-                    // Get the html document title
-
                     winperson4 = document.select(getString(R.string.jsoup_q1));
                     winperson1 = document.select(getString(R.string.jsoup_q2));
                     winperson2 = document.select(getString(R.string.jsoup_q3));
                     winperson3 = document.select(getString(R.string.jsoup_q4));
-
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -291,19 +267,12 @@ public class ActivityOne extends Activity {
 
         @Override
         public void onPostExecute(Void result) {
-
-
             String[] SAloto = {"Lotto", "Lotto Plus", "Lotto Plus 2", " Daily Lotto", "Powerball", "Powerball Plus"};
-
             if (winperson4 != null) {
-
-                Log.e("==============", "=========" + winperson1);
-
                 String[] pbnum1 = new String[winperson1.size()];
                 for (int i = 0; i < winperson1.size(); i++) {
                     pbnum1[i] = winperson1.get(i).text().substring(5);
                     pbnum1[i] = pbnum1[i].replaceAll("Next", "\nNext");
-
                 }
 
                 String[] pbnum2 = new String[winperson2.size()];
@@ -319,84 +288,56 @@ public class ActivityOne extends Activity {
                 /** 리스트 뷰 출력 출력 */
                 Node.setWin_Result(pbnum3) ;
 
-
                 for (int i = 0; i < 6; i++) {
                     pbnum3[i] = pbnum3[i].replace("  ", " ");
                     Node node = new Node();
 
-
                     switch (i) {
-
                         case 0:
-
                             Card card = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card);
                             break;
-
                         case 1:
-
                             Card card1 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card1);
                             break;
-
-
                         case 2:
-
                             Card card2 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i], 2, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card2);
                             break;
-
-
                         case 3:
                             //daily Lotto
                             Card card3 = new Card(SAloto[i], pbnum2[i], pbnum3[i], "", 1, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card3);
                             break;
-
                         case 4:
-
                             Card card4 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], 3, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card4);
                             break;
-
                         case 5:
                             Card card5 = new Card(SAloto[i], pbnum2[i], pbnum3[i], pbnum1[i - 1], 3, getString(R.string.listLast_Meg1));
                             oneCardArrayAdapter.add(card5);
                             break;
-
                     }
-
-
                 }
 
 
                 mProgressDialog.dismiss();
                 listView.setAdapter(oneCardArrayAdapter);
-
-
             } else {
-
                 /** 네트웍 품질 문제 발생시 메세지 출력 */
-
                 for (int i = 0; i < 3; i++) {
-
                     String iInfo1 = getString(R.string.net_Info);
                     String iInfo2 = getString(R.string.net_Info1);
                     String iInfo3 = getString(R.string.net_Info2);
                     String iInfo4 = getString(R.string.net_Info3);
-
-
                     Card card = new Card(iInfo1, iInfo2, iInfo3, iInfo4, 4, "");
                     oneCardArrayAdapter.add(card);
                     listView.setAdapter(oneCardArrayAdapter);
-
                 }
-
             }
-
         }
     }
-
 }
 
 
