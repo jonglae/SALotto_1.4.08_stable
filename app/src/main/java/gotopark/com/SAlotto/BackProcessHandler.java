@@ -1,20 +1,15 @@
 package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.AlertDialog;
-
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.res.Resources;
-import android.media.AudioManager;
-import android.media.SoundPool;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.InterstitialAd;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
@@ -22,8 +17,6 @@ import gun0912.ted.tedadmobdialog.TedAdmobDialog;
 import hotchemi.android.rate.AppRate;
 import hotchemi.android.rate.OnClickButtonListener;
 import hotchemi.android.rate.StoreType;
-
-import static android.app.PendingIntent.getActivity;
 
 
 class BackProcessHandler {
@@ -35,7 +28,7 @@ class BackProcessHandler {
     private static MainActivity activity;
     private static InterstitialAd mInterstitialAd;
 
-    BackProcessHandler(Activity context) {
+    BackProcessHandler(AppCompatActivity context) {
         activity = (MainActivity) context;
     }
 

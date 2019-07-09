@@ -1,6 +1,6 @@
 package gotopark.com.SAlotto.SelectNum;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -10,11 +10,11 @@ import java.util.List;
 
 public class GridViewAdapter extends BaseAdapter {
 
-    private Activity activity;
+    private AppCompatActivity activity;
     private String[] strings;
     public List<Integer> selectedPositions;
 
-    public GridViewAdapter(String[] strings, Activity activity) {
+    public GridViewAdapter(String[] strings, AppCompatActivity activity) {
         this.strings = strings;
         this.activity = activity;
         selectedPositions = new ArrayList<>();

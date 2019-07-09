@@ -1,7 +1,6 @@
 package gotopark.com.SAlotto;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -12,9 +11,10 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.BottomNavigationView;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,7 +35,7 @@ import java.io.IOException;
 import gotopark.com.SAlotto.listview.Card;
 import gotopark.com.SAlotto.listview.OneCardArrayAdapter;
 
-public class ActivityOne extends Activity {
+public class ActivityOne extends AppCompatActivity {
 
     private static final String TAG = "ActivityOne";
     public ListView listView;
