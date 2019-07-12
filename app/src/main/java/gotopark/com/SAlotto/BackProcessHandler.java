@@ -20,10 +20,7 @@ import hotchemi.android.rate.StoreType;
 
 
 class BackProcessHandler {
-
-
 //    private Toast toast;
-
     @SuppressLint("StaticFieldLeak")
     private static MainActivity activity;
     private static InterstitialAd mInterstitialAd;
@@ -50,8 +47,6 @@ class BackProcessHandler {
                                     @Override
                                     public void onAdClicked() {
                                         super.onAdClicked();
-
-
                                     }
 
 
@@ -59,20 +54,15 @@ class BackProcessHandler {
                                 .showReviewButton(true)
                                 .create()
                                 .show();
-
                     }
-
-
                 })
 
 
                 .setNegativeButton(activity.getString(R.string.scr_EXIT_Mesg3), new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-
                         AnRate();
                         dialog.cancel();
                         activity.finish();
-
                     }
                 });
         AlertDialog alert = builder.create();
@@ -98,30 +88,6 @@ class BackProcessHandler {
 
         AppRate.showRateDialogIfMeetsConditions(activity);
     }
-
-    //
-//     static void Admob_Front() {
-//        Log.e("전면_Front_TEST =====> ", "=======================> OK");
-//        mInterstitialAd = new InterstitialAd(activity);
-//        mInterstitialAd.setAdUnitId(activity.getString(R.string.interstitial_ad_unit_id));
-//
-//        AdRequest adRequest = new AdRequest.Builder()
-//                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-//                .build();
-//
-//        mInterstitialAd.loadAd(adRequest);
-//
-//
-//    }
-//
-//    static void Show_front() {
-//        if (mInterstitialAd.isLoaded()) {
-//            mInterstitialAd.show();
-//
-//        }
-//    }
-
-
 
     static String frontSay() {
 

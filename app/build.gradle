@@ -3,16 +3,22 @@ apply plugin: 'com.android.application'
 android {
     signingConfigs {
     }
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion '28.0.3'
     defaultConfig {
         applicationId "gotopark.com.SAlotto"
         minSdkVersion 17
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 83
         versionName "1.5.02"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -43,14 +49,14 @@ dependencies {
     implementation "com.github.hotchemi:android-rate:1.0.1"
     implementation 'org.jsoup:jsoup:1.11.3'
     implementation 'com.squareup.picasso:picasso:2.5.2'
-    implementation 'com.jakewharton:butterknife:8.8.1'
+    implementation 'com.jakewharton:butterknife:10.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation 'gun0912.ted:tedadmobdialog:1.0.5'
     implementation 'com.google.firebase:firebase-ads:18.0.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
 //    implementation 'com.google.android.gms:play-services-ads:17.2.1'
 
-
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
     implementation project(':library')
     androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
