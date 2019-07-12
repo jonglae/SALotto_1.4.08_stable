@@ -30,17 +30,14 @@
         android:id="@+id/numbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignWithParentIfMissing="false"
         android:layout_below="@id/btnTEST"
-        android:layout_alignParentStart="true"
         android:layout_gravity="center_horizontal"
-        android:layout_marginStart="1dp"
+        android:gravity="center_horizontal"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:orientation="horizontal">
 
             <TextView
@@ -48,9 +45,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -59,9 +57,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -70,9 +69,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -81,9 +81,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -92,9 +93,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -110,9 +112,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -121,9 +124,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -132,9 +136,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -143,9 +148,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -154,9 +160,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -172,9 +179,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -183,9 +191,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -194,9 +203,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -205,9 +215,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -216,9 +227,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -234,9 +246,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -245,9 +258,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -256,9 +270,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -267,9 +282,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -278,9 +294,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/text_black"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -296,9 +313,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -307,9 +325,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -318,9 +337,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -329,9 +349,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 
@@ -340,9 +361,10 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/dailyball2"
                 android:gravity="center_vertical|center_horizontal"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/black87"
+                android:textColor="@color/white"
                 android:textSize="25sp"
                 android:textStyle="bold" />
 

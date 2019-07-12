@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
 
 //TAP 맨위에 탭 아이콘  -->
         Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.dot1pic);
-        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.dot1pic);
-        Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.dot2pic);
+        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.dot2pic);
+        Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.dot3pic);
         Objects.requireNonNull(tabLayout.getTabAt(3)).setIcon(R.drawable.dot3pic);
 
 //TAP 맨위에 탭 아이콘  <---
@@ -125,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new Tab1Fragment());
         adapter.addFragment(new Tab2Fragment());
         adapter.addFragment(new Tab3Fragment());
+        adapter.addFragment(new Tab4Fragment());
         viewPager.setAdapter(adapter);
     }
 
