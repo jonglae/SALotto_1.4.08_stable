@@ -340,7 +340,7 @@ public class Tab2Fragment extends Fragment {
     }
 
 
-    public void GenNumber() {
+    private void GenNumber() {
 
         /**
          //                Toast.makeText(getActivity(), "TESTING BUTTON CLICK 1",Toast.LENGTH_SHORT).show();

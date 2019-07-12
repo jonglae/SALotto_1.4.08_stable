@@ -32,50 +32,50 @@ public class Tab3Fragment extends Fragment {
 
     private static final String TAG = "Tab3Fragment";
 
-    public String ctextR;
+    private String ctextR;
 
 
-    TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
-    TextView F2TV1, F2TV2, F2TV3, F2TV4, F2TV5, F2TV6;
-    TextView F3TV1, F3TV2, F3TV3, F3TV4, F3TV5, F3TV6;
-    TextView F4TV1, F4TV2, F4TV3, F4TV4, F4TV5, F4TV6;
-    TextView F5TV1, F5TV2, F5TV3, F5TV4, F5TV5, F5TV6;
+    private TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
+    private TextView F2TV1, F2TV2, F2TV3, F2TV4, F2TV5, F2TV6;
+    private TextView F3TV1, F3TV2, F3TV3, F3TV4, F3TV5, F3TV6;
+    private TextView F4TV1, F4TV2, F4TV3, F4TV4, F4TV5, F4TV6;
+    private TextView F5TV1, F5TV2, F5TV3, F5TV4, F5TV5, F5TV6;
 
-    int[] Lot1num1 = new int[5];
-    int[] Lot1num2 = new int[5];
-    int[] Lot1num3 = new int[5];
-    int[] Lot1num4 = new int[5];
-    int[] Lot1num5 = new int[5];
+    private int[] Lot1num1 = new int[5];
+    private int[] Lot1num2 = new int[5];
+    private int[] Lot1num3 = new int[5];
+    private int[] Lot1num4 = new int[5];
+    private int[] Lot1num5 = new int[5];
 
-    int[] rednum1 = new int[1];
-    int[] rednum2 = new int[1];
-    int[] rednum3 = new int[1];
-    int[] rednum4 = new int[1];
-    int[] rednum5 = new int[1];
+    private int[] rednum1 = new int[1];
+    private int[] rednum2 = new int[1];
+    private int[] rednum3 = new int[1];
+    private int[] rednum4 = new int[1];
+    private int[] rednum5 = new int[1];
 
     private Random rand;
-    int count, primeWord;
-    public TextView wisetext1;
+    private int count, primeWord;
+    private TextView wisetext1;
 
-    String ctextRlist;
-    String ctextRlist1;
-    String ctextRlist2;
-    String ctextRlist3;
-    String ctextRlist4;
-    String ctextRlist5;
+    private String ctextRlist;
+    private String ctextRlist1;
+    private String ctextRlist2;
+    private String ctextRlist3;
+    private String ctextRlist4;
+    private String ctextRlist5;
 
-    int ClickCount1 = 1;
+    private int ClickCount1 = 1;
 
-    int tak, tok;
-    SoundPool soundpool;
+    private int tak, tok;
+    private SoundPool soundpool;
 
-    DatabaseHelper db;
+    private DatabaseHelper db;
 
-    int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
-    int millisec;
-    int static_millisec=20;
+    private int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
+    private int millisec;
+    private int static_millisec=20;
     int InTerval =10;
-    int MultiClick;
+    private int MultiClick;
 
     @Nullable
     @Override
@@ -240,12 +240,12 @@ public class Tab3Fragment extends Fragment {
     }
 
 
-    public void showGuide(String input1) {
+    private void showGuide(String input1) {
         Toast.makeText(getActivity(), input1, Toast.LENGTH_SHORT).show();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void LotCOPY() {
+    private void LotCOPY() {
         String App_links1 = getString(R.string.app_links);
         String App_Share = getString(R.string.app_share);
         String tab_info1 = getString(R.string.tab_text2);
@@ -299,10 +299,9 @@ public class Tab3Fragment extends Fragment {
 
     }
 
-    public void wiseWord() {
+    private void wiseWord() {
 
         count = count + 1;
-        Log.e("============", count + "====" + primeWord);
 
         if (count == primeWord) {
             String saywords = BackProcessHandler.frontSay();
@@ -315,7 +314,7 @@ public class Tab3Fragment extends Fragment {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void GenNumber() {
+    private void GenNumber() {
 
         randomNum Rnum = new randomNum();
 
@@ -369,7 +368,7 @@ public class Tab3Fragment extends Fragment {
     }
 
 
-    public void savenum(int clickcount, String ctextRlist) {
+    private void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
             db.insertNote(ctextRlist1, "PowerBall/Plus", "5 Auto 1");

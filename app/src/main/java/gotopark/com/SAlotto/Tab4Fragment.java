@@ -227,8 +227,6 @@ public class Tab4Fragment extends Fragment {
         String App_Share = getString(R.string.app_share);
         String tab_info1 = getString(R.string.tab_text2);
 
-        String Srednum1, Srednum2, Srednum3, Srednum4, Srednum5;
-
         String[] SLot1num1 = new String[5];
         String[] SLot1num2 = new String[5];
         String[] SLot1num3 = new String[5];
@@ -302,8 +300,6 @@ public class Tab4Fragment extends Fragment {
         F1TV3.setText(String.valueOf(Lot1num1[2]));
         F1TV4.setText(String.valueOf(Lot1num1[3]));
         F1TV5.setText(String.valueOf(Lot1num1[4]));
-
-        Log.d("=====", String.valueOf(Lot1num1[0]));
 
         F2TV1.setText(String.valueOf(Lot1num2[0]));
         F2TV2.setText(String.valueOf(Lot1num2[1]));

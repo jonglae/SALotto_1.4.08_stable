@@ -378,11 +378,11 @@ public class Tab1Fragment extends Fragment {
     }
 
 
-    public void showGuide(String input1) {
+    private void showGuide(String input1) {
         Toast.makeText(getActivity(), input1, Toast.LENGTH_SHORT).show();
     }
 
-    public void LotCOPY() {
+    private void LotCOPY() {
         String App_links1 = getString(R.string.app_links);
         String App_Share = getString(R.string.app_share);
 
@@ -443,7 +443,7 @@ public class Tab1Fragment extends Fragment {
     }
 
 
-    public void Gen1Number() {
+    private void Gen1Number() {
 
         int dball1;
         int dball2;
@@ -480,7 +480,7 @@ public class Tab1Fragment extends Fragment {
         limg6.setImageResource(dball6);
     }
 
-    public void wiseWord() {
+    private void wiseWord() {
 
         count = count + 1;
 //                        Log.e("============", count + "====" + primeWord);
@@ -495,7 +495,7 @@ public class Tab1Fragment extends Fragment {
     }
 
 
-    public void Gen2Number() {
+    private void Gen2Number() {
 
         int[] Lot1num1 = new int[5];
         randomNum Rnum = new randomNum();
@@ -511,7 +511,7 @@ public class Tab1Fragment extends Fragment {
         pimgtext6.setText(String.valueOf(rednum1[0]));
     }
 
-    public void Gen3Number() {
+    private void Gen3Number() {
 
         int[] Lot1num1 = new int[4];
         randomNum Rnum = new randomNum();
@@ -525,7 +525,7 @@ public class Tab1Fragment extends Fragment {
         DLtext5.setText(String.valueOf(Lot1num1[4]));
     }
 
-    public void savenum(int clickcount, String ctextRlist, int Balltype) {
+    private void savenum(int clickcount, String ctextRlist, int Balltype) {
         switch (Balltype) {
 
             case 3:

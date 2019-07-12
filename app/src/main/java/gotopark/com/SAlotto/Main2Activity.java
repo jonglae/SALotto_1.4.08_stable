@@ -28,6 +28,7 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import gotopark.com.SAlotto.database.DatabaseHelper;
 import gotopark.com.SAlotto.database.model.Note;
@@ -129,7 +130,7 @@ public class Main2Activity extends AppCompatActivity {
                     switch (Balltype) {
 
                         case "Daily Lotto":
-                            results1 = arrcom.comp(ArrCom.concatenate(Node.getDaily_Lotto(), ClickNum));
+                            results1 = arrcom.comp(ArrCom.concatenate(Objects.requireNonNull(Node.getDaily_Lotto()), ClickNum));
                             updateNote2("Daily Lotto : " + results1, position);
 
                             break;
@@ -161,7 +162,6 @@ public class Main2Activity extends AppCompatActivity {
 
                             results3 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_5Ball(), ball5));
                             results4 = arrcom.comp(ArrCom.concatenate(Node.getPowerBall_Plus_last(), lastball));
-
 
                             updateNote2("Powerball : " + results1 + "+" + results2 + "\n" +
                                     "Powerball Plus : " + results3 + "+" + results4, position);
@@ -356,7 +356,6 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void Admob_is() {
-
         AdView mAdView = findViewById(R.id.adView);
         MobileAds.initialize(getApplicationContext(), getString(R.string.google_adsene_id));
         AdRequest adRequest = new AdRequest.Builder().build();
