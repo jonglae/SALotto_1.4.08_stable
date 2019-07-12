@@ -20,6 +20,8 @@ import butterknife.ButterKnife;
 import gotopark.com.SAlotto.R;
 import me.toptas.rssconverter.RssItem;
 
+import static com.squareup.picasso.Picasso.*;
+
 /**
  * Adapter for listing {@link RssItem}
  */
@@ -69,12 +71,10 @@ public class RssItemsAdapter extends RecyclerView.Adapter<RssItemsAdapter.ViewHo
         holder.textTitle.setText(item.getTitle());
         holder.textPubDate.setText(item.getPublishDate());
 
-        if (item.getImage() != null) {
-            Picasso.with(mContext).load(item.getImage()).
-                    fit()
-                    .centerCrop()
-                    .into(holder.imageThumb);
-        }
+        if (item.getImage() != null) Picasso.get().load(item.getImage()).
+                fit()
+                .centerCrop()
+                .into(holder.imageThumb);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
