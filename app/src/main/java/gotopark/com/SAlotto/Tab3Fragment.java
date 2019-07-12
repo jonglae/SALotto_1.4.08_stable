@@ -178,6 +178,7 @@ public class Tab3Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
+                        GenNumber();
                         ClickCount1 = 0;
                         wiseWord();
 

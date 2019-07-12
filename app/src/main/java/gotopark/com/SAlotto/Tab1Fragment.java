@@ -32,7 +32,7 @@ import gotopark.com.SAlotto.module.randomNum;
 public class Tab1Fragment extends Fragment {
     private static final String TAG = "Tab1Fragment";
     private String ctextR;
-    private Switch sw1, sw2;
+    private Switch sw1;
 
     private TextView text1, wisetext1;
 
@@ -207,9 +207,8 @@ public class Tab1Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
+                        Gen1Number();
                         wiseWord();
-
-
                         ClickCount1 = 0;
 
                     }

@@ -46,12 +46,6 @@ public class Tab4Fragment extends Fragment {
     private int[] Lot1num4 = new int[5];
     private int[] Lot1num5 = new int[5];
 
-    private int[] rednum1 = new int[1];
-    private int[] rednum2 = new int[1];
-    private int[] rednum3 = new int[1];
-    private int[] rednum4 = new int[1];
-    private int[] rednum5 = new int[1];
-
     private Random rand;
     private int count, primeWord;
     private TextView wisetext1;
@@ -73,7 +67,7 @@ public class Tab4Fragment extends Fragment {
     private int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
     private int millisec;
     private int static_millisec=20;
-    int InTerval =10;
+    private int InTerval =10;
     private int MultiClick;
 
     @Nullable
@@ -155,7 +149,7 @@ public class Tab4Fragment extends Fragment {
                     millisec = static_millisec;
                 }
 
-                CountDownTimer start = new CountDownTimer(millisec, 10) {
+                CountDownTimer start = new CountDownTimer(millisec, InTerval) {
                     public void onTick(long millisUntilFinished) {
                         soundpool.play(tak, 1, 1, 0, 0, 1);
                         GenNumber();
@@ -164,6 +158,8 @@ public class Tab4Fragment extends Fragment {
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
                         ClickCount1 = 0;
+                        GenNumber();
+
                         wiseWord();
                     }
                 }.start();
@@ -306,6 +302,8 @@ public class Tab4Fragment extends Fragment {
         F1TV3.setText(String.valueOf(Lot1num1[2]));
         F1TV4.setText(String.valueOf(Lot1num1[3]));
         F1TV5.setText(String.valueOf(Lot1num1[4]));
+
+        Log.d("=====", String.valueOf(Lot1num1[0]));
 
         F2TV1.setText(String.valueOf(Lot1num2[0]));
         F2TV2.setText(String.valueOf(Lot1num2[1]));

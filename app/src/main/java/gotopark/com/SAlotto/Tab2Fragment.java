@@ -176,7 +176,7 @@ public class Tab2Fragment extends Fragment {
         sw1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                soundpool.play(tak, 1, 1, 1, 0, 1);
+                soundpool.play(tak, 1, 1, 0, 0, 1);
                 if (sw1.isChecked()) {
                     MultiClick = 1;
                 } else {
@@ -189,7 +189,7 @@ public class Tab2Fragment extends Fragment {
             @SuppressLint("NewApi")
             @Override
             public void onClick(View view) {
-                soundpool.play(tok, 1, 1, 0, 0, 0);
+                soundpool.play(tok, 1, 1, 0, 0, 1);
 
                 LotCOPY();
 
@@ -226,6 +226,7 @@ public class Tab2Fragment extends Fragment {
 
                     public void onFinish() {
                         // 반복 후 작업은 아래에 라인
+                        GenNumber();
                         ClickCount1 = 0;
                         wiseWord();
                     }
