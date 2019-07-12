@@ -33,7 +33,6 @@ import gotopark.com.SAlotto.listview.OneCardAdapter2;
 
 import static gotopark.com.SAlotto.R.*;
 
-
 /**
  * Created by User on 4/15/2017.
  */
@@ -303,29 +302,20 @@ public class Main3Activity extends AppCompatActivity {
                         listView.setAdapter(cardAdapter);
 
                         Click_true = 1;
-
                     }
-
-
                 }
             }
         });
-
-
         Admob_is();
-
-
     }
 
 
     public void Admob_is() {
-
         // admob
         AdView mAdView = findViewById(id.adView);
         MobileAds.initialize(getApplicationContext(), getString(R.string.banner_ad_unit_id2));
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
     }
 
 
@@ -333,7 +323,6 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
     }
 
     @Override
