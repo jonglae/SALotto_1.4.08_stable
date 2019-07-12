@@ -113,7 +113,7 @@ public class RssFragment extends Fragment implements SwipeRefreshLayout.OnRefres
      * Loads fetched {@link RssItem} list to RecyclerView
      * @param rssItems
      */
-    public void onRssItemsLoaded(List<RssItem> rssItems) {
+    private void onRssItemsLoaded(List<RssItem> rssItems) {
         mAdapter.setItems(rssItems);
         mAdapter.notifyDataSetChanged();
         if (mRecyclerView.getVisibility() != View.VISIBLE) {
@@ -124,7 +124,7 @@ public class RssFragment extends Fragment implements SwipeRefreshLayout.OnRefres
     /**
      * Shows {@link SwipeRefreshLayout}
      */
-    public void showLoading() {
+    private void showLoading() {
         mSwRefresh.setRefreshing(true);
     }
 
@@ -132,7 +132,7 @@ public class RssFragment extends Fragment implements SwipeRefreshLayout.OnRefres
     /**
      * Hides {@link SwipeRefreshLayout}
      */
-    public void hideLoading() {
+    private void hideLoading() {
         mSwRefresh.setRefreshing(false);
     }
 

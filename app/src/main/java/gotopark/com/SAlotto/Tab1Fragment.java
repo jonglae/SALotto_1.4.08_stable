@@ -63,28 +63,28 @@ public class Tab1Fragment extends Fragment {
     private TextView pimgtext5;
     private TextView pimgtext6;
 
-    public Random rand;
+    private Random rand;
 
-    String ctextRlist1, ctextRlist2, ctextRlist3;
+    private String ctextRlist1, ctextRlist2, ctextRlist3;
 
 
-    int ClickCount1 = 1;
-    int ClickCount2 = 1;
-    int ClickCount3 = 1;
+    private int ClickCount1 = 1;
+    private int ClickCount2 = 1;
+    private int ClickCount3 = 1;
 
-    int count, primeWord;
+    private int count, primeWord;
 
-    int tak, tok;
-    SoundPool soundpool;
+    private int tak, tok;
+    private SoundPool soundpool;
 
-    int select;
-    String typeIs;
+    private int select;
+    private String typeIs;
 
-    int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
-    int millisec;
-    int static_millisec=20;
-    int InTerval =10;
-    int MultiClick;
+    private int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
+    private int millisec;
+    private int static_millisec=20;
+    private int InTerval =10;
+    private int MultiClick;
 
 
     @SuppressLint("CutPasteId")

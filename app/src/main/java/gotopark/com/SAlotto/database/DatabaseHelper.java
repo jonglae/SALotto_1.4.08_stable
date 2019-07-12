@@ -50,7 +50,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public long insertNote(String note,String balltype,String magroup) {
+    public void insertNote(String note, String balltype, String magroup) {
         // get writable database as we want to write data
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -69,7 +69,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.close();
 
         // return newly inserted row id
-        return id;
     }
 
     public long insertColumn(String note, String alot,String magroup) {

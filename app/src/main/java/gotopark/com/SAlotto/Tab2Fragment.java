@@ -33,50 +33,49 @@ public class Tab2Fragment extends Fragment {
 
 
     private static final String TAG = "Tab2Fragment";
-    public String ctextR;
+    private String ctextR;
     TextView wisetext1;
 
-    TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
-    TextView F2TV1, F2TV2, F2TV3, F2TV4, F2TV5, F2TV6;
-    TextView F3TV1, F3TV2, F3TV3, F3TV4, F3TV5, F3TV6;
-    TextView F4TV1, F4TV2, F4TV3, F4TV4, F4TV5, F4TV6;
-    TextView F5TV1, F5TV2, F5TV3, F5TV4, F5TV5, F5TV6;
+    private TextView F1TV1, F1TV2, F1TV3, F1TV4, F1TV5, F1TV6;
+    private TextView F2TV1, F2TV2, F2TV3, F2TV4, F2TV5, F2TV6;
+    private TextView F3TV1, F3TV2, F3TV3, F3TV4, F3TV5, F3TV6;
+    private TextView F4TV1, F4TV2, F4TV3, F4TV4, F4TV5, F4TV6;
+    private TextView F5TV1, F5TV2, F5TV3, F5TV4, F5TV5, F5TV6;
 
 
-    ImageView F1MIV1, F1MIV2, F1MIV3, F1MIV4, F1MIV5, F1MIV6;
-    ImageView F2MIV1, F2MIV2, F2MIV3, F2MIV4, F2MIV5, F2MIV6;
-    ImageView F3MIV1, F3MIV2, F3MIV3, F3MIV4, F3MIV5, F3MIV6;
-    ImageView F4MIV1, F4MIV2, F4MIV3, F4MIV4, F4MIV5, F4MIV6;
-    ImageView F5MIV1, F5MIV2, F5MIV3, F5MIV4, F5MIV5, F5MIV6;
+    private ImageView F1MIV1, F1MIV2, F1MIV3, F1MIV4, F1MIV5, F1MIV6;
+    private ImageView F2MIV1, F2MIV2, F2MIV3, F2MIV4, F2MIV5, F2MIV6;
+    private ImageView F3MIV1, F3MIV2, F3MIV3, F3MIV4, F3MIV5, F3MIV6;
+    private ImageView F4MIV1, F4MIV2, F4MIV3, F4MIV4, F4MIV5, F4MIV6;
+    private ImageView F5MIV1, F5MIV2, F5MIV3, F5MIV4, F5MIV5, F5MIV6;
 
 
-    int[] Lot1num1 = new int[6];
-    int[] Lot1num2 = new int[6];
-    int[] Lot1num3 = new int[6];
-    int[] Lot1num4 = new int[6];
-    int[] Lot1num5 = new int[6];
+    private int[] Lot1num1 = new int[6];
+    private int[] Lot1num2 = new int[6];
+    private int[] Lot1num3 = new int[6];
+    private int[] Lot1num4 = new int[6];
+    private int[] Lot1num5 = new int[6];
 
     private Random rand;
-    int count,primeWord;
+    private int count,primeWord;
 
-    String ctextRlist;
-    String ctextRlist1;
-    String ctextRlist2;
-    String ctextRlist3;
-    String ctextRlist4;
-    String ctextRlist5;
-    
-    DatabaseHelper db;
-    int ClickCount1 = 1;
+    private String ctextRlist1;
+    private String ctextRlist2;
+    private String ctextRlist3;
+    private String ctextRlist4;
+    private String ctextRlist5;
 
-    int tak,tok;
-    SoundPool soundpool;
+    private DatabaseHelper db;
+    private int ClickCount1 = 1;
 
-    int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
-    int millisec;
-    int static_millisec=20;
+    private int tak,tok;
+    private SoundPool soundpool;
+
+    private int[] Times_Ran = {150, 250, 350, 550, 650, 850, 950, 1150, 1450, 1550};
+    private int millisec;
+    private int static_millisec=20;
     int InTerval =10;
-    int MultiClick;
+    private int MultiClick;
 
     @Nullable
     @Override
@@ -275,12 +274,12 @@ public class Tab2Fragment extends Fragment {
     }
 
 
-    public void showGuide(String input1) {
+    private void showGuide(String input1) {
         Toast.makeText(getActivity(), input1, Toast.LENGTH_SHORT).show();
     }
 
     @RequiresApi(api = Build.VERSION_CODES.N)
-    public void LotCOPY() {
+    private void LotCOPY() {
         String App_links1 = getString(R.string.app_links);
         String App_Share = getString(R.string.app_share);
         String tab_info1 = getString(R.string.tab_text1);
@@ -313,7 +312,7 @@ public class Tab2Fragment extends Fragment {
         ctextR = ctextR + (SLot1num4[0] + ", " + SLot1num4[1] + ", " + SLot1num4[2] + ", " + SLot1num4[3] + ", " + SLot1num4[4] + ", " + SLot1num4[5] + "\n");
         ctextR = ctextR + (SLot1num5[0] + ", " + SLot1num5[1] + ", " + SLot1num5[2] + ", " + SLot1num5[3] + ", " + SLot1num5[4] + ", " + SLot1num5[5]);
 
-        ctextRlist = ctextR;
+        String ctextRlist = ctextR;
 
         ctextRlist1 = Lot1num1[0] + "," + Lot1num1[1] + "," + Lot1num1[2] + "," + Lot1num1[3] + "," + Lot1num1[4] + "," + Lot1num1[5];
         ctextRlist2 = Lot1num2[0] + "," + Lot1num2[1] + "," + Lot1num2[2] + "," + Lot1num2[3] + "," + Lot1num2[4] + "," + Lot1num2[5];
@@ -325,7 +324,7 @@ public class Tab2Fragment extends Fragment {
 
     }
 
-    public void wiseWord(){
+    private void wiseWord(){
 
         count = count + 1;
 //                        Log.e("============", count + "====" + primeWord);
@@ -503,7 +502,7 @@ public class Tab2Fragment extends Fragment {
 
     }
 
-    public void savenum(int clickcount, String ctextRlist) {
+    private void savenum(int clickcount, String ctextRlist) {
 
         if (clickcount == 0) {
 
