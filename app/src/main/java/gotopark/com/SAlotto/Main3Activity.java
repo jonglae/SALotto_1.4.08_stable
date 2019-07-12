@@ -117,18 +117,14 @@ public class Main3Activity extends AppCompatActivity {
         Seltext.setText(title);
 
         db = new DatabaseHelper(this);
-
-
         final GridView gridView1 = findViewById(id.grid);
         final GridView gridView2 = findViewById(id.grid2);
-
 
         adapter = new GridViewAdapter(numbers, this);
 
         if (numbers2 != null) {
             adapter2 = new GridViewAdapter(numbers2, this);
         }
-
 
         View btnGo = findViewById(id.button);
         View btnClear = findViewById(id.button10);
@@ -156,37 +152,24 @@ public class Main3Activity extends AppCompatActivity {
 
                 if (selectedStrings.size() == (ballgiri - 1)) {
                     Log.d("====click ok=====", "click ok");
-
                     Click_true = 0;
                 }
 
                 if (selectedIndex1 > -1) {
                     soundpool.play(tok, 1, 1, 0, 0, 1);
-
                     adapter.selectedPositions.remove(selectedIndex1);
                     ((GridItemView) v).display(false);
                     selectedStrings.remove(parent.getItemAtPosition(position));
-
-
                 } else {
-
                     if (selectedStrings.size() == ballgiri) {
-
                         Toast.makeText(getApplicationContext(), "OK", Toast.LENGTH_LONG).show();
-
                     } else {
                         soundpool.play(tak, 1, 1, 0, 0, 1);
-//                        Log.d("====IndexGesu=====", String.valueOf(IndexGesu1));
-
                         adapter.selectedPositions.add(position);
                         ((GridItemView) v).display(true);
                         selectedStrings.add((String) parent.getItemAtPosition(position));
                     }
-
-
                 }
-
-
             }
         });
 
@@ -195,42 +178,29 @@ public class Main3Activity extends AppCompatActivity {
             @SuppressLint("SetTextI18n")
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-
                 selectedIndex2 = adapter2.selectedPositions.indexOf(position);
-
                 if (selectedStrings_star2.size() == 0) {
                     Log.d("====click ok=====", "click ok");
-
                     Click_true = 0;
                 }
 
                 if (selectedIndex2 > -1) {
                     soundpool.play(tok, 1, 1, 0, 0, 1);
-
                     adapter2.selectedPositions.remove(selectedIndex2);
                     ((GridItemView) v).display(false);
                     selectedStrings_star2.remove(parent.getItemAtPosition(position));
-
                     Log.d("====parent=====", (String) parent.getItemAtPosition(position));
-
                 } else {
-
                     if (selectedStrings_star2.size() == 1) {
-
 //                        Click_true = 0;
                         Toast.makeText(getApplicationContext(), "Ball2 OK", Toast.LENGTH_LONG).show();
-
                     } else {
                         soundpool.play(tak, 1, 1, 0, 0, 1);
-
                         adapter2.selectedPositions.add(position);
                         ((GridItemView) v).display(true);
                         selectedStrings_star2.add((String) parent.getItemAtPosition(position));
-
                     }
-
                 }
-
             }
         });
 

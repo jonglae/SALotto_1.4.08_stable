@@ -84,27 +84,13 @@ public class Jsoup_Lotto extends AsyncTask<Void, Void, Void> {
 
     @Override
     public void onPostExecute(Void result) {
-
         if (winperson4 != null) {
-
-            Log.e("==============", "=========" + winperson4);
-
-
             String[] pbnum3 = new String[winperson3.size()];
             for (int i = 0; i < winperson3.size(); i++) {
                 pbnum3[i] = winperson3.get(i).text();
             }
-
             /** 리스트 뷰 출력 출력 */
             Node.setWin_Result(pbnum3);
-
-            Log.d("==========", "============>" + pbnum3[0]);
-            Log.d("==========", "============>" + pbnum3[1]);
-            Log.d("==========", "============>" + pbnum3[2]);
-            Log.d("==========", "============>" + pbnum3[3]);
-            Log.d("==========", "============>" + pbnum3[4]);
-
         }
-
     }
 }
