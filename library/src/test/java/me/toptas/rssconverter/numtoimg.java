@@ -24,8 +24,6 @@ public class numtoimg {
                 return Imgnum[3];
             } else if (Num[i] > 41 && Num[i] < 49) {
                 return Imgnum[4];
-            } else {
-
             }
 
         }

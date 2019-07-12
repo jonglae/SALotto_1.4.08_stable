@@ -26,7 +26,7 @@ public class RssItem implements Serializable {
         return mLink;
     }
 
-    public void setLink(String link) {
+    void setLink(String link) {
         this.mLink = link.trim();
     }
 
@@ -34,7 +34,7 @@ public class RssItem implements Serializable {
         return mImage;
     }
 
-    public void setImage(String image) {
+    void setImage(String image) {
         this.mImage = image;
     }
 
@@ -42,7 +42,7 @@ public class RssItem implements Serializable {
         return mPublishDate;
     }
 
-    public void setPublishDate(String publishDate) {
+    void setPublishDate(String publishDate) {
         this.mPublishDate = publishDate;
     }
 
@@ -50,7 +50,7 @@ public class RssItem implements Serializable {
         return mDescription;
     }
 
-    public void setDescription(String description) {
+    void setDescription(String description) {
         this.mDescription = description;
     }
 

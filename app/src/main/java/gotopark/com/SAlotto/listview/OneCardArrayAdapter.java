@@ -138,6 +138,10 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
         switch (select) {
             //daily lotto
             case 1:
+                viewHolder.Rtext6.setVisibility(View.GONE);
+                viewHolder.textplus.setVisibility(View.GONE);
+                viewHolder.Rtext7.setVisibility(View.GONE);
+
 
                 viewHolder.Rtext1.setTextColor(Color.parseColor("#FFFFFF"));
                 viewHolder.Rtext2.setTextColor(Color.parseColor("#FFFFFF"));
@@ -208,11 +212,14 @@ public class OneCardArrayAdapter extends ArrayAdapter<Card> {
                 viewHolder.Rtext7.setBackgroundResource(dball7);
 
                 viewHolder.Rtext6.setVisibility(View.VISIBLE);
+                viewHolder.Rtext7.setVisibility(View.VISIBLE);
                 viewHolder.textplus.setVisibility(View.VISIBLE);
                 break;
 
                 //powerball
             case 3:
+                viewHolder.Rtext7.setVisibility(View.VISIBLE);
+
                 viewHolder.Rtext6.setVisibility(View.GONE);
                 viewHolder.textplus.setVisibility(View.GONE);
 
