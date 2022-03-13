@@ -27,6 +27,26 @@ Google is always monitoring you, <br> so try to reduce Google service as soon as
 https://youtu.be/aI6A9f_X0C4
 
 
+SA Lotto
+South Africa lottery(National Lottery)
+
+✔ Daily Lotto
+✔ Lotto
+✔ Lotto plus 1 
+✔ Lotto plus 2
+✔ Power Ball
+✔ Power Ball plus
+✔ Number generator and show results
+✔ Check the winning numbers
+✔ Check winning number of this week between your generated numbers.
+✔ Save Generated Numbers Save List
+✔ Share your numbers with Family and friends
+
+Thank you for download
+(^ㅡ^)(__ __)(^ㅡ^)
+
+
+
 
 고마움을 표시 하고 싶으면 아래 NFT 구매 하시면 <br>
 향 후 제가진행 하는 그어떤 서비스에서도 VIP 로 초대 될것 입니다.<br />
