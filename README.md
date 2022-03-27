@@ -30,17 +30,17 @@ https://youtu.be/aI6A9f_X0C4
 SA Lotto
 South Africa lottery(National Lottery)
 
-✔ Daily Lotto
-✔ Lotto
-✔ Lotto plus 1 
-✔ Lotto plus 2
-✔ Power Ball
-✔ Power Ball plus
-✔ Number generator and show results
-✔ Check the winning numbers
-✔ Check winning number of this week between your generated numbers.
-✔ Save Generated Numbers Save List
-✔ Share your numbers with Family and friends
+✔ Daily Lotto<br>
+✔ Lotto<br>
+✔ Lotto plus 1 <br>
+✔ Lotto plus 2<br>
+✔ Power Ball<br>
+✔ Power Ball plus<br>
+✔ Number generator and show results<br>
+✔ Check the winning numbers<br>
+✔ Check winning number of this week between your generated numbers.<br>
+✔ Save Generated Numbers Save List<br>
+✔ Share your numbers with Family and friends<br>
 
 Thank you for download
 (^ㅡ^)(__ __)(^ㅡ^)
