@@ -24,7 +24,7 @@ Google is always monitoring you, <br> so try to reduce Google service as soon as
 </h3>
 
 [YouTube 동영상]<br />
-https://youtu.be/aI6A9f_X0C4
+https://www.youtube.com/watch?v=W-nQmmIsO8Q
 
 
 SA Lotto
